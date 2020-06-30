@@ -1,138 +1,59 @@
-# Configure Repositories
-#-plugin.00.bnd: \
-# aQute.bnd.repository.osgi.OSGiRepository; \
-# name='Bnd'; \
-# locations=https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBuild/artifact/dist/bundles/index.xml.gz; \
-# max_stale=1800
-#-plugin.01.eclipse: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url = http://download.eclipse.org/eclipse/updates/4.9; \
-# name = "Eclipse 4.9"
-#-plugin.02.orbit: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url = http://download.eclipse.org/tools/orbit/downloads/drops/R20180905201904/repository; \
-# name = "Orbit 4.9"
-#-plugin.03.jetty: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url = http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.12.v20180830; \
-# name = "Jetty 9.4.12"
-#-plugin.04.restlet: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url = http://p2.restlet.com/2.3; \
-# name = "Restlet 2.3"
-#-plugin.05.idempiere: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url = "file:///C:/workspace/idempiere-tycho/org.idempiere.p2/target/repository/"; \
-# name = "iDempiere"
-#-plugin.04.eclipse-local: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url="file:///C:/Users/Administrator/.p2/pool"; \
-# location="${workspace}/cnf/cache/stable/eclipse-local"; \
-# name="Eclipse Local"
- 
--plugin.04.idempiere-ws-client: \
- aQute.bnd.repository.p2.provider.P2Repository; \
- url = "https://raw.githubusercontent.com/idempiere/binary.file/master/p2.maven/org.idempiere.webservice.client-p2-R20190412"; \
- name = "iDempiere Web Services Client"
- 
--plugin.07.idempiere: \
- aQute.bnd.repository.p2.provider.P2Repository; \
- url = "https://raw.githubusercontent.com/idempiere/binary.file/master/p2.idempiere.core/idempiere-6.2-201905030208"; \
- name = "iDempiere"
-#-plugin.06.maven-p2-20180911: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url = https://sourceforge.net/projects/idempiere/files/binary.file/jarfile/maven-p2-R20180911; \
-# name = "iDempiere Maven-P2 20180911"
--plugin.05.maven-p2: \
- aQute.bnd.repository.p2.provider.P2Repository; \
- url = "https://raw.githubusercontent.com/idempiere/binary.file/master/p2.maven/maven-p2-R20190411"; \
- name = "iDempiere Maven-P2"
-#-plugin.07.maven-p2-20181031: \
-# aQute.bnd.repository.p2.provider.P2Repository; \
-# url = https://sourceforge.net/projects/idempiere/files/binary.file/jarfile/maven-p2-R20181031; \
-# name = "iDempiere Maven-P2 20181031"
--plugin.01.Central: \
-	aQute.bnd.repository.maven.provider.MavenBndRepository; \
-		releaseUrl=https://repo.maven.apache.org/maven2/; \
-		index=${.}/central.maven; \
-		readOnly=true; \
-		name="Maven Central"
--plugin.09.mockito: \
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-		releaseUrls=https://repo.maven.apache.org/maven2/; \
-		readOnly=true; \
-		pom=${.}/mockito-pom.xml; \
-		name="Mockito"
-#-plugin.10.karaf: \
-#	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-#		releaseUrls=https://repo.maven.apache.org/maven2/; \
-#		readOnly=true; \
-#		pom=${.}/karaf-pom.xml; \
-#		name="Karaf"
-#-plugin.09.cxf: \
-#	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-#		releaseUrls=https://repo.maven.apache.org/maven2/; \
-#		readOnly=true; \
-#		pom=${.}/pom.xml; \
-#		name="Apache CXF"
-#-plugin.10.wss4j: \
-#	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-#		releaseUrls=https://repo.maven.apache.org/maven2/; \
-#		query='q=g:%22org.apache.wss4j%22%20v:%222.2.0%22'; \
-#		readOnly=true; \
-#		name="Apache WSS4J"
--plugin.11.Local: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Local; \
-		pretty = true; \
-		local = ${build}/local
+########################
+## BUILD SETTINGS ##
+########################
+## Java Compiler Options
+#java:                  java
+#javac:                 javac
+javac.source:           1.8
+javac.target:           1.8
+javac.compliance:       1.8
+javac.debug:            on
 
--plugin.12.Templates: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Templates; \
-		pretty = true; \
-		local = ${build}/templates
+# This build requires newer Bnd features
+-require-bnd: "(version>=5.1.0)"
 
--plugin.13.Release: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Release; \
-		pretty = true; \
-		local = ${build}/release
+#
+# Custom Settings
+#
+Git-Descriptor:         ${system-allow-fail;git describe --dirty --always --abbrev=9}
+Git-SHA:                ${system-allow-fail;git rev-list -1 --no-abbrev-commit HEAD}
 
--plugin.14.Test: \
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-		snapshotUrls=https://oss.sonatype.org/content/repositories/osgi/; \
-		releaseUrls=https://repo.maven.apache.org/maven2/; \
-		revision=org.osgi.enroute:test-bundles:7.0.0; \
-		readOnly=true; \
-		name="Testing Bundles"
+# This is the version to baseline this build against. See cnf/ext/baseline.mvn.
+baseline.version:       0.9.0
+# biz.aQute.bndlib:aQute.bnd.osgi.About.CURRENT needs to be kept in sync with the base.version.
+base.version:           1.0.0
+# Uncomment the following line to build the non-snapshot version.
+#-snapshot:
+Bundle-Version:         ${base.version}.${tstamp}-SNAPSHOT
+# Don't baseline Bundle-Version
+-diffignore:            Bundle-Version
 
+# Maven info. The maven artifactId defaults to Bundle-SymbolicName
+#-groupid:               biz.aQute.bnd
+#-pom:                   version=${versionmask;===s;${@version}}
+#-maven-release:         pom;path=JAR,javadoc;-classpath="${project.buildpath}"
 
--releaserepo: Release
--baselinerepo: Release
+Automatic-Module-Name:  ${def;bsn}
+Bundle-Vendor:          Greek Welfare Centre of South Australia https://www.greekwelfaresa.org.au/
+Bundle-Copyright:       Copyright (c) Greek Welfare Centre of South Australia (2019, ${tstamp;yyyy}) and others. All Rights Reserved.
+SPDX-License-Identifier: (Apache-2.0 OR EPL-2.0)
+Bundle-License:         "${SPDX-License-Identifier}";\
+                        description="This program and the accompanying materials are made available under the terms of the Apache License, Version 2.0, or the Eclipse Public License 2.0.";\
+                        link="https://opensource.org/licenses/Apache-2.0,https://opensource.org/licenses/EPL-2.0"
+#Bundle-DocURL:          https://bnd.bndtools.org/
+#Bundle-SCM:             url=https://github.com/bndtools/bnd, \
+#                        connection=scm:git:https://github.com/bndtools/bnd.git, \
+#                        developerConnection=scm:git:git@github.com:bndtools/bnd.git, \
+#                        tag=${Git-Descriptor}
+Bundle-Developers: \
+    kriegfrj; \
+        email=fr.jkrieg@greekwelfaresa.org.au; \
+        name="Fr Jeremy Krieg"; \
+        organization=Greek Welfare Centre of South Australia; \
+        organizationUrl=https://www.greekwelfaresa.org.au; \
+        roles="architect,developer"; \
+        timezone="Australia/Adelaide"
 
-# Always use contracts
--contract: *
-
-# Set Git revision information in the manifests of built bundles
-Git-Descriptor:           ${system-allow-fail;git describe --dirty --always}
-Git-SHA:                  ${system-allow-fail;git rev-list -1 HEAD}
-
-# JUnit
-junit: org.apache.servicemix.bundles.junit; version=4.12
-junit5: org.junit.jupiter.api;version=latest,\
-	org.junit.jupiter.params;version=latest,\
-	org.junit.jupiter.engine;version=latest,\
-	org.junit.platform.launcher;version=latest,\
-	org.junit.platform.engine;version=latest,\
-	org.junit.platform.commons;version=latest,\
-	org.opentest4j;version=latest,\
-	org.apiguardian;version=latest
-mockito: org.mockito.mockito-core; version=3.0.0
-assertj: org.assertj.core; version=3.12.1
-mockito-deps: org.objenesis; version=2.6.0,\
-  net.bytebuddy.byte-buddy; version=1.9.10,\
-  net.bytebuddy.byte-buddy-agent; version=1.9.10 
-cxf-version: 3.2
-wss4j-version: 2.2.0
-osgi-test-version: 1.0.0-SNAPSHOT
+-make:                  (*).(jar);type=bnd; recipe="bnd/$1.bnd"
+-reproducible: true
+-noextraheaders: true

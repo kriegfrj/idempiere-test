@@ -1,0 +1,10 @@
+-include: ${workspace}/cnf/includes/idempiere.bnd
+
+-buildpath: \
+	${junit},\
+	${mockito},\
+	org.idempiere.test.common;version=snapshot,\
+	osgi.annotation;version=latest
+
+Bundle-Version: 1.0.0.${tstamp}
+Import-Package: *

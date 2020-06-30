@@ -1,0 +1,14 @@
+-include: ${workspace}/cnf/includes/idempiere.bnd
+
+-buildpath: \
+	${junit},\
+	${mockito},\
+	org.adempiere.base;version=latest,\
+	org.eclipse.equinox.app;version=latest,\
+	org.eclipse.osgi;version=latest,\
+	javax.annotation-api;version=latest
+
+Bundle-Version: 1.0.0.${tstamp}
+Import-Package: \
+	${idempiere.importpackage},\
+	*

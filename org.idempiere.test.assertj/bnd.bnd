@@ -1,0 +1,15 @@
+-include: ${workspace}/cnf/includes/idempiere.bnd
+
+-buildpath: \
+	${junit},\
+	${mockito},\
+	org.adempiere.base;version=latest,\
+	javax.annotation-api;version=latest,\
+	osgi.annotation;version=latest,\
+	org.idempiere.test.common;version=snapshot
+
+Bundle-Version: 1.0.0.${tstamp}
+Import-Package: \
+	${idempiere.importpackage},\
+	org.assertj.core.error,\
+	*
