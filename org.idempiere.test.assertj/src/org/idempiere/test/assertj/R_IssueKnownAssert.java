@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_R_IssueKnown;
 
 /** Generated assertion class for R_IssueKnown
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class R_IssueKnownAssert
 	extends AbstractPOAssert<R_IssueKnownAssert,X_R_IssueKnown>
@@ -40,8 +40,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getDescription();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -51,8 +51,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getIssueStatus();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have IssueStatus: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IssueStatus: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -62,8 +62,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getIssueSummary();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have IssueSummary: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IssueSummary: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -74,7 +74,7 @@ public class R_IssueKnownAssert
 		isNotNull();
 		int actualField = actual.getLineNo();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have LineNo: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LineNo: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -84,8 +84,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getLoggerName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have LoggerName: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LoggerName: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -116,7 +116,7 @@ public class R_IssueKnownAssert
 		isNotNull();
 		int actualField = actual.getR_IssueKnown_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have R_IssueKnown_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueKnown_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -126,8 +126,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getR_IssueKnown_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have R_IssueKnown_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueKnown_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -138,7 +138,7 @@ public class R_IssueKnownAssert
 		isNotNull();
 		int actualField = actual.getR_IssueRecommendation_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have R_IssueRecommendation_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueRecommendation_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -149,7 +149,7 @@ public class R_IssueKnownAssert
 		isNotNull();
 		int actualField = actual.getR_IssueStatus_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have R_IssueStatus_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueStatus_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -160,7 +160,7 @@ public class R_IssueKnownAssert
 		isNotNull();
 		int actualField = actual.getR_Request_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have R_Request_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_Request_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -170,8 +170,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getReleaseNo();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have ReleaseNo: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ReleaseNo: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -181,8 +181,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getSourceClassName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have SourceClassName: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SourceClassName: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -192,8 +192,8 @@ public class R_IssueKnownAssert
 	{
 		isNotNull();
 		String actualField = actual.getSourceMethodName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have SourceMethodName: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SourceMethodName: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_A_Asset_Info_Ins;
 
 /** Generated assertion class for A_Asset_Info_Ins
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class A_Asset_Info_InsAssert
 	extends AbstractPOAssert<A_Asset_Info_InsAssert,X_A_Asset_Info_Ins>
@@ -41,7 +41,7 @@ public class A_Asset_Info_InsAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -52,7 +52,7 @@ public class A_Asset_Info_InsAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_Info_Ins_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Ins_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Ins_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -62,8 +62,8 @@ public class A_Asset_Info_InsAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Asset_Info_Ins_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Ins_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Ins_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -89,8 +89,8 @@ public class A_Asset_Info_InsAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Insurance_Co();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Insurance_Co: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Insurance_Co: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -100,8 +100,8 @@ public class A_Asset_Info_InsAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Policy_No();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Policy_No: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Policy_No: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -127,8 +127,8 @@ public class A_Asset_Info_InsAssert
 	{
 		isNotNull();
 		String actualField = actual.getText();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Text: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Text: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

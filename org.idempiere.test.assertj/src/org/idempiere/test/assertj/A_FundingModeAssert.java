@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_A_FundingMode;
 
 /** Generated assertion class for A_FundingMode
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class A_FundingModeAssert
 	extends AbstractPOAssert<A_FundingModeAssert,X_A_FundingMode>
@@ -41,7 +41,7 @@ public class A_FundingModeAssert
 		isNotNull();
 		int actualField = actual.getA_FundingMode_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_FundingMode_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_FundingMode_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -51,8 +51,8 @@ public class A_FundingModeAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_FundingMode_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_FundingMode_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_FundingMode_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -62,8 +62,8 @@ public class A_FundingModeAssert
 	{
 		isNotNull();
 		String actualField = actual.getDescription();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -73,8 +73,8 @@ public class A_FundingModeAssert
 	{
 		isNotNull();
 		String actualField = actual.getName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -84,8 +84,8 @@ public class A_FundingModeAssert
 	{
 		isNotNull();
 		String actualField = actual.getValue();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

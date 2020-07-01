@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_C_Charge;
 
 /** Generated assertion class for C_Charge
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class C_ChargeAssert
 	extends AbstractPOAssert<C_ChargeAssert,X_C_Charge>
@@ -41,7 +41,7 @@ public class C_ChargeAssert
 		isNotNull();
 		int actualField = actual.getC_BPartner_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -52,7 +52,7 @@ public class C_ChargeAssert
 		isNotNull();
 		int actualField = actual.getC_Charge_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have C_Charge_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -62,8 +62,8 @@ public class C_ChargeAssert
 	{
 		isNotNull();
 		String actualField = actual.getC_Charge_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have C_Charge_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -74,7 +74,7 @@ public class C_ChargeAssert
 		isNotNull();
 		int actualField = actual.getC_ChargeType_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have C_ChargeType_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ChargeType_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -85,7 +85,7 @@ public class C_ChargeAssert
 		isNotNull();
 		int actualField = actual.getC_TaxCategory_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have C_TaxCategory_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxCategory_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -103,8 +103,8 @@ public class C_ChargeAssert
 	{
 		isNotNull();
 		String actualField = actual.getDescription();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -174,8 +174,8 @@ public class C_ChargeAssert
 	{
 		isNotNull();
 		String actualField = actual.getName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

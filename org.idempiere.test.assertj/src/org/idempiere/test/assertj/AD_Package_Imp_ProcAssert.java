@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_AD_Package_Imp_Proc;
 
 /** Generated assertion class for AD_Package_Imp_Proc
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class AD_Package_Imp_ProcAssert
 	extends AbstractPOAssert<AD_Package_Imp_ProcAssert,X_AD_Package_Imp_Proc>
@@ -60,8 +60,8 @@ public class AD_Package_Imp_ProcAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_Package_Dir();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Package_Dir: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Dir: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -72,7 +72,7 @@ public class AD_Package_Imp_ProcAssert
 		isNotNull();
 		int actualField = actual.getAD_Package_Imp_Proc_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Package_Imp_Proc_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Imp_Proc_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -82,8 +82,8 @@ public class AD_Package_Imp_ProcAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_Package_Imp_Proc_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Package_Imp_Proc_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Imp_Proc_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -93,8 +93,8 @@ public class AD_Package_Imp_ProcAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_Package_Source();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Package_Source: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Source: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -104,8 +104,8 @@ public class AD_Package_Imp_ProcAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_Package_Source_Type();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Package_Source_Type: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Source_Type: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -123,8 +123,8 @@ public class AD_Package_Imp_ProcAssert
 	{
 		isNotNull();
 		String actualField = actual.getName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -134,8 +134,8 @@ public class AD_Package_Imp_ProcAssert
 	{
 		isNotNull();
 		String actualField = actual.getP_Msg();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have P_Msg: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have P_Msg: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

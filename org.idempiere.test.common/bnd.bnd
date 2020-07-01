@@ -5,12 +5,10 @@
 	${mockito},\
 	org.adempiere.base;version=latest,\
 	javax.annotation-api;version=latest,\
-	osgi.annotation;version='7.0.0'
-
-Bundle-Version: 1.0.0.${tstamp}
+	osgi.annotation;version=latest,\
+	org.osgi.test.common;version=latest
+	
 Import-Package: \
-	${idempiere.importpackage},\
-	org.assertj.core.error,\
-	!org.compiere.*,\
-	!org.adempiere.*,\
+	${compiere.importpackage},\
+	${adempiere.importpackage},\
 	*

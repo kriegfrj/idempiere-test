@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_AD_Workflow;
 
 /** Generated assertion class for AD_Workflow
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class AD_WorkflowAssert
 	extends AbstractPOAssert<AD_WorkflowAssert,X_AD_Workflow>
@@ -40,8 +40,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getAccessLevel();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AccessLevel: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AccessLevel: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -52,7 +52,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getAD_CtxHelp_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_CtxHelp_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_CtxHelp_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -63,7 +63,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getAD_Table_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -74,7 +74,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getAD_WF_Node_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_WF_Node_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_Node_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -85,7 +85,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getAD_WF_Responsible_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_WF_Responsible_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_Responsible_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -96,7 +96,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getAD_Workflow_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Workflow_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Workflow_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -106,8 +106,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_Workflow_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Workflow_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Workflow_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -118,7 +118,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getAD_WorkflowProcessor_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_WorkflowProcessor_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WorkflowProcessor_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -128,8 +128,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getAuthor();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Author: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Author: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -147,19 +147,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getDescription();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -169,8 +158,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getDocValueLogic();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have DocValueLogic: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocValueLogic: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -181,7 +170,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getDuration();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Duration: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Duration: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -191,8 +180,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getDurationUnit();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have DurationUnit: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DurationUnit: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -202,8 +191,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getEntityType();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -274,18 +263,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getLimit();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Limit: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowAssert hasMovingTime(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getMovingTime();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have MovingTime: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Limit: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -295,38 +273,19 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
 	}
-
-	public AD_WorkflowAssert hasOverlapUnits(Object expected)
-	{
-		isNotNull();
-		bdAssert("OverlapUnits", actual.getOverlapUnits(), expected);
-		return myself;
-	}
-
 
 	public AD_WorkflowAssert hasPriority(int expected)
 	{
 		isNotNull();
 		int actualField = actual.getPriority();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Priority: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowAssert hasProcessType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getProcessType();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have ProcessType: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Priority: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -336,61 +295,12 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getPublishStatus();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have PublishStatus: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PublishStatus: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
 	}
-
-	public AD_WorkflowAssert hasQtyBatchSize(Object expected)
-	{
-		isNotNull();
-		bdAssert("QtyBatchSize", actual.getQtyBatchSize(), expected);
-		return myself;
-	}
-
-
-	public AD_WorkflowAssert hasQueuingTime(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getQueuingTime();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have QueuingTime: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowAssert hasS_Resource_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_Resource_ID();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have S_Resource_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowAssert hasSetupTime(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSetupTime();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have SetupTime: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowAssert hasUnitsCycles(Object expected)
-	{
-		isNotNull();
-		bdAssert("UnitsCycles", actual.getUnitsCycles(), expected);
-		return myself;
-	}
-
 
 	public AD_WorkflowAssert hasValidFrom(Object expected)
 	{
@@ -412,8 +322,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getValue();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -424,7 +334,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getVersion();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Version: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Version: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -435,7 +345,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getWaitingTime();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have WaitingTime: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WaitingTime: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -445,8 +355,8 @@ public class AD_WorkflowAssert
 	{
 		isNotNull();
 		String actualField = actual.getWorkflowType();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have WorkflowType: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WorkflowType: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -457,18 +367,7 @@ public class AD_WorkflowAssert
 		isNotNull();
 		int actualField = actual.getWorkingTime();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have WorkingTime: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowAssert hasYield(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getYield();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Yield: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WorkingTime: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

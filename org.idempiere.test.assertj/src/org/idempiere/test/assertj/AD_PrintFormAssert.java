@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_AD_PrintForm;
 
 /** Generated assertion class for AD_PrintForm
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class AD_PrintFormAssert
 	extends AbstractPOAssert<AD_PrintFormAssert,X_AD_PrintForm>
@@ -41,7 +41,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getAD_PrintForm_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_PrintForm_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PrintForm_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -51,8 +51,8 @@ public class AD_PrintFormAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_PrintForm_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_PrintForm_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PrintForm_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -62,30 +62,8 @@ public class AD_PrintFormAssert
 	{
 		isNotNull();
 		String actualField = actual.getDescription();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintFormAssert hasDistrib_Order_MailText_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getDistrib_Order_MailText_ID();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Distrib_Order_MailText_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintFormAssert hasDistrib_Order_PrintFormat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getDistrib_Order_PrintFormat_ID();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Distrib_Order_PrintFormat_ID: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -96,7 +74,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getInvoice_MailText_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Invoice_MailText_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Invoice_MailText_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -107,29 +85,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getInvoice_PrintFormat_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Invoice_PrintFormat_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintFormAssert hasManuf_Order_MailText_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getManuf_Order_MailText_ID();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Manuf_Order_MailText_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintFormAssert hasManuf_Order_PrintFormat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getManuf_Order_PrintFormat_ID();
-		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Manuf_Order_PrintFormat_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Invoice_PrintFormat_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -139,8 +95,8 @@ public class AD_PrintFormAssert
 	{
 		isNotNull();
 		String actualField = actual.getName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -151,7 +107,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getOrder_MailText_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Order_MailText_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Order_MailText_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -162,7 +118,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getOrder_PrintFormat_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Order_PrintFormat_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Order_PrintFormat_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -173,7 +129,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getProject_MailText_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Project_MailText_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Project_MailText_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -184,7 +140,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getProject_PrintFormat_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Project_PrintFormat_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Project_PrintFormat_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -195,7 +151,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getRemittance_MailText_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Remittance_MailText_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Remittance_MailText_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -206,7 +162,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getRemittance_PrintFormat_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Remittance_PrintFormat_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Remittance_PrintFormat_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -217,7 +173,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getShipment_MailText_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Shipment_MailText_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Shipment_MailText_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -228,7 +184,7 @@ public class AD_PrintFormAssert
 		isNotNull();
 		int actualField = actual.getShipment_PrintFormat_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Shipment_PrintFormat_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Shipment_PrintFormat_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

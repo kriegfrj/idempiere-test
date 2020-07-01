@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_A_Asset_Transfer;
 
 /** Generated assertion class for A_Asset_Transfer
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class A_Asset_TransferAssert
 	extends AbstractPOAssert<A_Asset_TransferAssert,X_A_Asset_Transfer>
@@ -41,7 +41,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Accumdepreciation_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -52,7 +52,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Accumdepreciation_Acct_New();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_Acct_New: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_Acct_New: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -62,8 +62,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Accumdepreciation_Acct_Str();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_Acct_Str: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_Acct_Str: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -74,7 +74,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Accumdepreciation_New_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_New_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Accumdepreciation_New_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -93,7 +93,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -104,7 +104,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_Acct_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Acct_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Acct_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -115,7 +115,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_Acct_New();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Acct_New: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Acct_New: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -125,8 +125,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Asset_Acct_Str();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Acct_Str: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Acct_Str: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -137,7 +137,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -148,7 +148,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_New_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_New_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_New_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -159,7 +159,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Asset_Transfer_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Transfer_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Transfer_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -169,8 +169,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Asset_Transfer_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Asset_Transfer_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Transfer_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -180,8 +180,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_CapvsExp();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_CapvsExp: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_CapvsExp: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -192,7 +192,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Depreciation_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Depreciation_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -203,7 +203,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Depreciation_Acct_New();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Depreciation_Acct_New: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Acct_New: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -213,8 +213,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Depreciation_Acct_Str();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Depreciation_Acct_Str: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Acct_Str: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -225,7 +225,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Depreciation_New_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Depreciation_New_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_New_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -236,7 +236,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Loss();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -247,7 +247,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Loss_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -258,7 +258,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Loss_New();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_New: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_New: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -269,7 +269,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Loss_New_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_New_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_New_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -279,8 +279,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Disposal_Loss_Str();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_Str: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Loss_Str: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -291,7 +291,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Revenue();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -302,7 +302,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Revenue_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -313,7 +313,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Revenue_New();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_New: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_New: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -324,7 +324,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Disposal_Revenue_New_Acct();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_New_Acct: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_New_Acct: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -334,8 +334,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getA_Disposal_Revenue_Str();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_Str: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Disposal_Revenue_Str: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -346,7 +346,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Period_End();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Period_End: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Period_End: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -357,7 +357,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getA_Period_Start();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have A_Period_Start: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Period_Start: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -416,7 +416,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getC_AcctSchema_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -427,7 +427,7 @@ public class A_Asset_TransferAssert
 		isNotNull();
 		int actualField = actual.getC_Period_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have C_Period_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Period_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -453,8 +453,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getDocStatus();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have DocStatus: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocStatus: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -464,8 +464,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getDocumentNo();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -475,8 +475,8 @@ public class A_Asset_TransferAssert
 	{
 		isNotNull();
 		String actualField = actual.getPostingType();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have PostingType: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PostingType: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

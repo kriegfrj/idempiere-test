@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_AD_Tree;
 
 /** Generated assertion class for AD_Tree
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class AD_TreeAssert
 	extends AbstractPOAssert<AD_TreeAssert,X_AD_Tree>
@@ -41,7 +41,7 @@ public class AD_TreeAssert
 		isNotNull();
 		int actualField = actual.getAD_Table_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -52,7 +52,7 @@ public class AD_TreeAssert
 		isNotNull();
 		int actualField = actual.getAD_Tree_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Tree_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Tree_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -62,8 +62,8 @@ public class AD_TreeAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_Tree_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_Tree_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Tree_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -73,8 +73,8 @@ public class AD_TreeAssert
 	{
 		isNotNull();
 		String actualField = actual.getDescription();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -160,12 +160,43 @@ public class AD_TreeAssert
 		return myself;
 	}
 
+	public AD_TreeAssert isValueDisplayed()
+	{
+		isNotNull();
+		if (!actual.isValueDisplayed()) {
+			failWithMessage("\nExpecting PO:\n  <%s>\nto be ValueDisplayed\nbut it was not",
+				getPODescription());
+		}
+		return myself;
+	}
+
+	public AD_TreeAssert isNotValueDisplayed()
+	{
+		isNotNull();
+		if (actual.isValueDisplayed()) {
+			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ValueDisplayed\nbut it was",
+				getPODescription());
+		}
+		return myself;
+	}
+
 	public AD_TreeAssert hasName(String expected)
 	{
 		isNotNull();
 		String actualField = actual.getName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+				getPODescription(), expected, actualField);
+		}
+		return myself;
+	}
+
+	public AD_TreeAssert hasParent_Column_ID(int expected)
+	{
+		isNotNull();
+		int actualField = actual.getParent_Column_ID();
+		if (expected != actualField) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Parent_Column_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -175,8 +206,8 @@ public class AD_TreeAssert
 	{
 		isNotNull();
 		String actualField = actual.getTreeType();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have TreeType: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TreeType: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

@@ -13,29 +13,24 @@
  *****************************************************************************/
 package org.idempiere.test;
 
-import java.util.Map;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import org.compiere.Adempiere;
-import org.eclipse.equinox.app.IApplication;
-import org.eclipse.equinox.app.IApplicationContext;
 import org.idempiere.test.generator.AssertionsGeneratorDialog;
 import org.idempiere.test.generator.ModelAssertionGenerator;
+import org.osgi.service.component.annotations.Component;
 
-/**
- * @author hengsin
- * @author tbayen - command line start
- *
- */
-public class AssertionsGeneratorApplication implements IApplication {
+@Component(property = { "main.thread=true" })
+public class AssertionsGeneratorApplication implements Runnable {
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.equinox.app.IApplication#start(org.eclipse.equinox.app.IApplicationContext)
-	 */
 	@Override
-	public Object start(IApplicationContext context) throws Exception {
-		Map<?, ?> args = context.getArguments();
-		// IDEMPIERE-1686 - GenerateModel does not take commandline arguments
-		String commandlineArgs[] = (String[]) args.get("application.args");
+	public void run() {
+		System.err.println("run was called: ");
+		String commandlineArgs[] = (String[]) new String[] {};
 		if (commandlineArgs.length == 4) {
 			Adempiere.startup(false);
 			String folder = commandlineArgs[0];
@@ -51,20 +46,19 @@ public class AssertionsGeneratorApplication implements IApplication {
 			// is still filling out the information.
 			Thread startupThread = new Thread(() -> Adempiere.startup(false));
 			startupThread.start();
+			try {
 			AssertionsGeneratorDialog dialog = new AssertionsGeneratorDialog(startupThread);
 			dialog.setModal(true);
 			dialog.pack();
 			dialog.setLocationRelativeTo(null);
 			dialog.setVisible(true);
+			} catch (Exception e) {
+				StringWriter w = new StringWriter();
+				PrintWriter pw = new PrintWriter(w);
+				e.printStackTrace(pw);
+				JOptionPane.showMessageDialog(new JFrame(), "Error trying to open assertions generator dialog: \n" + w.toString()
+				, "Error", JOptionPane.ERROR_MESSAGE);
+			}
 		}
-		return IApplication.EXIT_OK;
 	}
-
-	/* (non-Javadoc)
-	 * @see org.eclipse.equinox.app.IApplication#stop()
-	 */
-	@Override
-	public void stop() {
-	}
-
 }

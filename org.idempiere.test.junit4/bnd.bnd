@@ -4,8 +4,7 @@
 	${junit},\
 	${mockito},\
 	org.adempiere.base;version=latest,\
-	org.idempiere.test.common;version='1.0.0',\
-	osgi.annotation;version='7.0.0'
+	org.idempiere.test.common;version=snapshot,\
+	osgi.annotation;version=latest
 
-Bundle-Version: 1.0.0.${tstamp}
 Import-Package: *

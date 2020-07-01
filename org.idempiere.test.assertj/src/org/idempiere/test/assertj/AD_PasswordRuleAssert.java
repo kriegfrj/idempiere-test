@@ -17,13 +17,13 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
+import java.util.Objects;
 import javax.annotation.Generated;
-import org.assertj.core.util.Objects;
 import org.compiere.model.X_AD_PasswordRule;
 
 /** Generated assertion class for AD_PasswordRule
- *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @author idempiere-test (generated) 
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class AD_PasswordRuleAssert
 	extends AbstractPOAssert<AD_PasswordRuleAssert,X_AD_PasswordRule>
@@ -41,7 +41,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getAD_PasswordRule_ID();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_PasswordRule_ID: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PasswordRule_ID: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -51,8 +51,8 @@ public class AD_PasswordRuleAssert
 	{
 		isNotNull();
 		String actualField = actual.getAD_PasswordRule_UU();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AD_PasswordRule_UU: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PasswordRule_UU: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -63,7 +63,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getAlphabeticalCharacter();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AlphabeticalCharacter: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AlphabeticalCharacter: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -74,7 +74,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getAlphabeticalSequence();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have AlphabeticalSequence: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AlphabeticalSequence: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -85,7 +85,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getDays_Reuse_Password();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Days_Reuse_Password: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Days_Reuse_Password: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -96,7 +96,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getDigitCharacter();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have DigitCharacter: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DigitCharacter: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -187,7 +187,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getLowercaseCharacter();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have LowercaseCharacter: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LowercaseCharacter: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -198,7 +198,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getMaxLength();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have MaxLength: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MaxLength: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -209,7 +209,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getMinLength();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have MinLength: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MinLength: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -219,8 +219,8 @@ public class AD_PasswordRuleAssert
 	{
 		isNotNull();
 		String actualField = actual.getName();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -231,7 +231,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getNonAlphaNumericCharacter();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have NonAlphaNumericCharacter: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have NonAlphaNumericCharacter: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -242,7 +242,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getNumericalSequence();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have NumericalSequence: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have NumericalSequence: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -252,8 +252,8 @@ public class AD_PasswordRuleAssert
 	{
 		isNotNull();
 		String actualField = actual.getPathDictionary();
-		if (!Objects.areEqual(expected, actualField)) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have PathDictionary: <%s>\nbut it was: <%s>",
+		if (!Objects.equals(expected, actualField)) {
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PathDictionary: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -264,7 +264,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getQWERTYSequence();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have QWERTYSequence: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have QWERTYSequence: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -275,7 +275,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getRepeatCharacterRegex();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have RepeatCharacterRegex: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RepeatCharacterRegex: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;
@@ -286,7 +286,7 @@ public class AD_PasswordRuleAssert
 		isNotNull();
 		int actualField = actual.getUppercaseCharacter();
 		if (expected != actualField) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to have UppercaseCharacter: <%s>\nbut it was: <%s>",
+			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have UppercaseCharacter: <%s>\nbut it was: <%s>",
 				getPODescription(), expected, actualField);
 		}
 		return myself;

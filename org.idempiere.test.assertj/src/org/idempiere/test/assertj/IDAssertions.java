@@ -18,17 +18,17 @@
 package org.idempiere.test.assertj;
 
 import javax.annotation.Generated;
-
-import org.compiere.impexp.BankStatementMatchInfo;
 import org.compiere.model.*;
 import org.compiere.process.ProcessInfoLog;
+import org.compiere.impexp.BankStatementMatchInfo;
 
 /** Generated assertions entry point
  *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
 public class IDAssertions {
-	protected IDAssertions() {}
+	private IDAssertions() {}
+
 
 	public static A_AssetAssert assertThat(X_A_Asset a) {
 		return new A_AssetAssert(a);
@@ -1580,6 +1580,10 @@ public class IDAssertions {
 
 	public static C_RemunerationAssert assertThat(X_C_Remuneration a) {
 		return new C_RemunerationAssert(a);
+	}
+
+	public static C_RevenueRecog_ServiceAssert assertThat(X_C_RevenueRecog_Service a) {
+		return new C_RevenueRecog_ServiceAssert(a);
 	}
 
 	public static C_RevenueRecognitionAssert assertThat(X_C_RevenueRecognition a) {

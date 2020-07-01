@@ -20,10 +20,13 @@ import java.awt.Insets;
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
@@ -31,6 +34,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import org.compiere.Adempiere;
+import org.compiere.model.MEntityType;
 
 /**
  *
@@ -52,10 +56,11 @@ public class AssertionsGeneratorDialog extends JDialog implements ActionListener
 	private JTextField fTableName;
 	private JCheckBox fGenerateEntry;
 	private JCheckBox fGenerateSoftEntry;
-	private JTextField fEntityType;
+	private JComboBox<MEntityType> fEntityType;
 	private Thread mStartupThread;
+	private EntityTypeModel mEntityType;
 	
-	public AssertionsGeneratorDialog(Thread startupThread) {
+	public AssertionsGeneratorDialog(Thread startupThread) throws IOException {
 		super();
 		mStartupThread = startupThread;
 		setTitle("Assertions Class Generator");
@@ -69,8 +74,9 @@ public class AssertionsGeneratorDialog extends JDialog implements ActionListener
 
 		Panel filePanel = new Panel();
 		filePanel.setLayout(new BorderLayout());
-		String defaultPath = Adempiere.getAdempiereHome() + File.separator + "org.idempiere.test" + File.separator + "src";
-		fFolderName = new JTextField(defaultPath);
+		Path defaultPath = Paths.get(Adempiere.getAdempiereHome(), "../org.idempiere.test.assertj/src");
+		String defaultPathString = defaultPath.toRealPath().toString();
+		fFolderName = new JTextField(defaultPathString);
 		filePanel.add(fFolderName, BorderLayout.CENTER);
 		bFolder = new JButton("...");
 		bFolder.setMargin(new Insets(0, 0, 0, 0));
@@ -92,7 +98,11 @@ public class AssertionsGeneratorDialog extends JDialog implements ActionListener
 		mainPanel.add(fTableName);
 
 		mainPanel.add(new JLabel("Entity Type"));
-		fEntityType = new JTextField("D");
+		fEntityType = new JComboBox<>();
+		mEntityType = new EntityTypeModel(mStartupThread);
+		fEntityType.setModel(mEntityType);
+		fEntityType.setRenderer(new EntityTypeRenderer());
+//		fEntityType = new JTextField("D");
 		mainPanel.add(fEntityType);
 
 		fGenerateEntry = new JCheckBox("Generate Entry Point");
@@ -133,9 +143,9 @@ public class AssertionsGeneratorDialog extends JDialog implements ActionListener
 				JOptionPane.showMessageDialog(this, "Please enter table name filter", "Error", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
-			String entityType = fEntityType.getText();
-			if (entityType == null || entityType.trim().length() == 0) {
-				JOptionPane.showMessageDialog(this, "Please enter entity type", "Error", JOptionPane.ERROR_MESSAGE);
+			MEntityType entityType = mEntityType.getSelectedItem();
+			if (entityType == null) {
+				JOptionPane.showMessageDialog(this, "Please select entity type", "Error", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
@@ -144,7 +154,7 @@ public class AssertionsGeneratorDialog extends JDialog implements ActionListener
 			}
 			try {
 				mStartupThread.join();
-				ModelAssertionGenerator.generateSource(folder, modelPackageName, assertionsPackageName, entityType, tableName);
+				ModelAssertionGenerator.generateSource(folder, modelPackageName, assertionsPackageName, entityType.getEntityType(), tableName);
 			} catch (InterruptedException ex) {
 				JOptionPane.showMessageDialog(this, "Interrupted while waiting for iDempiere to start", "Error", JOptionPane.ERROR_MESSAGE);
 			}

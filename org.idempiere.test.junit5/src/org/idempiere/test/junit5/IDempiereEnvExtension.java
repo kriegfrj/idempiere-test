@@ -6,7 +6,6 @@ import static org.junit.platform.commons.util.ReflectionUtils.isPrivate;
 import static org.junit.platform.commons.util.ReflectionUtils.makeAccessible;
 
 import java.lang.reflect.Field;
-import java.util.function.Predicate;
 
 import org.idempiere.test.common.env.IDempiereEnv;
 import org.junit.jupiter.api.extension.AfterEachCallback;

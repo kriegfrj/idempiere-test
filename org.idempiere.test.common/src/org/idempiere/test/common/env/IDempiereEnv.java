@@ -2,7 +2,6 @@ package org.idempiere.test.common.env;
 
 import static org.idempiere.test.common.utils.Utils.BD_ONE;
 import static org.idempiere.test.common.utils.Utils.BD_ZERO;
-import static org.idempiere.test.common.utils.Utils.duck;
 import static org.idempiere.test.common.utils.Utils.injectMockLog;
 
 import java.lang.ref.WeakReference;
@@ -106,7 +105,7 @@ import org.compiere.util.Msg;
 import org.compiere.util.TimeUtil;
 import org.compiere.util.Trx;
 import org.idempiere.test.common.utils.ProcessController;
-import org.idempiere.test.common.env.IDempiereEnv.Builder;
+import org.osgi.test.common.exceptions.Exceptions;
 
 public class IDempiereEnv implements AutoCloseable {
 
@@ -1042,7 +1041,7 @@ public class IDempiereEnv implements AutoCloseable {
 		try {
 			return new ProcessController<>(processType, this);
 		} catch (Exception e) {
-			throw duck(e);
+			throw Exceptions.duck(e);
 		}
 	}
 	

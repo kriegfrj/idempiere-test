@@ -8,8 +8,7 @@
 	osgi.annotation;version=latest,\
 	org.idempiere.test.common;version=snapshot
 
-Bundle-Version: 1.0.0.${tstamp}
 Import-Package: \
-	${idempiere.importpackage},\
+	${compiere.importpackage},\
 	org.assertj.core.error,\
 	*

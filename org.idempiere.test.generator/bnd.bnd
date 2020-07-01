@@ -6,9 +6,10 @@
 	org.adempiere.base;version=latest,\
 	org.eclipse.equinox.app;version=latest,\
 	org.eclipse.osgi;version=latest,\
-	javax.annotation-api;version=latest
+	javax.annotation-api;version=latest,\
+	org.osgi.service.component.annotations;version='1.3.0',\
+	org.idempiere.test.assertj;version='1.0.0'
 
 Bundle-Version: 1.0.0.${tstamp}
 Import-Package: \
-	${idempiere.importpackage},\
 	*

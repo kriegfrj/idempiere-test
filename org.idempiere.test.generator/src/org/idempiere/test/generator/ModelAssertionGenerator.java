@@ -31,6 +31,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 import java.util.logging.Level;
@@ -41,6 +42,8 @@ import org.compiere.Adempiere;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.DisplayType;
+
+import org.idempiere.test.assertj.AbstractPOAssert;
 
 /**
  *  Generate Assertions Classes for auto-generated models.
@@ -55,16 +58,19 @@ public class ModelAssertionGenerator
 	private String className;
 	private String tableName;
 	private String assertionClassName;
+	private String entityTypeFilter;
 	
 	/**
 	 * 	Generate PO Class
 	 * 	@param AD_Table_ID table id
 	 * 	@param directory directory
 	 * 	@param assertionPackage package name
+	 * @param entityTypeFilter 
 	 */
-	public ModelAssertionGenerator (int AD_Table_ID, String directory, String modelPackage, String assertionPackage)
+	public ModelAssertionGenerator (int AD_Table_ID, String directory, String modelPackage, String assertionPackage, String entityTypeFilter)
 	{
 		this.packageName = assertionPackage;
+		this.entityTypeFilter = entityTypeFilter;
 
 		String sql = "SELECT TableName FROM AD_Table WHERE AD_Table_ID=?";
 		PreparedStatement pstmt = null;
@@ -93,8 +99,8 @@ public class ModelAssertionGenerator
 		//
 		className = "X_" + tableName;
 		addImportClass(modelPackage + "." + className);
-		if (!assertionPackage.equals("org.idempiere.test.assertions")) {
-			addImportClass("org.idempiere.test.assertions.*");
+		if (!assertionPackage.equals("org.idempiere.test.assertj")) {
+			addImportClass("org.idempiere.test.assertj.*");
 		}
 		assertionClassName = tableName + "Assert";
 
@@ -140,14 +146,15 @@ public class ModelAssertionGenerator
 		;
 
 		addImportClass(javax.annotation.Generated.class);
+		addImportClass(AbstractPOAssert.class);
 		createImports(start);
 		//	Class
 		start.append("/** Generated assertion class for ").append(tableName).append(NL)
-			 .append(" *  @author iDempiere (generated) ").append(NL)
+			 .append(" *  @author idempiere-test (generated) ").append(NL)
 			 .append(" *  @version ").append(Adempiere.MAIN_VERSION).append(" - $Id$ */").append(NL)
 			 .append("@Generated(\"").append(ModelAssertionGenerator.class).append("\")").append(NL)
 			 .append("public class ").append(assertionClassName).append(NL)
-			 .append("\textends AbstractPOAssert<").append(assertionClassName).append(",").append(className).append(">").append(NL)
+			 .append("\textends ").append(AbstractPOAssert.class.getSimpleName()).append('<').append(assertionClassName).append(",").append(className).append(">").append(NL)
 			 .append("{").append(NL)
 
 			//	Standard Constructor
@@ -189,6 +196,7 @@ public class ModelAssertionGenerator
 			+ " AND c.ColumnName NOT IN ('AD_Client_ID', 'AD_Org_ID', 'IsActive', 'Created', 'CreatedBy', 'Updated', 'UpdatedBy')"
 			+ " AND c.AD_Reference_ID<>" + buttonReferenceId
 			+ " AND c.IsActive='Y'"
+			+ " AND " + entityTypeFilter
 			+ " ORDER BY c.ColumnName";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -298,7 +306,7 @@ public class ModelAssertionGenerator
 			.append("\t\tisNotNull();").append(NL)
 			.append("\t\tint actualField = actual.get").append(columnName).append("();").append(NL)
 			.append("\t\tif (expected != actualField) {").append(NL)
-			.append("\t\t\tfailWithMessage(\"\\nExpecting PO: \\n  <%s>\\n to have ").append(columnName)
+			.append("\t\t\tfailWithActualExpectedAndMessage(actualField, expected, \"\\nExpecting PO: \\n  <%s>\\n to have ").append(columnName)
 			.append(": <%s>\\nbut it was: <%s>\",").append(NL)
 			.append("\t\t\t\tgetPODescription(), expected, actualField);").append(NL)
 			.append("\t\t}").append(NL)
@@ -361,14 +369,14 @@ public class ModelAssertionGenerator
 				;
 			} else {
 				addImportClass(clazz);
-				addImportClass("org.assertj.core.util.Objects");
+				addImportClass(Objects.class);
 				sb
 				.append("\tpublic ").append(assertionClassName).append(" has").append(columnName).append("(").append(clazz.getSimpleName()).append(" expected)").append(NL)
 				.append("\t{").append(NL)
 				.append("\t\tisNotNull();").append(NL)
 				.append("\t\t").append(clazz.getSimpleName()).append(" actualField = actual.get").append(columnName).append("();").append(NL)
-				.append("\t\tif (!Objects.areEqual(expected, actualField)) {").append(NL)
-				.append("\t\t\tfailWithMessage(\"\\nExpecting PO: \\n  <%s>\\n to have ").append(columnName)
+				.append("\t\tif (!Objects.equals(expected, actualField)) {").append(NL)
+				.append("\t\t\tfailWithActualExpectedAndMessage(actualField, expected, \"\\nExpecting PO: \\n  <%s>\\n to have ").append(columnName)
 				.append(": <%s>\\nbut it was: <%s>\",").append(NL)
 				.append("\t\t\t\tgetPODescription(), expected, actualField);").append(NL)
 				.append("\t\t}").append(NL)
@@ -507,10 +515,10 @@ public class ModelAssertionGenerator
 		if (!tableLike.toString().startsWith("'") || !tableLike.toString().endsWith("'"))
 			tableLike = new StringBuilder("'").append(tableLike).append("'");
 
-		StringBuilder entityTypeFilter = new StringBuilder();
+		StringBuilder entityTypeFilterBuilder = new StringBuilder();
 		if (entityType != null && entityType.trim().length() > 0)
 		{
-			entityTypeFilter.append("EntityType IN (");
+			entityTypeFilterBuilder.append("EntityType IN (");
 			StringTokenizer tokenizer = new StringTokenizer(entityType, ",");
 			int i = 0;
 			while(tokenizer.hasMoreTokens()) {
@@ -518,17 +526,19 @@ public class ModelAssertionGenerator
 				if (!token.toString().startsWith("'") || !token.toString().endsWith("'"))
 					token = new StringBuilder("'").append(token).append("'");
 				if (i > 0)
-					entityTypeFilter.append(",");
-				entityTypeFilter.append(token);
+					entityTypeFilterBuilder.append(",");
+				entityTypeFilterBuilder.append(token);
 				i++;
 			}
-			entityTypeFilter.append(")");
+			entityTypeFilterBuilder.append(")");
 		}
 		else
 		{
-			entityTypeFilter.append("EntityType IN ('U','A')");
+			entityTypeFilterBuilder.append("EntityType IN ('U','A')");
 		}
-
+		
+		String entityTypeFilter = entityTypeFilterBuilder.toString();
+		
 		StringBuilder directory = new StringBuilder().append(sourceFolder.trim());
 		String packagePath = assertionsPackageName.replace(".", File.separator);
 		if (!(directory.toString().endsWith("/") || directory.toString().endsWith("\\")))
@@ -556,7 +566,7 @@ public class ModelAssertionGenerator
 			sql.append(" AND TableName LIKE ").append(tableLike);
 		else
 			sql.append(" AND TableName IN (").append(tableLike).append(")"); // only specific tables
-		sql.append(" AND ").append(entityTypeFilter.toString());
+		sql.append(" AND ").append(entityTypeFilter);
 		sql.append(" ORDER BY TableName");
 
 		//
@@ -568,7 +578,7 @@ public class ModelAssertionGenerator
 			rs = pstmt.executeQuery();
 			while (rs.next())
 			{
-				new ModelAssertionGenerator(rs.getInt(1), directory.toString(), modelPackageName, assertionsPackageName);
+				new ModelAssertionGenerator(rs.getInt(1), directory.toString(), modelPackageName, assertionsPackageName, entityTypeFilter);
 			}
 			
 			writeAssertionsEntryPoint(directory.toString(), modelPackageName, assertionsPackageName);
@@ -607,7 +617,7 @@ public class ModelAssertionGenerator
 				.append(NL)
 				.append("import javax.annotation.Generated;").append(NL)
 				.append("import ").append(modelPackageName).append(".*;").append(NL)
-				.append("import org.assertj.core.api.SoftAssertions;").append(NL)
+				.append("import org.assertj.core.api.SoftAssertionsProvider;").append(NL)
 				.append("import org.compiere.process.ProcessInfoLog;").append(NL)
 				.append("import org.compiere.impexp.BankStatementMatchInfo;").append(NL)
 				.append(NL)
@@ -630,7 +640,7 @@ public class ModelAssertionGenerator
 			.append(" *  @author iDempiere (generated) ").append(NL)
 			.append(" *  @version ").append(Adempiere.MAIN_VERSION).append(" - $Id$ */").append(NL)
 			.append("@Generated(\"").append(ModelAssertionGenerator.class).append("\")").append(NL)
-			.append("public class IDSoftAssertions extends SoftAssertions {").append(NL)
+			.append("public interface IDSoftAssertionsProvider extends SoftAssertionsProvider {").append(NL)
 			;
 		
 			processedAssertions.add("POAssert");
@@ -653,13 +663,13 @@ public class ModelAssertionGenerator
 
 				softSB
 				.append(NL)
-				.append("\tpublic ").append(assertion).append(" assertThat(").append(model).append(" a) {").append(NL)
+				.append("\tdefault ").append(assertion).append(" assertThat(").append(model).append(" a) {").append(NL)
 				.append("\t\treturn proxy(").append(assertion).append(".class, ").append(model).append(".class, a);").append(NL)
 				.append("\t}").append(NL);
 			}
 			sb.append('}');
 			softSB.append('}');
 			writeToFile(sb, directory + "IDAssertions.java");
-			writeToFile(softSB, directory + "IDSoftAssertions.java");
+			writeToFile(softSB, directory + "IDSoftAssertionsProvider.java");
 	}
 }

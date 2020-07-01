@@ -5,6 +5,8 @@ import static org.idempiere.test.common.utils.Utils.injectMockLog;
 import static org.idempiere.test.common.utils.Utils.invoke;
 import static org.idempiere.test.common.utils.Utils.setField;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -20,6 +22,7 @@ import org.compiere.process.SvrProcess;
 import org.compiere.util.CLogger;
 import org.compiere.util.Trx;
 import org.idempiere.test.common.env.IDempiereEnv;
+import org.osgi.test.common.exceptions.Exceptions;
 
 public class ProcessController<P extends SvrProcess> {
 
@@ -35,8 +38,19 @@ public class ProcessController<P extends SvrProcess> {
 	private CLogger mLog;
 	private ProcessInfo mProcessInfo;
 	
-	public ProcessController(Class<P> processType, IDempiereEnv env) throws InstantiationException, IllegalAccessException {
-		this(processType.newInstance(), env);
+	private static <X> X instantiate(Class<X> type)  {
+		try {
+			Constructor<X> c = type.getConstructor();
+			return c.newInstance();
+		} catch (InvocationTargetException e) {
+			throw Exceptions.duck(e.getCause());
+		} catch (Exception e) {
+			throw Exceptions.duck(e);
+		}
+	}
+	
+	public ProcessController(Class<P> processType, IDempiereEnv env) {
+		this(instantiate(processType), env);
 	}
 	
 	public ProcessController(P process, IDempiereEnv env) {

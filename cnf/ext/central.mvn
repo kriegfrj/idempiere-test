@@ -1,5 +1,9 @@
 org.osgi:osgi.annotation:7.0.0
 org.osgi:osgi.core:7.0.0
+org.osgi:org.osgi.service.component.annotations:1.3.0
+
+org.osgi:org.osgi.test.common:${osgi-test.version}
+org.osgi:org.osgi.test.junit5:${osgi-test.version}
 
 # List repository contents using GAV coordinates
 org.assertj:assertj-core:3.16.1

@@ -3,8 +3,8 @@ package org.idempiere.test.assertj;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.Date;
+import java.util.Objects;
 
-import org.assertj.core.util.Objects;
 import org.compiere.model.PO;
 
 public abstract class AbstractPOAssert<SELF extends AbstractPOAssert<SELF, ACTUAL>, ACTUAL extends PO>
@@ -36,7 +36,7 @@ public abstract class AbstractPOAssert<SELF extends AbstractPOAssert<SELF, ACTUA
 		
 		Object actualColumn = actual.get_Value(columnName);
 		System.err.println("actual: " + actual + ", actualColumn: " + actualColumn + ", expected: " + expected);
-		if (!Objects.areEqual(expected, actualColumn)) {
+		if (!Objects.equals(expected, actualColumn)) {
 			failWithMessage("\nExpecting PO:\n  <%s>\ncolumn <%s>\nto have value <%s>\nbut it was <%s>", getPODescription(), columnName, expected, actualColumn);
 		}
 		return myself;
@@ -150,7 +150,7 @@ public abstract class AbstractPOAssert<SELF extends AbstractPOAssert<SELF, ACTUA
 	public SELF wasUpdatedAt(Date expected) {
 		isNotNull();
 		Timestamp a = actual.getUpdated();
-		if (!Objects.areEqual(expected, a)) {
+		if (!Objects.equals(expected, a)) {
 			failWithMessage("\nExpecting PO:\n  <%s>\nto have been updated at: <%s>\nbut it was updated at: <%s>",
 					getPODescription(), expected == null ? null : new Timestamp(expected.getTime()), a);
 		}
@@ -224,7 +224,7 @@ public abstract class AbstractPOAssert<SELF extends AbstractPOAssert<SELF, ACTUA
 	public SELF wasCreatedAt(Date expected) {
 		isNotNull();
 		Timestamp a = actual.getCreated();
-		if (!Objects.areEqual(expected, a)) {
+		if (!Objects.equals(expected, a)) {
 			failWithMessage("\nExpecting PO:\n  <%s>\nto have been updated at: <%s>\nbut it was updated at: <%s>",
 					getPODescription(), expected == null ? null : new Timestamp(expected.getTime()), a);
 		}

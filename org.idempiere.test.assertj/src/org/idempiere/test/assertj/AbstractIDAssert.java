@@ -6,9 +6,9 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.Date;
+import java.util.Objects;
 
 import org.assertj.core.api.AbstractAssert;
-import org.assertj.core.util.Objects;
 
 public abstract class AbstractIDAssert<SELF extends AbstractIDAssert<SELF, ACTUAL>, ACTUAL>
 		extends AbstractAssert<SELF, ACTUAL> {
@@ -46,7 +46,7 @@ public abstract class AbstractIDAssert<SELF extends AbstractIDAssert<SELF, ACTUA
 			}
 			expectedField = new Timestamp(millis);
 		}
-		if (!Objects.areEqual(actualField, expectedField)) {
+		if (!Objects.equals(actualField, expectedField)) {
 			failWithMessage("\nExpecting %s\n to have %s: <%s>\nbut it was: <%s>",
 				getDescription(), fieldName, expectedField, actualField);
 		}
@@ -79,7 +79,7 @@ public abstract class AbstractIDAssert<SELF extends AbstractIDAssert<SELF, ACTUA
 			failWithMessage("\nExpecting %s\n to have %s: <%s>\nbut it was: <%s>",
 					getDescription(), fieldName, expected, actualField);
 		}
-		if (!Objects.areEqual(actualField, expectedField)) {
+		if (!Objects.equals(actualField, expectedField)) {
 			failWithMessage("\nExpecting %s\n to have %s: <%s>\nbut it was: <%s>",
 				getDescription(), fieldName, expectedField, actualField);
 		}
