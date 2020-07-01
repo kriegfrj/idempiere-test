@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ShipperPickupTypesCfg;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ShipperPickupTypesCfg;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ShipperPickupTypesCfgAssert
-	extends AbstractPOAssert<M_ShipperPickupTypesCfgAssert,X_M_ShipperPickupTypesCfg>
+public class M_ShipperPickupTypesCfgAssert extends AbstractM_ShipperPickupTypesCfgAssert<M_ShipperPickupTypesCfgAssert, X_M_ShipperPickupTypesCfg>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class M_ShipperPickupTypesCfgAssert
       super (actual, M_ShipperPickupTypesCfgAssert.class);
     }
 
-
-	public M_ShipperPickupTypesCfgAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPickupTypesCfgAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperPickupTypesCfgAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperPickupTypesCfgAssert hasM_ShipperCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShipperCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPickupTypesCfgAssert hasM_ShipperPickupTypesCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShipperPickupTypesCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperPickupTypesCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPickupTypesCfgAssert hasM_ShipperPickupTypesCfg_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ShipperPickupTypesCfg_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperPickupTypesCfg_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPickupTypesCfgAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPickupTypesCfgAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

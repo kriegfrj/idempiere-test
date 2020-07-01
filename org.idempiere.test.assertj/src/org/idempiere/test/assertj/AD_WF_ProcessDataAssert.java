@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_WF_ProcessData;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_WF_ProcessData;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_WF_ProcessDataAssert
-	extends AbstractPOAssert<AD_WF_ProcessDataAssert,X_AD_WF_ProcessData>
+public class AD_WF_ProcessDataAssert extends AbstractAD_WF_ProcessDataAssert<AD_WF_ProcessDataAssert, X_AD_WF_ProcessData>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_WF_ProcessDataAssert
       super (actual, AD_WF_ProcessDataAssert.class);
     }
 
-
-	public AD_WF_ProcessDataAssert hasAD_WF_Process_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_Process_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_Process_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ProcessDataAssert hasAD_WF_ProcessData_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_ProcessData_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_ProcessData_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ProcessDataAssert hasAD_WF_ProcessData_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_WF_ProcessData_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_ProcessData_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ProcessDataAssert hasAttributeName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAttributeName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AttributeName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ProcessDataAssert hasAttributeValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAttributeValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AttributeValue: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

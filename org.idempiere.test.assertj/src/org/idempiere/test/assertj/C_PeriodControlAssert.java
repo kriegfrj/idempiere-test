@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_PeriodControl;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_PeriodControl;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_PeriodControlAssert
-	extends AbstractPOAssert<C_PeriodControlAssert,X_C_PeriodControl>
+public class C_PeriodControlAssert extends AbstractC_PeriodControlAssert<C_PeriodControlAssert, X_C_PeriodControl>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class C_PeriodControlAssert
       super (actual, C_PeriodControlAssert.class);
     }
 
-
-	public C_PeriodControlAssert hasC_Period_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Period_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Period_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodControlAssert hasC_PeriodControl_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_PeriodControl_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PeriodControl_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodControlAssert hasC_PeriodControl_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_PeriodControl_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PeriodControl_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodControlAssert hasDocBaseType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocBaseType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocBaseType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodControlAssert hasPeriodAction(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPeriodAction();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PeriodAction: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodControlAssert hasPeriodStatus(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPeriodStatus();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PeriodStatus: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

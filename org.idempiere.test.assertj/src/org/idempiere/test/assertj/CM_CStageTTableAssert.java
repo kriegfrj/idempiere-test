@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_CStageTTable;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_CStageTTable;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_CStageTTableAssert
-	extends AbstractPOAssert<CM_CStageTTableAssert,X_CM_CStageTTable>
+public class CM_CStageTTableAssert extends AbstractCM_CStageTTableAssert<CM_CStageTTableAssert, X_CM_CStageTTable>
 {
 
     /** Standard Constructor */
@@ -35,92 +33,4 @@ public class CM_CStageTTableAssert
       super (actual, CM_CStageTTableAssert.class);
     }
 
-
-	public CM_CStageTTableAssert hasCM_CStage_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_CStage_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_CStage_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_CStageTTableAssert hasCM_CStageTTable_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_CStageTTable_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_CStageTTable_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_CStageTTableAssert hasCM_CStageTTable_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_CStageTTable_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_CStageTTable_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_CStageTTableAssert hasCM_TemplateTable_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_TemplateTable_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_TemplateTable_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_CStageTTableAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_CStageTTableAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_CStageTTableAssert hasOtherClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getOtherClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have OtherClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_CStageTTableAssert hasWhereClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getWhereClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WhereClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

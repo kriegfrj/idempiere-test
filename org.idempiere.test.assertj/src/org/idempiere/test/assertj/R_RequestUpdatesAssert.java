@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_RequestUpdates;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_RequestUpdates;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_RequestUpdatesAssert
-	extends AbstractPOAssert<R_RequestUpdatesAssert,X_R_RequestUpdates>
+public class R_RequestUpdatesAssert extends AbstractR_RequestUpdatesAssert<R_RequestUpdatesAssert, X_R_RequestUpdates>
 {
 
     /** Standard Constructor */
@@ -35,57 +33,4 @@ public class R_RequestUpdatesAssert
       super (actual, R_RequestUpdatesAssert.class);
     }
 
-
-	public R_RequestUpdatesAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdatesAssert isSelfService()
-	{
-		isNotNull();
-		if (!actual.isSelfService()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SelfService\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_RequestUpdatesAssert isNotSelfService()
-	{
-		isNotNull();
-		if (actual.isSelfService()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SelfService\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_RequestUpdatesAssert hasR_Request_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_Request_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_Request_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdatesAssert hasR_RequestUpdates_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_RequestUpdates_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_RequestUpdates_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

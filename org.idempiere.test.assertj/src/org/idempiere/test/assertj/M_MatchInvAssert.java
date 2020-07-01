@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_MatchInv;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_MatchInv;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_MatchInvAssert
-	extends AbstractPOAssert<M_MatchInvAssert,X_M_MatchInv>
+public class M_MatchInvAssert extends AbstractM_MatchInvAssert<M_MatchInvAssert, X_M_MatchInv>
 {
 
     /** Standard Constructor */
@@ -35,155 +33,4 @@ public class M_MatchInvAssert
       super (actual, M_MatchInvAssert.class);
     }
 
-
-	public M_MatchInvAssert hasC_InvoiceLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasDateAcct(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateAcct", actual.getDateAcct(), expected);
-		return myself;
-	}
-
-
-	public M_MatchInvAssert hasDateTrx(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateTrx", actual.getDateTrx(), expected);
-		return myself;
-	}
-
-
-	public M_MatchInvAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasM_InOutLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasM_MatchInv_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_MatchInv_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MatchInv_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasM_MatchInv_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_MatchInv_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MatchInv_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MatchInvAssert hasProcessedOn(Object expected)
-	{
-		isNotNull();
-		bdAssert("ProcessedOn", actual.getProcessedOn(), expected);
-		return myself;
-	}
-
-
-	public M_MatchInvAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
-
-
-	public M_MatchInvAssert hasReversal_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getReversal_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Reversal_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

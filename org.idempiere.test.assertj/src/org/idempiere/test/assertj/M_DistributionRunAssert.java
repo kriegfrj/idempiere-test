@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_DistributionRun;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_DistributionRun;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_DistributionRunAssert
-	extends AbstractPOAssert<M_DistributionRunAssert,X_M_DistributionRun>
+public class M_DistributionRunAssert extends AbstractM_DistributionRunAssert<M_DistributionRunAssert, X_M_DistributionRun>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class M_DistributionRunAssert
       super (actual, M_DistributionRunAssert.class);
     }
 
-
-	public M_DistributionRunAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunAssert hasC_BPartner_Location_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_Location_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_Location_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunAssert isCreateSingleOrder()
-	{
-		isNotNull();
-		if (!actual.isCreateSingleOrder()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be CreateSingleOrder\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_DistributionRunAssert isNotCreateSingleOrder()
-	{
-		isNotNull();
-		if (actual.isCreateSingleOrder()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be CreateSingleOrder\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_DistributionRunAssert hasM_DistributionRun_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionRun_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionRun_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunAssert hasM_DistributionRun_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_DistributionRun_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionRun_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_GL_Fund;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_GL_Fund;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class GL_FundAssert
-	extends AbstractPOAssert<GL_FundAssert,X_GL_Fund>
+public class GL_FundAssert extends AbstractGL_FundAssert<GL_FundAssert, X_GL_Fund>
 {
 
     /** Standard Constructor */
@@ -35,94 +33,4 @@ public class GL_FundAssert
       super (actual, GL_FundAssert.class);
     }
 
-
-	public GL_FundAssert hasAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("Amt", actual.getAmt(), expected);
-		return myself;
-	}
-
-
-	public GL_FundAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_FundAssert hasDateFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateFrom", actual.getDateFrom(), expected);
-		return myself;
-	}
-
-
-	public GL_FundAssert hasDateTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateTo", actual.getDateTo(), expected);
-		return myself;
-	}
-
-
-	public GL_FundAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_FundAssert hasGL_Fund_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getGL_Fund_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_Fund_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_FundAssert hasGL_Fund_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getGL_Fund_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_Fund_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_FundAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_FundAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

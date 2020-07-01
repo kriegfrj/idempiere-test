@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_OrderSource;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_OrderSource;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_OrderSourceAssert
-	extends AbstractPOAssert<C_OrderSourceAssert,X_C_OrderSource>
+public class C_OrderSourceAssert extends AbstractC_OrderSourceAssert<C_OrderSourceAssert, X_C_OrderSource>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class C_OrderSourceAssert
       super (actual, C_OrderSourceAssert.class);
     }
 
-
-	public C_OrderSourceAssert hasC_OrderSource_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrderSource_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderSource_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderSourceAssert hasC_OrderSource_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_OrderSource_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderSource_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderSourceAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderSourceAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderSourceAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderSourceAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

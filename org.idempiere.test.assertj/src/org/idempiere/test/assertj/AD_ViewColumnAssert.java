@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_ViewColumn;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_ViewColumn;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ViewColumnAssert
-	extends AbstractPOAssert<AD_ViewColumnAssert,X_AD_ViewColumn>
+public class AD_ViewColumnAssert extends AbstractAD_ViewColumnAssert<AD_ViewColumnAssert, X_AD_ViewColumn>
 {
 
     /** Standard Constructor */
@@ -35,114 +33,4 @@ public class AD_ViewColumnAssert
       super (actual, AD_ViewColumnAssert.class);
     }
 
-
-	public AD_ViewColumnAssert hasAD_ViewColumn_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ViewColumn_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ViewColumn_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasAD_ViewColumn_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_ViewColumn_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ViewColumn_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasAD_ViewComponent_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ViewComponent_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ViewComponent_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasColumnName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getColumnName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ColumnName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasColumnSQL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getColumnSQL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ColumnSQL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasDBDataType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDBDataType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DBDataType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ViewColumnAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

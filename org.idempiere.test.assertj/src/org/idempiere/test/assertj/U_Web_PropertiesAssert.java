@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_U_Web_Properties;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_U_Web_Properties;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class U_Web_PropertiesAssert
-	extends AbstractPOAssert<U_Web_PropertiesAssert,X_U_Web_Properties>
+public class U_Web_PropertiesAssert extends AbstractU_Web_PropertiesAssert<U_Web_PropertiesAssert, X_U_Web_Properties>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class U_Web_PropertiesAssert
       super (actual, U_Web_PropertiesAssert.class);
     }
 
-
-	public U_Web_PropertiesAssert hasU_Key(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getU_Key();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have U_Key: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public U_Web_PropertiesAssert hasU_Value(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getU_Value();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have U_Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public U_Web_PropertiesAssert hasU_Web_Properties_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getU_Web_Properties_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have U_Web_Properties_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public U_Web_PropertiesAssert hasU_Web_Properties_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getU_Web_Properties_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have U_Web_Properties_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

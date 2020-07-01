@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_PackageLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_PackageLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_PackageLineAssert
-	extends AbstractPOAssert<M_PackageLineAssert,X_M_PackageLine>
+public class M_PackageLineAssert extends AbstractM_PackageLineAssert<M_PackageLineAssert, X_M_PackageLine>
 {
 
     /** Standard Constructor */
@@ -34,90 +32,5 @@ public class M_PackageLineAssert
     {
       super (actual, M_PackageLineAssert.class);
     }
-
-
-	public M_PackageLineAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PackageLineAssert hasM_InOutLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PackageLineAssert hasM_Package_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Package_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Package_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PackageLineAssert hasM_PackageLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PackageLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PackageLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PackageLineAssert hasM_PackageLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_PackageLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PackageLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PackageLineAssert hasM_PackageMPS_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PackageMPS_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PackageMPS_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PackageLineAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PackageLineAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
 
 }

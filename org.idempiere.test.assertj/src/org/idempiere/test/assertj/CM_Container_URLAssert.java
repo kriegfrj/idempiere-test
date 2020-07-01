@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_Container_URL;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_Container_URL;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_Container_URLAssert
-	extends AbstractPOAssert<CM_Container_URLAssert,X_CM_Container_URL>
+public class CM_Container_URLAssert extends AbstractCM_Container_URLAssert<CM_Container_URLAssert, X_CM_Container_URL>
 {
 
     /** Standard Constructor */
@@ -35,67 +33,4 @@ public class CM_Container_URLAssert
       super (actual, CM_Container_URLAssert.class);
     }
 
-
-	public CM_Container_URLAssert hasChecked(Object expected)
-	{
-		isNotNull();
-		dateAssert("Checked", actual.getChecked(), expected);
-		return myself;
-	}
-
-
-	public CM_Container_URLAssert hasCM_Container_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Container_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_URLAssert hasCM_Container_URL_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Container_URL_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_URL_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_URLAssert hasCM_Container_URL_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_Container_URL_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_URL_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_URLAssert hasLast_Result(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getLast_Result();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Last_Result: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_URLAssert hasStatus(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getStatus();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Status: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

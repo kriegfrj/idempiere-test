@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ProductionLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ProductionLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ProductionLineAssert
-	extends AbstractPOAssert<M_ProductionLineAssert,X_M_ProductionLine>
+public class M_ProductionLineAssert extends AbstractM_ProductionLineAssert<M_ProductionLineAssert, X_M_ProductionLine>
 {
 
     /** Standard Constructor */
@@ -34,187 +32,5 @@ public class M_ProductionLineAssert
     {
       super (actual, M_ProductionLineAssert.class);
     }
-
-
-	public M_ProductionLineAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert isEndProduct()
-	{
-		isNotNull();
-		if (!actual.isEndProduct()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be EndProduct\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert isNotEndProduct()
-	{
-		isNotNull();
-		if (actual.isEndProduct()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be EndProduct\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasLine(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLine();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Line: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasM_Locator_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Locator_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Locator_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasM_Production_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Production_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Production_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasM_ProductionLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ProductionLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductionLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasM_ProductionLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ProductionLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductionLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasM_ProductionPlan_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ProductionPlan_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductionPlan_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasMovementQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("MovementQty", actual.getMovementQty(), expected);
-		return myself;
-	}
-
-
-	public M_ProductionLineAssert hasPlannedQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("PlannedQty", actual.getPlannedQty(), expected);
-		return myself;
-	}
-
-
-	public M_ProductionLineAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasProductType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getProductType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ProductType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineAssert hasQtyAvailable(Object expected)
-	{
-		isNotNull();
-		bdAssert("QtyAvailable", actual.getQtyAvailable(), expected);
-		return myself;
-	}
-
-
-	public M_ProductionLineAssert hasQtyUsed(Object expected)
-	{
-		isNotNull();
-		bdAssert("QtyUsed", actual.getQtyUsed(), expected);
-		return myself;
-	}
 
 }

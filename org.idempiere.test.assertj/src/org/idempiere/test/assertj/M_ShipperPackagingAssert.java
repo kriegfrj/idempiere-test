@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ShipperPackaging;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ShipperPackaging;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ShipperPackagingAssert
-	extends AbstractPOAssert<M_ShipperPackagingAssert,X_M_ShipperPackaging>
+public class M_ShipperPackagingAssert extends AbstractM_ShipperPackagingAssert<M_ShipperPackagingAssert, X_M_ShipperPackaging>
 {
 
     /** Standard Constructor */
@@ -34,88 +32,5 @@ public class M_ShipperPackagingAssert
     {
       super (actual, M_ShipperPackagingAssert.class);
     }
-
-
-	public M_ShipperPackagingAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperPackagingAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperPackagingAssert hasM_Shipper_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Shipper_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Shipper_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPackagingAssert hasM_ShipperPackaging_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShipperPackaging_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperPackaging_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPackagingAssert hasM_ShipperPackaging_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ShipperPackaging_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperPackaging_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPackagingAssert hasM_ShipperPackagingCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShipperPackagingCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperPackagingCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPackagingAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperPackagingAssert hasWeight(Object expected)
-	{
-		isNotNull();
-		bdAssert("Weight", actual.getWeight(), expected);
-		return myself;
-	}
 
 }

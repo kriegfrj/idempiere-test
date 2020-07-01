@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_BankStatementMatcher;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_BankStatementMatcher;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_BankStatementMatcherAssert
-	extends AbstractPOAssert<C_BankStatementMatcherAssert,X_C_BankStatementMatcher>
+public class C_BankStatementMatcherAssert extends AbstractC_BankStatementMatcherAssert<C_BankStatementMatcherAssert, X_C_BankStatementMatcher>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class C_BankStatementMatcherAssert
       super (actual, C_BankStatementMatcherAssert.class);
     }
 
-
-	public C_BankStatementMatcherAssert hasC_BankStatementMatcher_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BankStatementMatcher_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BankStatementMatcher_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankStatementMatcherAssert hasC_BankStatementMatcher_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_BankStatementMatcher_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BankStatementMatcher_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankStatementMatcherAssert hasClassname(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getClassname();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Classname: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankStatementMatcherAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankStatementMatcherAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankStatementMatcherAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

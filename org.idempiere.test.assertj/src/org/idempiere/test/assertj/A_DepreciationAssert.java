@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Depreciation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Depreciation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_DepreciationAssert
-	extends AbstractPOAssert<A_DepreciationAssert,X_A_Depreciation>
+public class A_DepreciationAssert extends AbstractA_DepreciationAssert<A_DepreciationAssert, X_A_Depreciation>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class A_DepreciationAssert
       super (actual, A_DepreciationAssert.class);
     }
 
-
-	public A_DepreciationAssert hasA_Depreciation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Depreciation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_DepreciationAssert hasA_Depreciation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Depreciation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_DepreciationAssert hasDepreciationType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDepreciationType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DepreciationType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_DepreciationAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_DepreciationAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_DepreciationAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public A_DepreciationAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public A_DepreciationAssert hasText(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getText();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Text: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

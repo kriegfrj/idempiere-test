@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_ModelValidator;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_ModelValidator;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ModelValidatorAssert
-	extends AbstractPOAssert<AD_ModelValidatorAssert,X_AD_ModelValidator>
+public class AD_ModelValidatorAssert extends AbstractAD_ModelValidatorAssert<AD_ModelValidatorAssert, X_AD_ModelValidator>
 {
 
     /** Standard Constructor */
@@ -35,92 +33,4 @@ public class AD_ModelValidatorAssert
       super (actual, AD_ModelValidatorAssert.class);
     }
 
-
-	public AD_ModelValidatorAssert hasAD_ModelValidator_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ModelValidator_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ModelValidator_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ModelValidatorAssert hasAD_ModelValidator_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_ModelValidator_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ModelValidator_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ModelValidatorAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ModelValidatorAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ModelValidatorAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ModelValidatorAssert hasModelValidationClass(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getModelValidationClass();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ModelValidationClass: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ModelValidatorAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ModelValidatorAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

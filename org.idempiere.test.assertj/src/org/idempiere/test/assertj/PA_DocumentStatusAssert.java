@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_DocumentStatus;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_DocumentStatus;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_DocumentStatusAssert
-	extends AbstractPOAssert<PA_DocumentStatusAssert,X_PA_DocumentStatus>
+public class PA_DocumentStatusAssert extends AbstractPA_DocumentStatusAssert<PA_DocumentStatusAssert, X_PA_DocumentStatus>
 {
 
     /** Standard Constructor */
@@ -35,180 +33,4 @@ public class PA_DocumentStatusAssert
       super (actual, PA_DocumentStatusAssert.class);
     }
 
-
-	public PA_DocumentStatusAssert hasAD_Form_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Form_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Form_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasAD_Role_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Role_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Role_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasAD_Window_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Window_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Window_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasC_Project_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Project_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Project_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasName_PrintColor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getName_PrintColor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name_PrintColor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasName_PrintFont_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getName_PrintFont_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name_PrintFont_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasNumber_PrintColor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getNumber_PrintColor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Number_PrintColor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasNumber_PrintFont_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getNumber_PrintFont_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Number_PrintFont_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasPA_DocumentStatus_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_DocumentStatus_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_DocumentStatus_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasPA_DocumentStatus_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_DocumentStatus_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_DocumentStatus_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_DocumentStatusAssert hasWhereClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getWhereClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WhereClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

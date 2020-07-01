@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_Source;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_Source;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_SourceAssert
-	extends AbstractPOAssert<K_SourceAssert,X_K_Source>
+public class K_SourceAssert extends AbstractK_SourceAssert<K_SourceAssert, X_K_Source>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class K_SourceAssert
       super (actual, K_SourceAssert.class);
     }
 
-
-	public K_SourceAssert hasDescriptionURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescriptionURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DescriptionURL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_SourceAssert hasK_Source_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Source_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Source_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_SourceAssert hasK_Source_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_Source_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Source_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_SourceAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

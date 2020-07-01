@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Charge_Acct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Charge_Acct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_Charge_AcctAssert
-	extends AbstractPOAssert<C_Charge_AcctAssert,X_C_Charge_Acct>
+public class C_Charge_AcctAssert extends AbstractC_Charge_AcctAssert<C_Charge_AcctAssert, X_C_Charge_Acct>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class C_Charge_AcctAssert
       super (actual, C_Charge_AcctAssert.class);
     }
 
-
-	public C_Charge_AcctAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Charge_AcctAssert hasC_Charge_Acct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Charge_Acct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_Acct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Charge_AcctAssert hasC_Charge_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Charge_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Charge_AcctAssert hasCh_Expense_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCh_Expense_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Ch_Expense_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_WF_NextCondition;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_WF_NextCondition;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_WF_NextConditionAssert
-	extends AbstractPOAssert<AD_WF_NextConditionAssert,X_AD_WF_NextCondition>
+public class AD_WF_NextConditionAssert extends AbstractAD_WF_NextConditionAssert<AD_WF_NextConditionAssert, X_AD_WF_NextCondition>
 {
 
     /** Standard Constructor */
@@ -35,114 +33,4 @@ public class AD_WF_NextConditionAssert
       super (actual, AD_WF_NextConditionAssert.class);
     }
 
-
-	public AD_WF_NextConditionAssert hasAD_Column_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Column_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Column_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasAD_WF_NextCondition_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_NextCondition_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_NextCondition_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasAD_WF_NextCondition_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_WF_NextCondition_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_NextCondition_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasAD_WF_NodeNext_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_NodeNext_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_NodeNext_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasAndOr(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAndOr();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AndOr: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasOperation(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getOperation();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Operation: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NextConditionAssert hasValue2(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue2();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value2: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

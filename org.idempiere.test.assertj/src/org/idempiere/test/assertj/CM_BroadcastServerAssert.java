@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_BroadcastServer;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_BroadcastServer;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_BroadcastServerAssert
-	extends AbstractPOAssert<CM_BroadcastServerAssert,X_CM_BroadcastServer>
+public class CM_BroadcastServerAssert extends AbstractCM_BroadcastServerAssert<CM_BroadcastServerAssert, X_CM_BroadcastServer>
 {
 
     /** Standard Constructor */
@@ -35,89 +33,4 @@ public class CM_BroadcastServerAssert
       super (actual, CM_BroadcastServerAssert.class);
     }
 
-
-	public CM_BroadcastServerAssert hasCM_BroadcastServer_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_BroadcastServer_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_BroadcastServer_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_BroadcastServerAssert hasCM_BroadcastServer_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_BroadcastServer_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_BroadcastServer_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_BroadcastServerAssert hasCM_WebProject_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_WebProject_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_WebProject_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_BroadcastServerAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_BroadcastServerAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_BroadcastServerAssert hasIP_Address(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getIP_Address();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IP_Address: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_BroadcastServerAssert hasLastSynchronized(Object expected)
-	{
-		isNotNull();
-		dateAssert("LastSynchronized", actual.getLastSynchronized(), expected);
-		return myself;
-	}
-
-
-	public CM_BroadcastServerAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

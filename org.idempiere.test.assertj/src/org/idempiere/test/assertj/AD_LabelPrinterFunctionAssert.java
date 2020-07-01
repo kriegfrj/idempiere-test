@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_LabelPrinterFunction;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_LabelPrinterFunction;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_LabelPrinterFunctionAssert
-	extends AbstractPOAssert<AD_LabelPrinterFunctionAssert,X_AD_LabelPrinterFunction>
+public class AD_LabelPrinterFunctionAssert extends AbstractAD_LabelPrinterFunctionAssert<AD_LabelPrinterFunctionAssert, X_AD_LabelPrinterFunction>
 {
 
     /** Standard Constructor */
@@ -35,112 +33,4 @@ public class AD_LabelPrinterFunctionAssert
       super (actual, AD_LabelPrinterFunctionAssert.class);
     }
 
-
-	public AD_LabelPrinterFunctionAssert hasAD_LabelPrinter_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_LabelPrinter_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LabelPrinter_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert hasAD_LabelPrinterFunction_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_LabelPrinterFunction_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LabelPrinterFunction_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert hasAD_LabelPrinterFunction_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_LabelPrinterFunction_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LabelPrinterFunction_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert hasFunctionPrefix(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFunctionPrefix();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FunctionPrefix: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert hasFunctionSuffix(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFunctionSuffix();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FunctionSuffix: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert isXYPosition()
-	{
-		isNotNull();
-		if (!actual.isXYPosition()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be XYPosition\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert isNotXYPosition()
-	{
-		isNotNull();
-		if (actual.isXYPosition()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be XYPosition\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterFunctionAssert hasXYSeparator(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getXYSeparator();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have XYSeparator: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

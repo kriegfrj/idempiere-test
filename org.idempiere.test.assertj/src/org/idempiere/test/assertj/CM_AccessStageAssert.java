@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_AccessStage;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_AccessStage;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_AccessStageAssert
-	extends AbstractPOAssert<CM_AccessStageAssert,X_CM_AccessStage>
+public class CM_AccessStageAssert extends AbstractCM_AccessStageAssert<CM_AccessStageAssert, X_CM_AccessStage>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class CM_AccessStageAssert
       super (actual, CM_AccessStageAssert.class);
     }
 
-
-	public CM_AccessStageAssert hasCM_AccessProfile_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_AccessProfile_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessProfile_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessStageAssert hasCM_AccessStage_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_AccessStage_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessStage_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessStageAssert hasCM_CStage_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_CStage_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_CStage_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

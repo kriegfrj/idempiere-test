@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Package_UUID_Map;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Package_UUID_Map;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Package_UUID_MapAssert
-	extends AbstractPOAssert<AD_Package_UUID_MapAssert,X_AD_Package_UUID_Map>
+public class AD_Package_UUID_MapAssert extends AbstractAD_Package_UUID_MapAssert<AD_Package_UUID_MapAssert, X_AD_Package_UUID_Map>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_Package_UUID_MapAssert
       super (actual, AD_Package_UUID_MapAssert.class);
     }
 
-
-	public AD_Package_UUID_MapAssert hasAD_Package_UUID_Map_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Package_UUID_Map_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_UUID_Map_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_UUID_MapAssert hasAD_Package_UUID_Map_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Package_UUID_Map_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_UUID_Map_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_UUID_MapAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_UUID_MapAssert hasSource_UUID(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSource_UUID();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Source_UUID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_UUID_MapAssert hasTarget_UUID(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTarget_UUID();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Target_UUID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

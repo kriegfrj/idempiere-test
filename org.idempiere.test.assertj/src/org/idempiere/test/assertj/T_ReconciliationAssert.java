@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_T_Reconciliation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_T_Reconciliation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class T_ReconciliationAssert
-	extends AbstractPOAssert<T_ReconciliationAssert,X_T_Reconciliation>
+public class T_ReconciliationAssert extends AbstractT_ReconciliationAssert<T_ReconciliationAssert, X_T_Reconciliation>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class T_ReconciliationAssert
       super (actual, T_ReconciliationAssert.class);
     }
 
-
-	public T_ReconciliationAssert hasAD_PInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_PInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_ReconciliationAssert hasFact_Acct_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getFact_Acct_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Fact_Acct_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_ReconciliationAssert hasMatchCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMatchCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MatchCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_ReconciliationAssert hasT_Reconciliation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getT_Reconciliation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have T_Reconciliation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

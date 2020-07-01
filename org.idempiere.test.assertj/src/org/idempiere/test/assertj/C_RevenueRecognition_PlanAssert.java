@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_RevenueRecognition_Plan;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_RevenueRecognition_Plan;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RevenueRecognition_PlanAssert
-	extends AbstractPOAssert<C_RevenueRecognition_PlanAssert,X_C_RevenueRecognition_Plan>
+public class C_RevenueRecognition_PlanAssert extends AbstractC_RevenueRecognition_PlanAssert<C_RevenueRecognition_PlanAssert, X_C_RevenueRecognition_Plan>
 {
 
     /** Standard Constructor */
@@ -35,108 +33,4 @@ public class C_RevenueRecognition_PlanAssert
       super (actual, C_RevenueRecognition_PlanAssert.class);
     }
 
-
-	public C_RevenueRecognition_PlanAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognition_PlanAssert hasC_Currency_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Currency_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Currency_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognition_PlanAssert hasC_InvoiceLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognition_PlanAssert hasC_RevenueRecognition_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RevenueRecognition_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecognition_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognition_PlanAssert hasC_RevenueRecognition_Plan_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RevenueRecognition_Plan_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecognition_Plan_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognition_PlanAssert hasC_RevenueRecognition_Plan_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_RevenueRecognition_Plan_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecognition_Plan_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognition_PlanAssert hasP_Revenue_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getP_Revenue_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have P_Revenue_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognition_PlanAssert hasRecognizedAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("RecognizedAmt", actual.getRecognizedAmt(), expected);
-		return myself;
-	}
-
-
-	public C_RevenueRecognition_PlanAssert hasTotalAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("TotalAmt", actual.getTotalAmt(), expected);
-		return myself;
-	}
-
-
-	public C_RevenueRecognition_PlanAssert hasUnEarnedRevenue_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getUnEarnedRevenue_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have UnEarnedRevenue_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Asset_Retirement;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Asset_Retirement;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Asset_RetirementAssert
-	extends AbstractPOAssert<A_Asset_RetirementAssert,X_A_Asset_Retirement>
+public class A_Asset_RetirementAssert extends AbstractA_Asset_RetirementAssert<A_Asset_RetirementAssert, X_A_Asset_Retirement>
 {
 
     /** Standard Constructor */
@@ -35,64 +33,4 @@ public class A_Asset_RetirementAssert
       super (actual, A_Asset_RetirementAssert.class);
     }
 
-
-	public A_Asset_RetirementAssert hasA_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_RetirementAssert hasA_Asset_Retirement_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_Retirement_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Retirement_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_RetirementAssert hasA_Asset_Retirement_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Asset_Retirement_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Retirement_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_RetirementAssert hasAssetMarketValueAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("AssetMarketValueAmt", actual.getAssetMarketValueAmt(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_RetirementAssert hasAssetValueAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("AssetValueAmt", actual.getAssetValueAmt(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_RetirementAssert hasC_InvoiceLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_PaymentBatch;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_PaymentBatch;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_PaymentBatchAssert
-	extends AbstractPOAssert<C_PaymentBatchAssert,X_C_PaymentBatch>
+public class C_PaymentBatchAssert extends AbstractC_PaymentBatchAssert<C_PaymentBatchAssert, X_C_PaymentBatch>
 {
 
     /** Standard Constructor */
@@ -34,88 +32,5 @@ public class C_PaymentBatchAssert
     {
       super (actual, C_PaymentBatchAssert.class);
     }
-
-
-	public C_PaymentBatchAssert hasC_PaymentBatch_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_PaymentBatch_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaymentBatch_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentBatchAssert hasC_PaymentBatch_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_PaymentBatch_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaymentBatch_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentBatchAssert hasC_PaymentProcessor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_PaymentProcessor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaymentProcessor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentBatchAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentBatchAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentBatchAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_PaymentBatchAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_PaymentBatchAssert hasProcessingDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("ProcessingDate", actual.getProcessingDate(), expected);
-		return myself;
-	}
 
 }

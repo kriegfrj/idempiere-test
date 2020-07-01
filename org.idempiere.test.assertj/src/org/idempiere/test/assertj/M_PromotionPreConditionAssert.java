@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_PromotionPreCondition;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_PromotionPreCondition;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_PromotionPreConditionAssert
-	extends AbstractPOAssert<M_PromotionPreConditionAssert,X_M_PromotionPreCondition>
+public class M_PromotionPreConditionAssert extends AbstractM_PromotionPreConditionAssert<M_PromotionPreConditionAssert, X_M_PromotionPreCondition>
 {
 
     /** Standard Constructor */
@@ -34,153 +32,5 @@ public class M_PromotionPreConditionAssert
     {
       super (actual, M_PromotionPreConditionAssert.class);
     }
-
-
-	public M_PromotionPreConditionAssert hasC_Activity_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Activity_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Activity_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasC_BP_Group_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BP_Group_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_Group_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasEndDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("EndDate", actual.getEndDate(), expected);
-		return myself;
-	}
-
-
-	public M_PromotionPreConditionAssert hasM_PriceList_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PriceList_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PriceList_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasM_Promotion_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Promotion_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Promotion_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasM_PromotionPreCondition_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PromotionPreCondition_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PromotionPreCondition_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasM_PromotionPreCondition_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_PromotionPreCondition_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PromotionPreCondition_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasM_Warehouse_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Warehouse_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Warehouse_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasPromotionCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPromotionCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PromotionCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasPromotionCounter(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPromotionCounter();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PromotionCounter: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasPromotionUsageLimit(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPromotionUsageLimit();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PromotionUsageLimit: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionPreConditionAssert hasStartDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("StartDate", actual.getStartDate(), expected);
-		return myself;
-	}
 
 }

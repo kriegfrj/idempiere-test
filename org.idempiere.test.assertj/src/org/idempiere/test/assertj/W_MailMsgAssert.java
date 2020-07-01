@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_W_MailMsg;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_W_MailMsg;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class W_MailMsgAssert
-	extends AbstractPOAssert<W_MailMsgAssert,X_W_MailMsg>
+public class W_MailMsgAssert extends AbstractW_MailMsgAssert<W_MailMsgAssert, X_W_MailMsg>
 {
 
     /** Standard Constructor */
@@ -35,114 +33,4 @@ public class W_MailMsgAssert
       super (actual, W_MailMsgAssert.class);
     }
 
-
-	public W_MailMsgAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasMailMsgType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMailMsgType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MailMsgType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasMessage(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMessage();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Message: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasMessage2(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMessage2();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Message2: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasMessage3(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMessage3();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Message3: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasSubject(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSubject();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Subject: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasW_MailMsg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_MailMsg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_MailMsg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasW_MailMsg_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getW_MailMsg_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_MailMsg_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_MailMsgAssert hasW_Store_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_Store_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_Store_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_ASP_Form;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_ASP_Form;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class ASP_FormAssert
-	extends AbstractPOAssert<ASP_FormAssert,X_ASP_Form>
+public class ASP_FormAssert extends AbstractASP_FormAssert<ASP_FormAssert, X_ASP_Form>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class ASP_FormAssert
       super (actual, ASP_FormAssert.class);
     }
 
-
-	public ASP_FormAssert hasAD_Form_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Form_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Form_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FormAssert hasASP_Form_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Form_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Form_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FormAssert hasASP_Form_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Form_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Form_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FormAssert hasASP_Level_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Level_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Level_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FormAssert hasASP_Status(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Status();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Status: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

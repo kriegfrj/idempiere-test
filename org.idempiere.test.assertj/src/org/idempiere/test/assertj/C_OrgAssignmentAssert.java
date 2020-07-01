@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_OrgAssignment;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_OrgAssignment;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_OrgAssignmentAssert
-	extends AbstractPOAssert<C_OrgAssignmentAssert,X_C_OrgAssignment>
+public class C_OrgAssignmentAssert extends AbstractC_OrgAssignmentAssert<C_OrgAssignmentAssert, X_C_OrgAssignment>
 {
 
     /** Standard Constructor */
@@ -34,65 +32,5 @@ public class C_OrgAssignmentAssert
     {
       super (actual, C_OrgAssignmentAssert.class);
     }
-
-
-	public C_OrgAssignmentAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrgAssignmentAssert hasC_OrgAssignment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrgAssignment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrgAssignment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrgAssignmentAssert hasC_OrgAssignment_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_OrgAssignment_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrgAssignment_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrgAssignmentAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrgAssignmentAssert hasValidFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidFrom", actual.getValidFrom(), expected);
-		return myself;
-	}
-
-
-	public C_OrgAssignmentAssert hasValidTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidTo", actual.getValidTo(), expected);
-		return myself;
-	}
 
 }

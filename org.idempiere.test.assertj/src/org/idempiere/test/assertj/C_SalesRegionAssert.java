@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_SalesRegion;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_SalesRegion;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_SalesRegionAssert
-	extends AbstractPOAssert<C_SalesRegionAssert,X_C_SalesRegion>
+public class C_SalesRegionAssert extends AbstractC_SalesRegionAssert<C_SalesRegionAssert, X_C_SalesRegion>
 {
 
     /** Standard Constructor */
@@ -35,110 +33,4 @@ public class C_SalesRegionAssert
       super (actual, C_SalesRegionAssert.class);
     }
 
-
-	public C_SalesRegionAssert hasC_SalesRegion_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_SalesRegion_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_SalesRegion_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert hasC_SalesRegion_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_SalesRegion_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_SalesRegion_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert isSummary()
-	{
-		isNotNull();
-		if (!actual.isSummary()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Summary\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert isNotSummary()
-	{
-		isNotNull();
-		if (actual.isSummary()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Summary\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert hasSalesRep_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSalesRep_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SalesRep_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesRegionAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

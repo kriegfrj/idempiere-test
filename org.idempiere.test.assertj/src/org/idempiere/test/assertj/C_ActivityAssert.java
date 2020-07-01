@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Activity;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Activity;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_ActivityAssert
-	extends AbstractPOAssert<C_ActivityAssert,X_C_Activity>
+public class C_ActivityAssert extends AbstractC_ActivityAssert<C_ActivityAssert, X_C_Activity>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class C_ActivityAssert
       super (actual, C_ActivityAssert.class);
     }
 
-
-	public C_ActivityAssert hasC_Activity_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Activity_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Activity_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ActivityAssert hasC_Activity_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Activity_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Activity_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ActivityAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ActivityAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ActivityAssert isSummary()
-	{
-		isNotNull();
-		if (!actual.isSummary()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Summary\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ActivityAssert isNotSummary()
-	{
-		isNotNull();
-		if (actual.isSummary()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Summary\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ActivityAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ActivityAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

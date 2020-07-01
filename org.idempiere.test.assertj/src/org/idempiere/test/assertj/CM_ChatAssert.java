@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_Chat;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_Chat;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_ChatAssert
-	extends AbstractPOAssert<CM_ChatAssert,X_CM_Chat>
+public class CM_ChatAssert extends AbstractCM_ChatAssert<CM_ChatAssert, X_CM_Chat>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class CM_ChatAssert
       super (actual, CM_ChatAssert.class);
     }
 
-
-	public CM_ChatAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatAssert hasCM_Chat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Chat_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Chat_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatAssert hasCM_Chat_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_Chat_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Chat_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatAssert hasCM_ChatType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_ChatType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_ChatType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatAssert hasConfidentialType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConfidentialType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConfidentialType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatAssert hasModerationType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getModerationType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ModerationType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

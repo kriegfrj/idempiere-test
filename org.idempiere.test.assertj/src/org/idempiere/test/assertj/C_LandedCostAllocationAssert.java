@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_LandedCostAllocation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_LandedCostAllocation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_LandedCostAllocationAssert
-	extends AbstractPOAssert<C_LandedCostAllocationAssert,X_C_LandedCostAllocation>
+public class C_LandedCostAllocationAssert extends AbstractC_LandedCostAllocationAssert<C_LandedCostAllocationAssert, X_C_LandedCostAllocation>
 {
 
     /** Standard Constructor */
@@ -34,106 +32,5 @@ public class C_LandedCostAllocationAssert
     {
       super (actual, C_LandedCostAllocationAssert.class);
     }
-
-
-	public C_LandedCostAllocationAssert hasAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("Amt", actual.getAmt(), expected);
-		return myself;
-	}
-
-
-	public C_LandedCostAllocationAssert hasBase(Object expected)
-	{
-		isNotNull();
-		bdAssert("Base", actual.getBase(), expected);
-		return myself;
-	}
-
-
-	public C_LandedCostAllocationAssert hasC_InvoiceLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAllocationAssert hasC_LandedCostAllocation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_LandedCostAllocation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_LandedCostAllocation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAllocationAssert hasC_LandedCostAllocation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_LandedCostAllocation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_LandedCostAllocation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAllocationAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAllocationAssert hasM_CostElement_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_CostElement_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_CostElement_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAllocationAssert hasM_InOutLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAllocationAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAllocationAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
 
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_RelatedProduct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_RelatedProduct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_RelatedProductAssert
-	extends AbstractPOAssert<M_RelatedProductAssert,X_M_RelatedProduct>
+public class M_RelatedProductAssert extends AbstractM_RelatedProductAssert<M_RelatedProductAssert, X_M_RelatedProduct>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class M_RelatedProductAssert
       super (actual, M_RelatedProductAssert.class);
     }
 
-
-	public M_RelatedProductAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RelatedProductAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RelatedProductAssert hasM_RelatedProduct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_RelatedProduct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_RelatedProduct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RelatedProductAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RelatedProductAssert hasRelatedProduct_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getRelatedProduct_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RelatedProduct_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RelatedProductAssert hasRelatedProductType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRelatedProductType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RelatedProductType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_ZoomCondition;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_ZoomCondition;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ZoomConditionAssert
-	extends AbstractPOAssert<AD_ZoomConditionAssert,X_AD_ZoomCondition>
+public class AD_ZoomConditionAssert extends AbstractAD_ZoomConditionAssert<AD_ZoomConditionAssert, X_AD_ZoomCondition>
 {
 
     /** Standard Constructor */
@@ -35,103 +33,4 @@ public class AD_ZoomConditionAssert
       super (actual, AD_ZoomConditionAssert.class);
     }
 
-
-	public AD_ZoomConditionAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasAD_Window_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Window_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Window_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasAD_ZoomCondition_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ZoomCondition_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ZoomCondition_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasAD_ZoomCondition_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_ZoomCondition_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ZoomCondition_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasWhereClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getWhereClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WhereClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ZoomConditionAssert hasZoomLogic(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getZoomLogic();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ZoomLogic: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

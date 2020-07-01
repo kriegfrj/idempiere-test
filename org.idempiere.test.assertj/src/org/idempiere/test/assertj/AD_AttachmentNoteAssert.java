@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_AttachmentNote;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_AttachmentNote;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_AttachmentNoteAssert
-	extends AbstractPOAssert<AD_AttachmentNoteAssert,X_AD_AttachmentNote>
+public class AD_AttachmentNoteAssert extends AbstractAD_AttachmentNoteAssert<AD_AttachmentNoteAssert, X_AD_AttachmentNote>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class AD_AttachmentNoteAssert
       super (actual, AD_AttachmentNoteAssert.class);
     }
 
-
-	public AD_AttachmentNoteAssert hasAD_Attachment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Attachment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Attachment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AttachmentNoteAssert hasAD_AttachmentNote_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_AttachmentNote_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_AttachmentNote_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AttachmentNoteAssert hasAD_AttachmentNote_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_AttachmentNote_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_AttachmentNote_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AttachmentNoteAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AttachmentNoteAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AttachmentNoteAssert hasTitle(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTitle();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Title: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

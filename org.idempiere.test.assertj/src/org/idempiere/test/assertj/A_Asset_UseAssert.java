@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Asset_Use;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Asset_Use;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Asset_UseAssert
-	extends AbstractPOAssert<A_Asset_UseAssert,X_A_Asset_Use>
+public class A_Asset_UseAssert extends AbstractA_Asset_UseAssert<A_Asset_UseAssert, X_A_Asset_Use>
 {
 
     /** Standard Constructor */
@@ -35,67 +33,4 @@ public class A_Asset_UseAssert
       super (actual, A_Asset_UseAssert.class);
     }
 
-
-	public A_Asset_UseAssert hasA_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_UseAssert hasA_Asset_Use_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_Use_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Use_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_UseAssert hasA_Asset_Use_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Asset_Use_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Use_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_UseAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_UseAssert hasUseDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("UseDate", actual.getUseDate(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_UseAssert hasUseUnits(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getUseUnits();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have UseUnits: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

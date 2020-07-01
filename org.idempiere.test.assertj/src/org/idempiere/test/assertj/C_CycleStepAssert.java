@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_CycleStep;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_CycleStep;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_CycleStepAssert
-	extends AbstractPOAssert<C_CycleStepAssert,X_C_CycleStep>
+public class C_CycleStepAssert extends AbstractC_CycleStepAssert<C_CycleStepAssert, X_C_CycleStep>
 {
 
     /** Standard Constructor */
@@ -35,67 +33,4 @@ public class C_CycleStepAssert
       super (actual, C_CycleStepAssert.class);
     }
 
-
-	public C_CycleStepAssert hasC_Cycle_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Cycle_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Cycle_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CycleStepAssert hasC_CycleStep_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CycleStep_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CycleStep_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CycleStepAssert hasC_CycleStep_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_CycleStep_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CycleStep_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CycleStepAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CycleStepAssert hasRelativeWeight(Object expected)
-	{
-		isNotNull();
-		bdAssert("RelativeWeight", actual.getRelativeWeight(), expected);
-		return myself;
-	}
-
-
-	public C_CycleStepAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_W_Counter;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_W_Counter;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class W_CounterAssert
-	extends AbstractPOAssert<W_CounterAssert,X_W_Counter>
+public class W_CounterAssert extends AbstractW_CounterAssert<W_CounterAssert, X_W_Counter>
 {
 
     /** Standard Constructor */
@@ -35,145 +33,4 @@ public class W_CounterAssert
       super (actual, W_CounterAssert.class);
     }
 
-
-	public W_CounterAssert hasAcceptLanguage(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAcceptLanguage();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AcceptLanguage: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasEMail(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEMail();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EMail: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasPageURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPageURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PageURL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public W_CounterAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasReferrer(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getReferrer();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Referrer: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasRemote_Addr(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRemote_Addr();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Remote_Addr: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasRemote_Host(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRemote_Host();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Remote_Host: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasUserAgent(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getUserAgent();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have UserAgent: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasW_Counter_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_Counter_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_Counter_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasW_Counter_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getW_Counter_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_Counter_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_CounterAssert hasW_CounterCount_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_CounterCount_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_CounterCount_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

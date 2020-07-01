@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Chart;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Chart;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ChartAssert
-	extends AbstractPOAssert<AD_ChartAssert,X_AD_Chart>
+public class AD_ChartAssert extends AbstractAD_ChartAssert<AD_ChartAssert, X_AD_Chart>
 {
 
     /** Standard Constructor */
@@ -35,176 +33,4 @@ public class AD_ChartAssert
       super (actual, AD_ChartAssert.class);
     }
 
-
-	public AD_ChartAssert hasAD_Chart_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Chart_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Chart_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasAD_Chart_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Chart_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Chart_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasChartOrientation(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getChartOrientation();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ChartOrientation: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasChartType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getChartType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ChartType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasDomainLabel(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDomainLabel();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DomainLabel: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert isDisplayLegend()
-	{
-		isNotNull();
-		if (!actual.isDisplayLegend()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be DisplayLegend\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert isNotDisplayLegend()
-	{
-		isNotNull();
-		if (actual.isDisplayLegend()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be DisplayLegend\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert isTimeSeries()
-	{
-		isNotNull();
-		if (!actual.isTimeSeries()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be TimeSeries\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert isNotTimeSeries()
-	{
-		isNotNull();
-		if (actual.isTimeSeries()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be TimeSeries\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasRangeLabel(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRangeLabel();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RangeLabel: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasTimeScope(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getTimeScope();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TimeScope: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasTimeUnit(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTimeUnit();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TimeUnit: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChartAssert hasWinHeight(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getWinHeight();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WinHeight: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

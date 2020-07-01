@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_ClientShare;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_ClientShare;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ClientShareAssert
-	extends AbstractPOAssert<AD_ClientShareAssert,X_AD_ClientShare>
+public class AD_ClientShareAssert extends AbstractAD_ClientShareAssert<AD_ClientShareAssert, X_AD_ClientShare>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class AD_ClientShareAssert
       super (actual, AD_ClientShareAssert.class);
     }
 
-
-	public AD_ClientShareAssert hasAD_ClientShare_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ClientShare_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ClientShare_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ClientShareAssert hasAD_ClientShare_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_ClientShare_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ClientShare_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ClientShareAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ClientShareAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ClientShareAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ClientShareAssert hasShareType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getShareType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ShareType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

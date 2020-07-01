@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_RMATax;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_RMATax;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_RMATaxAssert
-	extends AbstractPOAssert<M_RMATaxAssert,X_M_RMATax>
+public class M_RMATaxAssert extends AbstractM_RMATaxAssert<M_RMATaxAssert, X_M_RMATax>
 {
 
     /** Standard Constructor */
@@ -34,105 +32,5 @@ public class M_RMATaxAssert
     {
       super (actual, M_RMATaxAssert.class);
     }
-
-
-	public M_RMATaxAssert hasC_Tax_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Tax_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Tax_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert hasC_TaxProvider_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_TaxProvider_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxProvider_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert isTaxIncluded()
-	{
-		isNotNull();
-		if (!actual.isTaxIncluded()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be TaxIncluded\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert isNotTaxIncluded()
-	{
-		isNotNull();
-		if (actual.isTaxIncluded()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be TaxIncluded\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert hasM_RMA_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_RMA_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_RMA_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert hasM_RMATax_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_RMATax_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_RMATax_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_RMATaxAssert hasTaxAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("TaxAmt", actual.getTaxAmt(), expected);
-		return myself;
-	}
-
-
-	public M_RMATaxAssert hasTaxBaseAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("TaxBaseAmt", actual.getTaxBaseAmt(), expected);
-		return myself;
-	}
 
 }

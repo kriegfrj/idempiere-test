@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_StatusLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_StatusLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_StatusLineAssert
-	extends AbstractPOAssert<AD_StatusLineAssert,X_AD_StatusLine>
+public class AD_StatusLineAssert extends AbstractAD_StatusLineAssert<AD_StatusLineAssert, X_AD_StatusLine>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class AD_StatusLineAssert
       super (actual, AD_StatusLineAssert.class);
     }
 
-
-	public AD_StatusLineAssert hasAD_Message_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Message_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Message_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StatusLineAssert hasAD_StatusLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_StatusLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_StatusLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StatusLineAssert hasAD_StatusLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_StatusLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_StatusLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StatusLineAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StatusLineAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StatusLineAssert hasSQLStatement(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSQLStatement();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SQLStatement: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

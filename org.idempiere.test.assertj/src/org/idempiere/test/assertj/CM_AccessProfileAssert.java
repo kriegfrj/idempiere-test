@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_AccessProfile;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_AccessProfile;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_AccessProfileAssert
-	extends AbstractPOAssert<CM_AccessProfileAssert,X_CM_AccessProfile>
+public class CM_AccessProfileAssert extends AbstractCM_AccessProfileAssert<CM_AccessProfileAssert, X_CM_AccessProfile>
 {
 
     /** Standard Constructor */
@@ -35,79 +33,4 @@ public class CM_AccessProfileAssert
       super (actual, CM_AccessProfileAssert.class);
     }
 
-
-	public CM_AccessProfileAssert hasCM_AccessProfile_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_AccessProfile_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessProfile_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessProfileAssert hasCM_AccessProfile_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_AccessProfile_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessProfile_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessProfileAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessProfileAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessProfileAssert isExclude()
-	{
-		isNotNull();
-		if (!actual.isExclude()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Exclude\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_AccessProfileAssert isNotExclude()
-	{
-		isNotNull();
-		if (actual.isExclude()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Exclude\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_AccessProfileAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

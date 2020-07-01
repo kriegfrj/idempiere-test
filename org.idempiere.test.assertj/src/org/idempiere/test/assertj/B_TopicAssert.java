@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_B_Topic;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_B_Topic;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class B_TopicAssert
-	extends AbstractPOAssert<B_TopicAssert,X_B_Topic>
+public class B_TopicAssert extends AbstractB_TopicAssert<B_TopicAssert, X_B_Topic>
 {
 
     /** Standard Constructor */
@@ -35,173 +33,4 @@ public class B_TopicAssert
       super (actual, B_TopicAssert.class);
     }
 
-
-	public B_TopicAssert hasB_Topic_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_Topic_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Topic_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasB_Topic_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getB_Topic_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Topic_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasB_TopicCategory_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_TopicCategory_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_TopicCategory_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasB_TopicType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_TopicType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_TopicType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasDecisionDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("DecisionDate", actual.getDecisionDate(), expected);
-		return myself;
-	}
-
-
-	public B_TopicAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert isPublished()
-	{
-		isNotNull();
-		if (!actual.isPublished()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Published\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_TopicAssert isNotPublished()
-	{
-		isNotNull();
-		if (actual.isPublished()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Published\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_TopicAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasTextDetails(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextDetails();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextDetails: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasTopicAction(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTopicAction();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TopicAction: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicAssert hasTopicStatus(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTopicStatus();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TopicStatus: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

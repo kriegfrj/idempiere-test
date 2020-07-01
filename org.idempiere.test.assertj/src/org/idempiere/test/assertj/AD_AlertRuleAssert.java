@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_AlertRule;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_AlertRule;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_AlertRuleAssert
-	extends AbstractPOAssert<AD_AlertRuleAssert,X_AD_AlertRule>
+public class AD_AlertRuleAssert extends AbstractAD_AlertRuleAssert<AD_AlertRuleAssert, X_AD_AlertRule>
 {
 
     /** Standard Constructor */
@@ -35,156 +33,4 @@ public class AD_AlertRuleAssert
       super (actual, AD_AlertRuleAssert.class);
     }
 
-
-	public AD_AlertRuleAssert hasAD_Alert_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Alert_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Alert_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasAD_AlertRule_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_AlertRule_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_AlertRule_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasAD_AlertRule_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_AlertRule_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_AlertRule_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasErrorMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getErrorMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ErrorMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasFromClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFromClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FromClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert isValid()
-	{
-		isNotNull();
-		if (!actual.isValid()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Valid\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert isNotValid()
-	{
-		isNotNull();
-		if (actual.isValid()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Valid\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasOtherClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getOtherClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have OtherClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasPostProcessing(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPostProcessing();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PostProcessing: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasPreProcessing(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPreProcessing();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PreProcessing: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasSelectClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSelectClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SelectClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRuleAssert hasWhereClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getWhereClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WhereClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

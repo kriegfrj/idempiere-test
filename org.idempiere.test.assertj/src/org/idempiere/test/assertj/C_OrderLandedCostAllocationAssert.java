@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_OrderLandedCostAllocation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_OrderLandedCostAllocation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_OrderLandedCostAllocationAssert
-	extends AbstractPOAssert<C_OrderLandedCostAllocationAssert,X_C_OrderLandedCostAllocation>
+public class C_OrderLandedCostAllocationAssert extends AbstractC_OrderLandedCostAllocationAssert<C_OrderLandedCostAllocationAssert, X_C_OrderLandedCostAllocation>
 {
 
     /** Standard Constructor */
@@ -34,93 +32,5 @@ public class C_OrderLandedCostAllocationAssert
     {
       super (actual, C_OrderLandedCostAllocationAssert.class);
     }
-
-
-	public C_OrderLandedCostAllocationAssert hasAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("Amt", actual.getAmt(), expected);
-		return myself;
-	}
-
-
-	public C_OrderLandedCostAllocationAssert hasBase(Object expected)
-	{
-		isNotNull();
-		bdAssert("Base", actual.getBase(), expected);
-		return myself;
-	}
-
-
-	public C_OrderLandedCostAllocationAssert hasC_OrderLandedCost_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrderLandedCost_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderLandedCost_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderLandedCostAllocationAssert hasC_OrderLandedCostAllocation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrderLandedCostAllocation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderLandedCostAllocation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderLandedCostAllocationAssert hasC_OrderLandedCostAllocation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_OrderLandedCostAllocation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderLandedCostAllocation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderLandedCostAllocationAssert hasC_OrderLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrderLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderLandedCostAllocationAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OrderLandedCostAllocationAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OrderLandedCostAllocationAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
 
 }

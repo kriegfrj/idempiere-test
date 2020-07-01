@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Org;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Org;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_OrgAssert
-	extends AbstractPOAssert<AD_OrgAssert,X_AD_Org>
+public class AD_OrgAssert extends AbstractAD_OrgAssert<AD_OrgAssert, X_AD_Org>
 {
 
     /** Standard Constructor */
@@ -35,79 +33,4 @@ public class AD_OrgAssert
       super (actual, AD_OrgAssert.class);
     }
 
-
-	public AD_OrgAssert hasAD_Org_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Org_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Org_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgAssert hasAD_ReplicationStrategy_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ReplicationStrategy_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ReplicationStrategy_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgAssert isSummary()
-	{
-		isNotNull();
-		if (!actual.isSummary()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Summary\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_OrgAssert isNotSummary()
-	{
-		isNotNull();
-		if (actual.isSummary()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Summary\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_OrgAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

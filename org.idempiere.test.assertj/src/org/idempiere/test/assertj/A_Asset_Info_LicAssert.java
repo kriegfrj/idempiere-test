@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Asset_Info_Lic;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Asset_Info_Lic;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Asset_Info_LicAssert
-	extends AbstractPOAssert<A_Asset_Info_LicAssert,X_A_Asset_Info_Lic>
+public class A_Asset_Info_LicAssert extends AbstractA_Asset_Info_LicAssert<A_Asset_Info_LicAssert, X_A_Asset_Info_Lic>
 {
 
     /** Standard Constructor */
@@ -35,117 +33,4 @@ public class A_Asset_Info_LicAssert
       super (actual, A_Asset_Info_LicAssert.class);
     }
 
-
-	public A_Asset_Info_LicAssert hasA_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert hasA_Asset_Info_Lic_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_Info_Lic_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Lic_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert hasA_Asset_Info_Lic_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Asset_Info_Lic_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Lic_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert hasA_Issuing_Agency(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Issuing_Agency();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Issuing_Agency: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert hasA_License_Fee(Object expected)
-	{
-		isNotNull();
-		bdAssert("A_License_Fee", actual.getA_License_Fee(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_Info_LicAssert hasA_License_No(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_License_No();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_License_No: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert hasA_Renewal_Date(Object expected)
-	{
-		isNotNull();
-		dateAssert("A_Renewal_Date", actual.getA_Renewal_Date(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_Info_LicAssert hasA_State(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_State();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_State: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_LicAssert hasText(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getText();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Text: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

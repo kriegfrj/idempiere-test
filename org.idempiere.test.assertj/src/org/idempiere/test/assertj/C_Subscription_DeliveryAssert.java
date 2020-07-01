@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Subscription_Delivery;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Subscription_Delivery;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_Subscription_DeliveryAssert
-	extends AbstractPOAssert<C_Subscription_DeliveryAssert,X_C_Subscription_Delivery>
+public class C_Subscription_DeliveryAssert extends AbstractC_Subscription_DeliveryAssert<C_Subscription_DeliveryAssert, X_C_Subscription_Delivery>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class C_Subscription_DeliveryAssert
       super (actual, C_Subscription_DeliveryAssert.class);
     }
 
-
-	public C_Subscription_DeliveryAssert hasC_Subscription_Delivery_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Subscription_Delivery_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Subscription_Delivery_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Subscription_DeliveryAssert hasC_Subscription_Delivery_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Subscription_Delivery_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Subscription_Delivery_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Subscription_DeliveryAssert hasC_Subscription_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Subscription_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Subscription_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

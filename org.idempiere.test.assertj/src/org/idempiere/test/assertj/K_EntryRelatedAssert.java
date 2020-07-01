@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_EntryRelated;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_EntryRelated;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_EntryRelatedAssert
-	extends AbstractPOAssert<K_EntryRelatedAssert,X_K_EntryRelated>
+public class K_EntryRelatedAssert extends AbstractK_EntryRelatedAssert<K_EntryRelatedAssert, X_K_EntryRelated>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class K_EntryRelatedAssert
       super (actual, K_EntryRelatedAssert.class);
     }
 
-
-	public K_EntryRelatedAssert hasK_Entry_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Entry_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Entry_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryRelatedAssert hasK_EntryRelated_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_EntryRelated_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_EntryRelated_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryRelatedAssert hasK_EntryRelated_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_EntryRelated_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_EntryRelated_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryRelatedAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

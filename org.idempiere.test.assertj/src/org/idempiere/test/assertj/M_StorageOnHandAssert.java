@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_StorageOnHand;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_StorageOnHand;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_StorageOnHandAssert
-	extends AbstractPOAssert<M_StorageOnHandAssert,X_M_StorageOnHand>
+public class M_StorageOnHandAssert extends AbstractM_StorageOnHandAssert<M_StorageOnHandAssert, X_M_StorageOnHand>
 {
 
     /** Standard Constructor */
@@ -34,73 +32,5 @@ public class M_StorageOnHandAssert
     {
       super (actual, M_StorageOnHandAssert.class);
     }
-
-
-	public M_StorageOnHandAssert hasDateLastInventory(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateLastInventory", actual.getDateLastInventory(), expected);
-		return myself;
-	}
-
-
-	public M_StorageOnHandAssert hasDateMaterialPolicy(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateMaterialPolicy", actual.getDateMaterialPolicy(), expected);
-		return myself;
-	}
-
-
-	public M_StorageOnHandAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageOnHandAssert hasM_Locator_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Locator_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Locator_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageOnHandAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageOnHandAssert hasM_StorageOnHand_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_StorageOnHand_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_StorageOnHand_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageOnHandAssert hasQtyOnHand(Object expected)
-	{
-		isNotNull();
-		bdAssert("QtyOnHand", actual.getQtyOnHand(), expected);
-		return myself;
-	}
 
 }

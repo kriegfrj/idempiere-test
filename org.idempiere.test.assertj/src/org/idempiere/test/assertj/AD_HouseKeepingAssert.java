@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_HouseKeeping;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_HouseKeeping;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_HouseKeepingAssert
-	extends AbstractPOAssert<AD_HouseKeepingAssert,X_AD_HouseKeeping>
+public class AD_HouseKeepingAssert extends AbstractAD_HouseKeepingAssert<AD_HouseKeepingAssert, X_AD_HouseKeeping>
 {
 
     /** Standard Constructor */
@@ -35,173 +33,4 @@ public class AD_HouseKeepingAssert
       super (actual, AD_HouseKeepingAssert.class);
     }
 
-
-	public AD_HouseKeepingAssert hasAD_HouseKeeping_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_HouseKeeping_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_HouseKeeping_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasAD_HouseKeeping_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_HouseKeeping_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_HouseKeeping_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasBackupFolder(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getBackupFolder();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have BackupFolder: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert isExportXMLBackup()
-	{
-		isNotNull();
-		if (!actual.isExportXMLBackup()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be ExportXMLBackup\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert isNotExportXMLBackup()
-	{
-		isNotNull();
-		if (actual.isExportXMLBackup()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ExportXMLBackup\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert isSaveInHistoric()
-	{
-		isNotNull();
-		if (!actual.isSaveInHistoric()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SaveInHistoric\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert isNotSaveInHistoric()
-	{
-		isNotNull();
-		if (actual.isSaveInHistoric()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SaveInHistoric\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasLastDeleted(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLastDeleted();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LastDeleted: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasLastRun(Object expected)
-	{
-		isNotNull();
-		dateAssert("LastRun", actual.getLastRun(), expected);
-		return myself;
-	}
-
-
-	public AD_HouseKeepingAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasTableName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTableName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TableName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_HouseKeepingAssert hasWhereClause(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getWhereClause();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WhereClause: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

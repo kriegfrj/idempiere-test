@@ -19,6 +19,12 @@
 -runpath: slf4j.api;version='[1.7.25,1.7.26)',\
 	slf4j.simple
 
+-runprogramargs: ${workspace}/org.idempiere.test.assertj/src,\
+  org.compiere.model,\
+  org.idempiere.test.assertj,\
+  D,\
+  '%'
+
 #-runvm: '--illegal-access=warn',\
 #    '--add-opens=java.base/java.lang=ALL-UNNAMED',\
 #    '--add-opens=java.base/java.lang.invoke=ALL-UNNAMED',\

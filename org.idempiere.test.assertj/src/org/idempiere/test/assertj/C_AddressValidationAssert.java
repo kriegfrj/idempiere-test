@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_AddressValidation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_AddressValidation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_AddressValidationAssert
-	extends AbstractPOAssert<C_AddressValidationAssert,X_C_AddressValidation>
+public class C_AddressValidationAssert extends AbstractC_AddressValidationAssert<C_AddressValidationAssert, X_C_AddressValidation>
 {
 
     /** Standard Constructor */
@@ -35,114 +33,4 @@ public class C_AddressValidationAssert
       super (actual, C_AddressValidationAssert.class);
     }
 
-
-	public C_AddressValidationAssert hasC_AddressValidation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AddressValidation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AddressValidation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasC_AddressValidation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_AddressValidation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AddressValidation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasC_AddressValidationCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AddressValidationCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AddressValidationCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasConnectionKey(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConnectionKey();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConnectionKey: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasConnectionPassword(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConnectionPassword();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConnectionPassword: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasShipperAccount(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getShipperAccount();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ShipperAccount: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasShipperMeter(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getShipperMeter();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ShipperMeter: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationAssert hasUserID(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getUserID();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have UserID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

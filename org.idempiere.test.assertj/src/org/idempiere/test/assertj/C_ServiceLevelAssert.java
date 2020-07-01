@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_ServiceLevel;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_ServiceLevel;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_ServiceLevelAssert
-	extends AbstractPOAssert<C_ServiceLevelAssert,X_C_ServiceLevel>
+public class C_ServiceLevelAssert extends AbstractC_ServiceLevelAssert<C_ServiceLevelAssert, X_C_ServiceLevel>
 {
 
     /** Standard Constructor */
@@ -34,96 +32,5 @@ public class C_ServiceLevelAssert
     {
       super (actual, C_ServiceLevelAssert.class);
     }
-
-
-	public C_ServiceLevelAssert hasC_RevenueRecognition_Plan_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RevenueRecognition_Plan_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecognition_Plan_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ServiceLevelAssert hasC_ServiceLevel_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_ServiceLevel_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ServiceLevel_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ServiceLevelAssert hasC_ServiceLevel_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_ServiceLevel_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ServiceLevel_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ServiceLevelAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ServiceLevelAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ServiceLevelAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ServiceLevelAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ServiceLevelAssert hasServiceLevelInvoiced(Object expected)
-	{
-		isNotNull();
-		bdAssert("ServiceLevelInvoiced", actual.getServiceLevelInvoiced(), expected);
-		return myself;
-	}
-
-
-	public C_ServiceLevelAssert hasServiceLevelProvided(Object expected)
-	{
-		isNotNull();
-		bdAssert("ServiceLevelProvided", actual.getServiceLevelProvided(), expected);
-		return myself;
-	}
 
 }

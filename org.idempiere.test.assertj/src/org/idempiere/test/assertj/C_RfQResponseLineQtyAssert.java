@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_RfQResponseLineQty;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_RfQResponseLineQty;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RfQResponseLineQtyAssert
-	extends AbstractPOAssert<C_RfQResponseLineQtyAssert,X_C_RfQResponseLineQty>
+public class C_RfQResponseLineQtyAssert extends AbstractC_RfQResponseLineQtyAssert<C_RfQResponseLineQtyAssert, X_C_RfQResponseLineQty>
 {
 
     /** Standard Constructor */
@@ -35,75 +33,4 @@ public class C_RfQResponseLineQtyAssert
       super (actual, C_RfQResponseLineQtyAssert.class);
     }
 
-
-	public C_RfQResponseLineQtyAssert hasC_RfQLineQty_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQLineQty_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQLineQty_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQResponseLineQtyAssert hasC_RfQResponseLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQResponseLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQResponseLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQResponseLineQtyAssert hasC_RfQResponseLineQty_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQResponseLineQty_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQResponseLineQty_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQResponseLineQtyAssert hasC_RfQResponseLineQty_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_RfQResponseLineQty_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQResponseLineQty_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQResponseLineQtyAssert hasDiscount(Object expected)
-	{
-		isNotNull();
-		bdAssert("Discount", actual.getDiscount(), expected);
-		return myself;
-	}
-
-
-	public C_RfQResponseLineQtyAssert hasPrice(Object expected)
-	{
-		isNotNull();
-		bdAssert("Price", actual.getPrice(), expected);
-		return myself;
-	}
-
-
-	public C_RfQResponseLineQtyAssert hasRanking(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getRanking();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Ranking: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

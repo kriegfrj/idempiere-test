@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_GoalRestriction;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_GoalRestriction;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_GoalRestrictionAssert
-	extends AbstractPOAssert<PA_GoalRestrictionAssert,X_PA_GoalRestriction>
+public class PA_GoalRestrictionAssert extends AbstractPA_GoalRestrictionAssert<PA_GoalRestrictionAssert, X_PA_GoalRestriction>
 {
 
     /** Standard Constructor */
@@ -35,114 +33,4 @@ public class PA_GoalRestrictionAssert
       super (actual, PA_GoalRestrictionAssert.class);
     }
 
-
-	public PA_GoalRestrictionAssert hasC_BP_Group_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BP_Group_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_Group_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasGoalRestrictionType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getGoalRestrictionType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GoalRestrictionType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasM_Product_Category_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_Category_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_Category_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasOrg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getOrg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Org_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasPA_Goal_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_Goal_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_Goal_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasPA_GoalRestriction_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_GoalRestriction_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_GoalRestriction_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_GoalRestrictionAssert hasPA_GoalRestriction_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_GoalRestriction_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_GoalRestriction_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

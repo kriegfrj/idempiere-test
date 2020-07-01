@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_ASP_Tab;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_ASP_Tab;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class ASP_TabAssert
-	extends AbstractPOAssert<ASP_TabAssert,X_ASP_Tab>
+public class ASP_TabAssert extends AbstractASP_TabAssert<ASP_TabAssert, X_ASP_Tab>
 {
 
     /** Standard Constructor */
@@ -35,79 +33,4 @@ public class ASP_TabAssert
       super (actual, ASP_TabAssert.class);
     }
 
-
-	public ASP_TabAssert hasAD_Tab_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Tab_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Tab_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_TabAssert isAllFields()
-	{
-		isNotNull();
-		if (!actual.isAllFields()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be AllFields\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public ASP_TabAssert isNotAllFields()
-	{
-		isNotNull();
-		if (actual.isAllFields()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be AllFields\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public ASP_TabAssert hasASP_Status(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Status();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Status: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_TabAssert hasASP_Tab_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Tab_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Tab_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_TabAssert hasASP_Tab_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Tab_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Tab_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_TabAssert hasASP_Window_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Window_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Window_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_MailText;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_MailText;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_MailTextAssert
-	extends AbstractPOAssert<R_MailTextAssert,X_R_MailText>
+public class R_MailTextAssert extends AbstractR_MailTextAssert<R_MailTextAssert, X_R_MailText>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class R_MailTextAssert
       super (actual, R_MailTextAssert.class);
     }
 
-
-	public R_MailTextAssert isHtml()
-	{
-		isNotNull();
-		if (!actual.isHtml()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Html\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_MailTextAssert isNotHtml()
-	{
-		isNotNull();
-		if (actual.isHtml()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Html\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_MailTextAssert hasMailHeader(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMailHeader();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MailHeader: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_MailTextAssert hasMailText2(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMailText2();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MailText2: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_MailTextAssert hasMailText3(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMailText3();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MailText3: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_MailTextAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_MailTextAssert hasR_MailText_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_MailText_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_MailText_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_MailTextAssert hasR_MailText_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_MailText_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_MailText_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

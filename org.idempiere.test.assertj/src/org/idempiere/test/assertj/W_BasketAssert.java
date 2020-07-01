@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_W_Basket;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_W_Basket;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class W_BasketAssert
-	extends AbstractPOAssert<W_BasketAssert,X_W_Basket>
+public class W_BasketAssert extends AbstractW_BasketAssert<W_BasketAssert, X_W_Basket>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class W_BasketAssert
       super (actual, W_BasketAssert.class);
     }
 
-
-	public W_BasketAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketAssert hasEMail(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEMail();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EMail: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketAssert hasM_PriceList_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PriceList_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PriceList_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketAssert hasSession_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSession_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Session_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketAssert hasW_Basket_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_Basket_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_Basket_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketAssert hasW_Basket_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getW_Basket_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_Basket_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

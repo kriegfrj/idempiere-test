@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Job;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Job;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_JobAssert
-	extends AbstractPOAssert<C_JobAssert,X_C_Job>
+public class C_JobAssert extends AbstractC_JobAssert<C_JobAssert, X_C_Job>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class C_JobAssert
       super (actual, C_JobAssert.class);
     }
 
-
-	public C_JobAssert hasC_Job_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Job_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Job_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_JobAssert hasC_Job_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Job_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Job_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_JobAssert hasC_JobCategory_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_JobCategory_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_JobCategory_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_JobAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_JobAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_JobAssert isEmployee()
-	{
-		isNotNull();
-		if (!actual.isEmployee()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Employee\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_JobAssert isNotEmployee()
-	{
-		isNotNull();
-		if (actual.isEmployee()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Employee\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_JobAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

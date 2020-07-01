@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_TaxPostal;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_TaxPostal;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_TaxPostalAssert
-	extends AbstractPOAssert<C_TaxPostalAssert,X_C_TaxPostal>
+public class C_TaxPostalAssert extends AbstractC_TaxPostalAssert<C_TaxPostalAssert, X_C_TaxPostal>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class C_TaxPostalAssert
       super (actual, C_TaxPostalAssert.class);
     }
 
-
-	public C_TaxPostalAssert hasC_Tax_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Tax_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Tax_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxPostalAssert hasC_TaxPostal_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_TaxPostal_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxPostal_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxPostalAssert hasC_TaxPostal_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_TaxPostal_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxPostal_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxPostalAssert hasPostal(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPostal();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Postal: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxPostalAssert hasPostal_To(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPostal_To();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Postal_To: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

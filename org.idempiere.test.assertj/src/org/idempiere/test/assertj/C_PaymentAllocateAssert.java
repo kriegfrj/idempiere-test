@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_PaymentAllocate;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_PaymentAllocate;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_PaymentAllocateAssert
-	extends AbstractPOAssert<C_PaymentAllocateAssert,X_C_PaymentAllocate>
+public class C_PaymentAllocateAssert extends AbstractC_PaymentAllocateAssert<C_PaymentAllocateAssert, X_C_PaymentAllocate>
 {
 
     /** Standard Constructor */
@@ -34,108 +32,5 @@ public class C_PaymentAllocateAssert
     {
       super (actual, C_PaymentAllocateAssert.class);
     }
-
-
-	public C_PaymentAllocateAssert hasAmount(Object expected)
-	{
-		isNotNull();
-		bdAssert("Amount", actual.getAmount(), expected);
-		return myself;
-	}
-
-
-	public C_PaymentAllocateAssert hasC_AllocationLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AllocationLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AllocationLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentAllocateAssert hasC_Invoice_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Invoice_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Invoice_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentAllocateAssert hasC_Payment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Payment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Payment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentAllocateAssert hasC_PaymentAllocate_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_PaymentAllocate_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaymentAllocate_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentAllocateAssert hasC_PaymentAllocate_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_PaymentAllocate_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaymentAllocate_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaymentAllocateAssert hasDiscountAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DiscountAmt", actual.getDiscountAmt(), expected);
-		return myself;
-	}
-
-
-	public C_PaymentAllocateAssert hasInvoiceAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("InvoiceAmt", actual.getInvoiceAmt(), expected);
-		return myself;
-	}
-
-
-	public C_PaymentAllocateAssert hasOverUnderAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("OverUnderAmt", actual.getOverUnderAmt(), expected);
-		return myself;
-	}
-
-
-	public C_PaymentAllocateAssert hasRemainingAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("RemainingAmt", actual.getRemainingAmt(), expected);
-		return myself;
-	}
-
-
-	public C_PaymentAllocateAssert hasWriteOffAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("WriteOffAmt", actual.getWriteOffAmt(), expected);
-		return myself;
-	}
 
 }

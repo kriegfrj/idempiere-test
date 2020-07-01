@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Depreciation_Forecast;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Depreciation_Forecast;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Depreciation_ForecastAssert
-	extends AbstractPOAssert<A_Depreciation_ForecastAssert,X_A_Depreciation_Forecast>
+public class A_Depreciation_ForecastAssert extends AbstractA_Depreciation_ForecastAssert<A_Depreciation_ForecastAssert, X_A_Depreciation_Forecast>
 {
 
     /** Standard Constructor */
@@ -35,87 +33,4 @@ public class A_Depreciation_ForecastAssert
       super (actual, A_Depreciation_ForecastAssert.class);
     }
 
-
-	public A_Depreciation_ForecastAssert hasA_Depreciation_Forecast_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Depreciation_Forecast_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Forecast_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_ForecastAssert hasA_Depreciation_Forecast_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Depreciation_Forecast_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Forecast_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_ForecastAssert hasA_End_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_End_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_End_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_ForecastAssert hasA_Start_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Start_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Start_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_ForecastAssert hasDateDoc(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateDoc", actual.getDateDoc(), expected);
-		return myself;
-	}
-
-
-	public A_Depreciation_ForecastAssert hasPostingType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPostingType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PostingType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_ForecastAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public A_Depreciation_ForecastAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

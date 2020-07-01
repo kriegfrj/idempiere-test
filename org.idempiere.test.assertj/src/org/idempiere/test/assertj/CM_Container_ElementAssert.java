@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_Container_Element;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_Container_Element;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_Container_ElementAssert
-	extends AbstractPOAssert<CM_Container_ElementAssert,X_CM_Container_Element>
+public class CM_Container_ElementAssert extends AbstractCM_Container_ElementAssert<CM_Container_ElementAssert, X_CM_Container_Element>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class CM_Container_ElementAssert
       super (actual, CM_Container_ElementAssert.class);
     }
 
-
-	public CM_Container_ElementAssert hasCM_Container_Element_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Container_Element_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_Element_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_ElementAssert hasCM_Container_Element_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_Container_Element_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_Element_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_ElementAssert hasCM_Container_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Container_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_ElementAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_ElementAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Container_ElementAssert isValid()
-	{
-		isNotNull();
-		if (!actual.isValid()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Valid\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_Container_ElementAssert isNotValid()
-	{
-		isNotNull();
-		if (actual.isValid()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Valid\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_Container_ElementAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

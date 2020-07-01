@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_OnlineTrxHistory;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_OnlineTrxHistory;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_OnlineTrxHistoryAssert
-	extends AbstractPOAssert<C_OnlineTrxHistoryAssert,X_C_OnlineTrxHistory>
+public class C_OnlineTrxHistoryAssert extends AbstractC_OnlineTrxHistoryAssert<C_OnlineTrxHistoryAssert, X_C_OnlineTrxHistory>
 {
 
     /** Standard Constructor */
@@ -35,88 +33,4 @@ public class C_OnlineTrxHistoryAssert
       super (actual, C_OnlineTrxHistoryAssert.class);
     }
 
-
-	public C_OnlineTrxHistoryAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OnlineTrxHistoryAssert hasC_OnlineTrxHistory_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OnlineTrxHistory_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OnlineTrxHistory_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OnlineTrxHistoryAssert hasC_OnlineTrxHistory_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_OnlineTrxHistory_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OnlineTrxHistory_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OnlineTrxHistoryAssert isError()
-	{
-		isNotNull();
-		if (!actual.isError()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Error\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OnlineTrxHistoryAssert isNotError()
-	{
-		isNotNull();
-		if (actual.isError()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Error\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OnlineTrxHistoryAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OnlineTrxHistoryAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OnlineTrxHistoryAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

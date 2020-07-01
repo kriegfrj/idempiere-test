@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_CtxHelpMsg;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_CtxHelpMsg;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_CtxHelpMsgAssert
-	extends AbstractPOAssert<AD_CtxHelpMsgAssert,X_AD_CtxHelpMsg>
+public class AD_CtxHelpMsgAssert extends AbstractAD_CtxHelpMsgAssert<AD_CtxHelpMsgAssert, X_AD_CtxHelpMsg>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class AD_CtxHelpMsgAssert
       super (actual, AD_CtxHelpMsgAssert.class);
     }
 
-
-	public AD_CtxHelpMsgAssert hasAD_CtxHelp_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_CtxHelp_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_CtxHelp_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_CtxHelpMsgAssert hasAD_CtxHelpMsg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_CtxHelpMsg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_CtxHelpMsg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_CtxHelpMsgAssert hasAD_CtxHelpMsg_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_CtxHelpMsg_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_CtxHelpMsg_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_CtxHelpMsgAssert hasMsgText(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMsgText();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MsgText: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

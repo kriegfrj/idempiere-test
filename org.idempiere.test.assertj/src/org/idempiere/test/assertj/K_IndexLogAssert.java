@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_IndexLog;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_IndexLog;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_IndexLogAssert
-	extends AbstractPOAssert<K_IndexLogAssert,X_K_IndexLog>
+public class K_IndexLogAssert extends AbstractK_IndexLogAssert<K_IndexLogAssert, X_K_IndexLog>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class K_IndexLogAssert
       super (actual, K_IndexLogAssert.class);
     }
 
-
-	public K_IndexLogAssert hasIndexQuery(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getIndexQuery();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IndexQuery: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_IndexLogAssert hasIndexQueryResult(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getIndexQueryResult();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IndexQueryResult: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_IndexLogAssert hasK_IndexLog_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_IndexLog_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_IndexLog_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_IndexLogAssert hasK_IndexLog_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_IndexLog_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_IndexLog_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_IndexLogAssert hasQuerySource(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getQuerySource();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have QuerySource: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

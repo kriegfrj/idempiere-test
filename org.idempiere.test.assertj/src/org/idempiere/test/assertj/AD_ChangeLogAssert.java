@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_ChangeLog;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_ChangeLog;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ChangeLogAssert
-	extends AbstractPOAssert<AD_ChangeLogAssert,X_AD_ChangeLog>
+public class AD_ChangeLogAssert extends AbstractAD_ChangeLogAssert<AD_ChangeLogAssert, X_AD_ChangeLog>
 {
 
     /** Standard Constructor */
@@ -35,134 +33,4 @@ public class AD_ChangeLogAssert
       super (actual, AD_ChangeLogAssert.class);
     }
 
-
-	public AD_ChangeLogAssert hasAD_ChangeLog_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ChangeLog_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ChangeLog_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasAD_ChangeLog_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_ChangeLog_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ChangeLog_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasAD_Column_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Column_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Column_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasAD_Session_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Session_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Session_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasEventChangeLog(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEventChangeLog();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EventChangeLog: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert isCustomization()
-	{
-		isNotNull();
-		if (!actual.isCustomization()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Customization\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert isNotCustomization()
-	{
-		isNotNull();
-		if (actual.isCustomization()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Customization\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasNewValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getNewValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have NewValue: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasOldValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getOldValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have OldValue: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ChangeLogAssert hasTrxName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTrxName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TrxName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -157,6 +157,8 @@ public class AssertionsGeneratorDialog extends JDialog implements ActionListener
 				ModelAssertionGenerator.generateSource(folder, modelPackageName, assertionsPackageName, entityType.getEntityType(), tableName);
 			} catch (InterruptedException ex) {
 				JOptionPane.showMessageDialog(this, "Interrupted while waiting for iDempiere to start", "Error", JOptionPane.ERROR_MESSAGE);
+			} catch (IOException ex) {
+				JOptionPane.showMessageDialog(this, "Error while creating the assertions: " + e, "Error", JOptionPane.ERROR_MESSAGE);
 			}
 			this.dispose();
 		} else if (e.getSource() == bCancel) {

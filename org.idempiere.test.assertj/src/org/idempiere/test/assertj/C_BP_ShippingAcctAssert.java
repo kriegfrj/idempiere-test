@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_BP_ShippingAcct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_BP_ShippingAcct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_BP_ShippingAcctAssert
-	extends AbstractPOAssert<C_BP_ShippingAcctAssert,X_C_BP_ShippingAcct>
+public class C_BP_ShippingAcctAssert extends AbstractC_BP_ShippingAcctAssert<C_BP_ShippingAcctAssert, X_C_BP_ShippingAcct>
 {
 
     /** Standard Constructor */
@@ -35,92 +33,4 @@ public class C_BP_ShippingAcctAssert
       super (actual, C_BP_ShippingAcctAssert.class);
     }
 
-
-	public C_BP_ShippingAcctAssert hasC_BP_ShippingAcct_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BP_ShippingAcct_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_ShippingAcct_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_ShippingAcctAssert hasC_BP_ShippingAcct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_BP_ShippingAcct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_ShippingAcct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_ShippingAcctAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_ShippingAcctAssert hasC_BPartner_Location_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_Location_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_Location_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_ShippingAcctAssert hasDutiesShipperAccount(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDutiesShipperAccount();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DutiesShipperAccount: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_ShippingAcctAssert hasM_ShippingProcessor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShippingProcessor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShippingProcessor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_ShippingAcctAssert hasShipperAccount(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getShipperAccount();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ShipperAccount: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_ShippingAcctAssert hasShipperMeter(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getShipperMeter();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ShipperMeter: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

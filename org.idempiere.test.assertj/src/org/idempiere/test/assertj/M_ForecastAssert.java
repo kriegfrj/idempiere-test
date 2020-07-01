@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_Forecast;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_Forecast;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ForecastAssert
-	extends AbstractPOAssert<M_ForecastAssert,X_M_Forecast>
+public class M_ForecastAssert extends AbstractM_ForecastAssert<M_ForecastAssert, X_M_Forecast>
 {
 
     /** Standard Constructor */
@@ -35,101 +33,4 @@ public class M_ForecastAssert
       super (actual, M_ForecastAssert.class);
     }
 
-
-	public M_ForecastAssert hasC_Calendar_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Calendar_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Calendar_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert hasC_Year_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Year_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Year_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert hasM_Forecast_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Forecast_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Forecast_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert hasM_Forecast_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_Forecast_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Forecast_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ForecastAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

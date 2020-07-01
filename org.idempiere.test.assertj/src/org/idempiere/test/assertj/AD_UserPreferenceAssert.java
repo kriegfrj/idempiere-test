@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_UserPreference;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_UserPreference;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_UserPreferenceAssert
-	extends AbstractPOAssert<AD_UserPreferenceAssert,X_AD_UserPreference>
+public class AD_UserPreferenceAssert extends AbstractAD_UserPreferenceAssert<AD_UserPreferenceAssert, X_AD_UserPreference>
 {
 
     /** Standard Constructor */
@@ -35,148 +33,4 @@ public class AD_UserPreferenceAssert
       super (actual, AD_UserPreferenceAssert.class);
     }
 
-
-	public AD_UserPreferenceAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert hasAD_UserPreference_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_UserPreference_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_UserPreference_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert hasAD_UserPreference_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_UserPreference_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_UserPreference_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isAutoCommit()
-	{
-		isNotNull();
-		if (!actual.isAutoCommit()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be AutoCommit\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isNotAutoCommit()
-	{
-		isNotNull();
-		if (actual.isAutoCommit()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be AutoCommit\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert hasAutomaticDecimalPlacesForAmoun(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAutomaticDecimalPlacesForAmoun();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AutomaticDecimalPlacesForAmoun: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isAutoNew()
-	{
-		isNotNull();
-		if (!actual.isAutoNew()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be AutoNew\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isNotAutoNew()
-	{
-		isNotNull();
-		if (actual.isAutoNew()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be AutoNew\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isDetailedZoomAcross()
-	{
-		isNotNull();
-		if (!actual.isDetailedZoomAcross()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be DetailedZoomAcross\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isNotDetailedZoomAcross()
-	{
-		isNotNull();
-		if (actual.isDetailedZoomAcross()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be DetailedZoomAcross\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isUseSimilarTo()
-	{
-		isNotNull();
-		if (!actual.isUseSimilarTo()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be UseSimilarTo\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isNotUseSimilarTo()
-	{
-		isNotNull();
-		if (actual.isUseSimilarTo()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be UseSimilarTo\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isToggleOnDoubleClick()
-	{
-		isNotNull();
-		if (!actual.isToggleOnDoubleClick()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be ToggleOnDoubleClick\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_UserPreferenceAssert isNotToggleOnDoubleClick()
-	{
-		isNotNull();
-		if (actual.isToggleOnDoubleClick()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ToggleOnDoubleClick\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

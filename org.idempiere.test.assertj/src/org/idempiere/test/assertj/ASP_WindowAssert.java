@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_ASP_Window;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_ASP_Window;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class ASP_WindowAssert
-	extends AbstractPOAssert<ASP_WindowAssert,X_ASP_Window>
+public class ASP_WindowAssert extends AbstractASP_WindowAssert<ASP_WindowAssert, X_ASP_Window>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class ASP_WindowAssert
       super (actual, ASP_WindowAssert.class);
     }
 
-
-	public ASP_WindowAssert hasAD_Window_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Window_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Window_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WindowAssert hasASP_Level_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Level_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Level_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WindowAssert hasASP_Status(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Status();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Status: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WindowAssert hasASP_Window_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Window_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Window_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WindowAssert hasASP_Window_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Window_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Window_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

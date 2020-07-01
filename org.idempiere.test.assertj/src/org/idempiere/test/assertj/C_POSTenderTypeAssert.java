@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_POSTenderType;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_POSTenderType;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_POSTenderTypeAssert
-	extends AbstractPOAssert<C_POSTenderTypeAssert,X_C_POSTenderType>
+public class C_POSTenderTypeAssert extends AbstractC_POSTenderTypeAssert<C_POSTenderTypeAssert, X_C_POSTenderType>
 {
 
     /** Standard Constructor */
@@ -35,121 +33,4 @@ public class C_POSTenderTypeAssert
       super (actual, C_POSTenderTypeAssert.class);
     }
 
-
-	public C_POSTenderTypeAssert hasC_POSTenderType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_POSTenderType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_POSTenderType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert hasC_POSTenderType_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_POSTenderType_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_POSTenderType_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert isGuarantee()
-	{
-		isNotNull();
-		if (!actual.isGuarantee()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Guarantee\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert isNotGuarantee()
-	{
-		isNotNull();
-		if (actual.isGuarantee()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Guarantee\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert isPostDated()
-	{
-		isNotNull();
-		if (!actual.isPostDated()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be PostDated\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert isNotPostDated()
-	{
-		isNotNull();
-		if (actual.isPostDated()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be PostDated\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert hasTenderType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTenderType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TenderType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_POSTenderTypeAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

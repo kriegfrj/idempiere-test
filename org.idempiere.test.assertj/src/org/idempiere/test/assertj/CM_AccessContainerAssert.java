@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_AccessContainer;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_AccessContainer;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_AccessContainerAssert
-	extends AbstractPOAssert<CM_AccessContainerAssert,X_CM_AccessContainer>
+public class CM_AccessContainerAssert extends AbstractCM_AccessContainerAssert<CM_AccessContainerAssert, X_CM_AccessContainer>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class CM_AccessContainerAssert
       super (actual, CM_AccessContainerAssert.class);
     }
 
-
-	public CM_AccessContainerAssert hasCM_AccessContainer_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_AccessContainer_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessContainer_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessContainerAssert hasCM_AccessProfile_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_AccessProfile_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessProfile_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessContainerAssert hasCM_Container_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Container_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_ProjectIssue;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_ProjectIssue;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_ProjectIssueAssert
-	extends AbstractPOAssert<C_ProjectIssueAssert,X_C_ProjectIssue>
+public class C_ProjectIssueAssert extends AbstractC_ProjectIssueAssert<C_ProjectIssueAssert, X_C_ProjectIssue>
 {
 
     /** Standard Constructor */
@@ -35,178 +33,4 @@ public class C_ProjectIssueAssert
       super (actual, C_ProjectIssueAssert.class);
     }
 
-
-	public C_ProjectIssueAssert hasC_Project_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Project_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Project_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasC_ProjectIssue_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_ProjectIssue_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ProjectIssue_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasC_ProjectIssue_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_ProjectIssue_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ProjectIssue_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasLine(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLine();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Line: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasM_InOutLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasM_Locator_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Locator_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Locator_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasMovementDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("MovementDate", actual.getMovementDate(), expected);
-		return myself;
-	}
-
-
-	public C_ProjectIssueAssert hasMovementQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("MovementQty", actual.getMovementQty(), expected);
-		return myself;
-	}
-
-
-	public C_ProjectIssueAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasProcessedOn(Object expected)
-	{
-		isNotNull();
-		bdAssert("ProcessedOn", actual.getProcessedOn(), expected);
-		return myself;
-	}
-
-
-	public C_ProjectIssueAssert isProcessing()
-	{
-		isNotNull();
-		if (!actual.isProcessing()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processing\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert isNotProcessing()
-	{
-		isNotNull();
-		if (actual.isProcessing()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processing\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueAssert hasS_TimeExpenseLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_TimeExpenseLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_TimeExpenseLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

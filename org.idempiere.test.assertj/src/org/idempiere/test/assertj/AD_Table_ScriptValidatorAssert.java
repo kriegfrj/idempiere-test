@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Table_ScriptValidator;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Table_ScriptValidator;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Table_ScriptValidatorAssert
-	extends AbstractPOAssert<AD_Table_ScriptValidatorAssert,X_AD_Table_ScriptValidator>
+public class AD_Table_ScriptValidatorAssert extends AbstractAD_Table_ScriptValidatorAssert<AD_Table_ScriptValidatorAssert, X_AD_Table_ScriptValidator>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class AD_Table_ScriptValidatorAssert
       super (actual, AD_Table_ScriptValidatorAssert.class);
     }
 
-
-	public AD_Table_ScriptValidatorAssert hasAD_Rule_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Rule_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Rule_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Table_ScriptValidatorAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Table_ScriptValidatorAssert hasAD_Table_ScriptValidator_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ScriptValidator_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ScriptValidator_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Table_ScriptValidatorAssert hasAD_Table_ScriptValidator_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Table_ScriptValidator_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ScriptValidator_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Table_ScriptValidatorAssert hasEventModelValidator(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEventModelValidator();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EventModelValidator: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Table_ScriptValidatorAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

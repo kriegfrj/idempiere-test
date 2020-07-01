@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_Media;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_Media;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_MediaAssert
-	extends AbstractPOAssert<CM_MediaAssert,X_CM_Media>
+public class CM_MediaAssert extends AbstractCM_MediaAssert<CM_MediaAssert, X_CM_Media>
 {
 
     /** Standard Constructor */
@@ -35,112 +33,4 @@ public class CM_MediaAssert
       super (actual, CM_MediaAssert.class);
     }
 
-
-	public CM_MediaAssert hasAD_Image_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Image_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Image_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert hasCM_Media_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Media_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Media_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert hasCM_Media_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_Media_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Media_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert hasCM_WebProject_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_WebProject_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_WebProject_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert isSummary()
-	{
-		isNotNull();
-		if (!actual.isSummary()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Summary\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert isNotSummary()
-	{
-		isNotNull();
-		if (actual.isSummary()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Summary\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert hasMediaType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMediaType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MediaType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

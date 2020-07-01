@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_BP_Relation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_BP_Relation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_BP_RelationAssert
-	extends AbstractPOAssert<C_BP_RelationAssert,X_C_BP_Relation>
+public class C_BP_RelationAssert extends AbstractC_BP_RelationAssert<C_BP_RelationAssert, X_C_BP_Relation>
 {
 
     /** Standard Constructor */
@@ -35,172 +33,4 @@ public class C_BP_RelationAssert
       super (actual, C_BP_RelationAssert.class);
     }
 
-
-	public C_BP_RelationAssert hasC_BP_Relation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BP_Relation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_Relation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert hasC_BP_Relation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_BP_Relation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_Relation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert hasC_BPartner_Location_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_Location_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_Location_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert hasC_BPartnerRelation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartnerRelation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartnerRelation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert hasC_BPartnerRelation_Location_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartnerRelation_Location_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartnerRelation_Location_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isBillTo()
-	{
-		isNotNull();
-		if (!actual.isBillTo()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be BillTo\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isNotBillTo()
-	{
-		isNotNull();
-		if (actual.isBillTo()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be BillTo\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isPayFrom()
-	{
-		isNotNull();
-		if (!actual.isPayFrom()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be PayFrom\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isNotPayFrom()
-	{
-		isNotNull();
-		if (actual.isPayFrom()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be PayFrom\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isRemitTo()
-	{
-		isNotNull();
-		if (!actual.isRemitTo()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be RemitTo\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isNotRemitTo()
-	{
-		isNotNull();
-		if (actual.isRemitTo()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be RemitTo\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isShipTo()
-	{
-		isNotNull();
-		if (!actual.isShipTo()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be ShipTo\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert isNotShipTo()
-	{
-		isNotNull();
-		if (actual.isShipTo()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ShipTo\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_RelationAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

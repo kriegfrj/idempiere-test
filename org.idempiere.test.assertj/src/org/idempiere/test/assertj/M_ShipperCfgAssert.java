@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ShipperCfg;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ShipperCfg;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ShipperCfgAssert
-	extends AbstractPOAssert<M_ShipperCfgAssert,X_M_ShipperCfg>
+public class M_ShipperCfgAssert extends AbstractM_ShipperCfgAssert<M_ShipperCfgAssert, X_M_ShipperCfg>
 {
 
     /** Standard Constructor */
@@ -35,161 +33,4 @@ public class M_ShipperCfgAssert
       super (actual, M_ShipperCfgAssert.class);
     }
 
-
-	public M_ShipperCfgAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isInternational()
-	{
-		isNotNull();
-		if (!actual.isInternational()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be International\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isNotInternational()
-	{
-		isNotNull();
-		if (actual.isInternational()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be International\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isOnline()
-	{
-		isNotNull();
-		if (!actual.isOnline()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Online\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isNotOnline()
-	{
-		isNotNull();
-		if (actual.isOnline()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Online\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isResidential()
-	{
-		isNotNull();
-		if (!actual.isResidential()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Residential\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isNotResidential()
-	{
-		isNotNull();
-		if (actual.isResidential()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Residential\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isSaturdayDelivery()
-	{
-		isNotNull();
-		if (!actual.isSaturdayDelivery()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SaturdayDelivery\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert isNotSaturdayDelivery()
-	{
-		isNotNull();
-		if (actual.isSaturdayDelivery()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SaturdayDelivery\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert hasM_ShipperCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShipperCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert hasM_ShipperCfg_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ShipperCfg_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperCfg_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert hasM_ShippingProcessorCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShippingProcessorCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShippingProcessorCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert hasShippingServiceCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getShippingServiceCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ShippingServiceCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperCfgAssert hasTrackingURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTrackingURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TrackingURL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

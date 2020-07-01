@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_TaskInstance;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_TaskInstance;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_TaskInstanceAssert
-	extends AbstractPOAssert<AD_TaskInstanceAssert,X_AD_TaskInstance>
+public class AD_TaskInstanceAssert extends AbstractAD_TaskInstanceAssert<AD_TaskInstanceAssert, X_AD_TaskInstance>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class AD_TaskInstanceAssert
       super (actual, AD_TaskInstanceAssert.class);
     }
 
-
-	public AD_TaskInstanceAssert hasAD_Task_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Task_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Task_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TaskInstanceAssert hasAD_TaskInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_TaskInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_TaskInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TaskInstanceAssert hasAD_TaskInstance_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_TaskInstance_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_TaskInstance_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

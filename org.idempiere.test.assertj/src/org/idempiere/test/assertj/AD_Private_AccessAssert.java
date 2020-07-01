@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Private_Access;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Private_Access;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Private_AccessAssert
-	extends AbstractPOAssert<AD_Private_AccessAssert,X_AD_Private_Access>
+public class AD_Private_AccessAssert extends AbstractAD_Private_AccessAssert<AD_Private_AccessAssert, X_AD_Private_Access>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class AD_Private_AccessAssert
       super (actual, AD_Private_AccessAssert.class);
     }
 
-
-	public AD_Private_AccessAssert hasAD_Private_Access_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Private_Access_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Private_Access_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Private_AccessAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Private_AccessAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

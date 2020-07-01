@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_Warehouse_Acct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_Warehouse_Acct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_Warehouse_AcctAssert
-	extends AbstractPOAssert<M_Warehouse_AcctAssert,X_M_Warehouse_Acct>
+public class M_Warehouse_AcctAssert extends AbstractM_Warehouse_AcctAssert<M_Warehouse_AcctAssert, X_M_Warehouse_Acct>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class M_Warehouse_AcctAssert
       super (actual, M_Warehouse_AcctAssert.class);
     }
 
-
-	public M_Warehouse_AcctAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_Warehouse_AcctAssert hasM_Warehouse_Acct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_Warehouse_Acct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Warehouse_Acct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_Warehouse_AcctAssert hasM_Warehouse_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Warehouse_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Warehouse_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_Warehouse_AcctAssert hasW_Differences_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_Differences_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_Differences_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_GL_BudgetControl;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_GL_BudgetControl;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class GL_BudgetControlAssert
-	extends AbstractPOAssert<GL_BudgetControlAssert,X_GL_BudgetControl>
+public class GL_BudgetControlAssert extends AbstractGL_BudgetControlAssert<GL_BudgetControlAssert, X_GL_BudgetControl>
 {
 
     /** Standard Constructor */
@@ -35,123 +33,4 @@ public class GL_BudgetControlAssert
       super (actual, GL_BudgetControlAssert.class);
     }
 
-
-	public GL_BudgetControlAssert hasBudgetControlScope(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getBudgetControlScope();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have BudgetControlScope: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasCommitmentType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCommitmentType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CommitmentType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasGL_Budget_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getGL_Budget_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_Budget_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasGL_BudgetControl_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getGL_BudgetControl_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_BudgetControl_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasGL_BudgetControl_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getGL_BudgetControl_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_BudgetControl_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert isBeforeApproval()
-	{
-		isNotNull();
-		if (!actual.isBeforeApproval()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be BeforeApproval\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert isNotBeforeApproval()
-	{
-		isNotNull();
-		if (actual.isBeforeApproval()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be BeforeApproval\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public GL_BudgetControlAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

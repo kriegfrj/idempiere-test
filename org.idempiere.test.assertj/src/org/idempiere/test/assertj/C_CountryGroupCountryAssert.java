@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_CountryGroupCountry;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_CountryGroupCountry;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_CountryGroupCountryAssert
-	extends AbstractPOAssert<C_CountryGroupCountryAssert,X_C_CountryGroupCountry>
+public class C_CountryGroupCountryAssert extends AbstractC_CountryGroupCountryAssert<C_CountryGroupCountryAssert, X_C_CountryGroupCountry>
 {
 
     /** Standard Constructor */
@@ -34,65 +32,5 @@ public class C_CountryGroupCountryAssert
     {
       super (actual, C_CountryGroupCountryAssert.class);
     }
-
-
-	public C_CountryGroupCountryAssert hasC_Country_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Country_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Country_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CountryGroupCountryAssert hasC_CountryGroup_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CountryGroup_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CountryGroup_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CountryGroupCountryAssert hasC_CountryGroupCountry_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CountryGroupCountry_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CountryGroupCountry_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CountryGroupCountryAssert hasC_CountryGroupCountry_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_CountryGroupCountry_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CountryGroupCountry_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CountryGroupCountryAssert hasDateFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateFrom", actual.getDateFrom(), expected);
-		return myself;
-	}
-
-
-	public C_CountryGroupCountryAssert hasDateTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateTo", actual.getDateTo(), expected);
-		return myself;
-	}
 
 }

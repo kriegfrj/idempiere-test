@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_Entry;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_Entry;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_EntryAssert
-	extends AbstractPOAssert<K_EntryAssert,X_K_Entry>
+public class K_EntryAssert extends AbstractK_EntryAssert<K_EntryAssert, X_K_Entry>
 {
 
     /** Standard Constructor */
@@ -34,143 +32,5 @@ public class K_EntryAssert
     {
       super (actual, K_EntryAssert.class);
     }
-
-
-	public K_EntryAssert hasAD_Session_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Session_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Session_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasDescriptionURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescriptionURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DescriptionURL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert isPublic()
-	{
-		isNotNull();
-		if (!actual.isPublic()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Public\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_EntryAssert isNotPublic()
-	{
-		isNotNull();
-		if (actual.isPublic()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Public\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasK_Entry_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Entry_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Entry_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasK_Entry_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_Entry_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Entry_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasK_Source_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Source_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Source_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasK_Topic_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Topic_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Topic_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasKeywords(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getKeywords();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Keywords: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasRating(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getRating();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Rating: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryAssert hasValidTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidTo", actual.getValidTo(), expected);
-		return myself;
-	}
 
 }

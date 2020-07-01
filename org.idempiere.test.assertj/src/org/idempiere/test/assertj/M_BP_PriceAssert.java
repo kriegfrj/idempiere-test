@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_BP_Price;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_BP_Price;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_BP_PriceAssert
-	extends AbstractPOAssert<M_BP_PriceAssert,X_M_BP_Price>
+public class M_BP_PriceAssert extends AbstractM_BP_PriceAssert<M_BP_PriceAssert, X_M_BP_Price>
 {
 
     /** Standard Constructor */
@@ -34,158 +32,5 @@ public class M_BP_PriceAssert
     {
       super (actual, M_BP_PriceAssert.class);
     }
-
-
-	public M_BP_PriceAssert hasBreakValue(Object expected)
-	{
-		isNotNull();
-		bdAssert("BreakValue", actual.getBreakValue(), expected);
-		return myself;
-	}
-
-
-	public M_BP_PriceAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasC_Currency_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Currency_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Currency_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasComments(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getComments();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Comments: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasDiscount(Object expected)
-	{
-		isNotNull();
-		bdAssert("Discount", actual.getDiscount(), expected);
-		return myself;
-	}
-
-
-	public M_BP_PriceAssert isNetPrice()
-	{
-		isNotNull();
-		if (!actual.isNetPrice()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be NetPrice\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert isNotNetPrice()
-	{
-		isNotNull();
-		if (actual.isNetPrice()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be NetPrice\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasM_BP_Price_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_BP_Price_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_BP_Price_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasM_BP_Price_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_BP_Price_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_BP_Price_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasPriceLimit(Object expected)
-	{
-		isNotNull();
-		bdAssert("PriceLimit", actual.getPriceLimit(), expected);
-		return myself;
-	}
-
-
-	public M_BP_PriceAssert hasPriceList(Object expected)
-	{
-		isNotNull();
-		bdAssert("PriceList", actual.getPriceList(), expected);
-		return myself;
-	}
-
-
-	public M_BP_PriceAssert hasPriceOverrideType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPriceOverrideType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PriceOverrideType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BP_PriceAssert hasPriceStd(Object expected)
-	{
-		isNotNull();
-		bdAssert("PriceStd", actual.getPriceStd(), expected);
-		return myself;
-	}
-
-
-	public M_BP_PriceAssert hasValidFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidFrom", actual.getValidFrom(), expected);
-		return myself;
-	}
-
-
-	public M_BP_PriceAssert hasValidTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidTo", actual.getValidTo(), expected);
-		return myself;
-	}
 
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_DistributionRunLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_DistributionRunLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_DistributionRunLineAssert
-	extends AbstractPOAssert<M_DistributionRunLineAssert,X_M_DistributionRunLine>
+public class M_DistributionRunLineAssert extends AbstractM_DistributionRunLineAssert<M_DistributionRunLineAssert, X_M_DistributionRunLine>
 {
 
     /** Standard Constructor */
@@ -34,98 +32,5 @@ public class M_DistributionRunLineAssert
     {
       super (actual, M_DistributionRunLineAssert.class);
     }
-
-
-	public M_DistributionRunLineAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunLineAssert hasLine(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLine();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Line: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunLineAssert hasM_DistributionList_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionList_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionList_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunLineAssert hasM_DistributionRun_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionRun_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionRun_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunLineAssert hasM_DistributionRunLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionRunLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionRunLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunLineAssert hasM_DistributionRunLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_DistributionRunLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionRunLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunLineAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DistributionRunLineAssert hasMinQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("MinQty", actual.getMinQty(), expected);
-		return myself;
-	}
-
-
-	public M_DistributionRunLineAssert hasTotalQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("TotalQty", actual.getTotalQty(), expected);
-		return myself;
-	}
 
 }

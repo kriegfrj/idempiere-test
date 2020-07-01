@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Bank;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Bank;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_BankAssert
-	extends AbstractPOAssert<C_BankAssert,X_C_Bank>
+public class C_BankAssert extends AbstractC_BankAssert<C_BankAssert, X_C_Bank>
 {
 
     /** Standard Constructor */
@@ -35,101 +33,4 @@ public class C_BankAssert
       super (actual, C_BankAssert.class);
     }
 
-
-	public C_BankAssert hasC_Bank_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Bank_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Bank_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankAssert hasC_Bank_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Bank_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Bank_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankAssert hasC_Location_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Location_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Location_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankAssert isOwnBank()
-	{
-		isNotNull();
-		if (!actual.isOwnBank()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be OwnBank\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BankAssert isNotOwnBank()
-	{
-		isNotNull();
-		if (actual.isOwnBank()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be OwnBank\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BankAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankAssert hasRoutingNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRoutingNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RoutingNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BankAssert hasSwiftCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSwiftCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SwiftCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

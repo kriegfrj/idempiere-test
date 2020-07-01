@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_InvoicePaySchedule;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_InvoicePaySchedule;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_InvoicePayScheduleAssert
-	extends AbstractPOAssert<C_InvoicePayScheduleAssert,X_C_InvoicePaySchedule>
+public class C_InvoicePayScheduleAssert extends AbstractC_InvoicePayScheduleAssert<C_InvoicePayScheduleAssert, X_C_InvoicePaySchedule>
 {
 
     /** Standard Constructor */
@@ -35,120 +33,4 @@ public class C_InvoicePayScheduleAssert
       super (actual, C_InvoicePayScheduleAssert.class);
     }
 
-
-	public C_InvoicePayScheduleAssert hasC_Invoice_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Invoice_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Invoice_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoicePayScheduleAssert hasC_InvoicePaySchedule_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoicePaySchedule_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoicePaySchedule_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoicePayScheduleAssert hasC_InvoicePaySchedule_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_InvoicePaySchedule_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoicePaySchedule_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoicePayScheduleAssert hasC_PaySchedule_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_PaySchedule_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaySchedule_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoicePayScheduleAssert hasDiscountAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DiscountAmt", actual.getDiscountAmt(), expected);
-		return myself;
-	}
-
-
-	public C_InvoicePayScheduleAssert hasDiscountDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("DiscountDate", actual.getDiscountDate(), expected);
-		return myself;
-	}
-
-
-	public C_InvoicePayScheduleAssert hasDueAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DueAmt", actual.getDueAmt(), expected);
-		return myself;
-	}
-
-
-	public C_InvoicePayScheduleAssert hasDueDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("DueDate", actual.getDueDate(), expected);
-		return myself;
-	}
-
-
-	public C_InvoicePayScheduleAssert isValid()
-	{
-		isNotNull();
-		if (!actual.isValid()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Valid\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_InvoicePayScheduleAssert isNotValid()
-	{
-		isNotNull();
-		if (actual.isValid()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Valid\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_InvoicePayScheduleAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_InvoicePayScheduleAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

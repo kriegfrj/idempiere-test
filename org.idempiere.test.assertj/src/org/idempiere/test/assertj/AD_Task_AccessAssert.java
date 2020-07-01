@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Task_Access;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Task_Access;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Task_AccessAssert
-	extends AbstractPOAssert<AD_Task_AccessAssert,X_AD_Task_Access>
+public class AD_Task_AccessAssert extends AbstractAD_Task_AccessAssert<AD_Task_AccessAssert, X_AD_Task_Access>
 {
 
     /** Standard Constructor */
@@ -35,57 +33,4 @@ public class AD_Task_AccessAssert
       super (actual, AD_Task_AccessAssert.class);
     }
 
-
-	public AD_Task_AccessAssert hasAD_Role_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Role_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Role_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Task_AccessAssert hasAD_Task_Access_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Task_Access_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Task_Access_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Task_AccessAssert hasAD_Task_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Task_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Task_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Task_AccessAssert isReadWrite()
-	{
-		isNotNull();
-		if (!actual.isReadWrite()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be ReadWrite\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_Task_AccessAssert isNotReadWrite()
-	{
-		isNotNull();
-		if (actual.isReadWrite()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ReadWrite\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

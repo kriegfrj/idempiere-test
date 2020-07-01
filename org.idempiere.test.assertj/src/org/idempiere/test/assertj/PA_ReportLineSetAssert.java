@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_ReportLineSet;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_ReportLineSet;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_ReportLineSetAssert
-	extends AbstractPOAssert<PA_ReportLineSetAssert,X_PA_ReportLineSet>
+public class PA_ReportLineSetAssert extends AbstractPA_ReportLineSetAssert<PA_ReportLineSetAssert, X_PA_ReportLineSet>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class PA_ReportLineSetAssert
       super (actual, PA_ReportLineSetAssert.class);
     }
 
-
-	public PA_ReportLineSetAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_ReportLineSetAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_ReportLineSetAssert hasPA_ReportLineSet_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_ReportLineSet_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_ReportLineSet_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_ReportLineSetAssert hasPA_ReportLineSet_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_ReportLineSet_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_ReportLineSet_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

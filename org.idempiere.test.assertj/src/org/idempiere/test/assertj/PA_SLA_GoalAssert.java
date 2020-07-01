@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_SLA_Goal;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_SLA_Goal;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_SLA_GoalAssert
-	extends AbstractPOAssert<PA_SLA_GoalAssert,X_PA_SLA_Goal>
+public class PA_SLA_GoalAssert extends AbstractPA_SLA_GoalAssert<PA_SLA_GoalAssert, X_PA_SLA_Goal>
 {
 
     /** Standard Constructor */
@@ -34,142 +32,5 @@ public class PA_SLA_GoalAssert
     {
       super (actual, PA_SLA_GoalAssert.class);
     }
-
-
-	public PA_SLA_GoalAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert hasDateLastRun(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateLastRun", actual.getDateLastRun(), expected);
-		return myself;
-	}
-
-
-	public PA_SLA_GoalAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert hasMeasureActual(Object expected)
-	{
-		isNotNull();
-		bdAssert("MeasureActual", actual.getMeasureActual(), expected);
-		return myself;
-	}
-
-
-	public PA_SLA_GoalAssert hasMeasureTarget(Object expected)
-	{
-		isNotNull();
-		bdAssert("MeasureTarget", actual.getMeasureTarget(), expected);
-		return myself;
-	}
-
-
-	public PA_SLA_GoalAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert hasPA_SLA_Criteria_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_SLA_Criteria_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Criteria_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert hasPA_SLA_Goal_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_SLA_Goal_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Goal_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert hasPA_SLA_Goal_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_SLA_Goal_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Goal_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public PA_SLA_GoalAssert hasValidFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidFrom", actual.getValidFrom(), expected);
-		return myself;
-	}
-
-
-	public PA_SLA_GoalAssert hasValidTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidTo", actual.getValidTo(), expected);
-		return myself;
-	}
 
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_AccessMedia;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_AccessMedia;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_AccessMediaAssert
-	extends AbstractPOAssert<CM_AccessMediaAssert,X_CM_AccessMedia>
+public class CM_AccessMediaAssert extends AbstractCM_AccessMediaAssert<CM_AccessMediaAssert, X_CM_AccessMedia>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class CM_AccessMediaAssert
       super (actual, CM_AccessMediaAssert.class);
     }
 
-
-	public CM_AccessMediaAssert hasCM_AccessMedia_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_AccessMedia_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessMedia_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessMediaAssert hasCM_AccessProfile_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_AccessProfile_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessProfile_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessMediaAssert hasCM_Media_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Media_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Media_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_RevenueRecognition;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_RevenueRecognition;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RevenueRecognitionAssert
-	extends AbstractPOAssert<C_RevenueRecognitionAssert,X_C_RevenueRecognition>
+public class C_RevenueRecognitionAssert extends AbstractC_RevenueRecognitionAssert<C_RevenueRecognitionAssert, X_C_RevenueRecognition>
 {
 
     /** Standard Constructor */
@@ -35,101 +33,4 @@ public class C_RevenueRecognitionAssert
       super (actual, C_RevenueRecognitionAssert.class);
     }
 
-
-	public C_RevenueRecognitionAssert hasC_RevenueRecognition_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RevenueRecognition_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecognition_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert hasC_RevenueRecognition_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_RevenueRecognition_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecognition_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert hasFixedRecogDay(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getFixedRecogDay();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FixedRecogDay: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert isTimeBased()
-	{
-		isNotNull();
-		if (!actual.isTimeBased()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be TimeBased\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert isNotTimeBased()
-	{
-		isNotNull();
-		if (actual.isTimeBased()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be TimeBased\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert hasNoMonths(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getNoMonths();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have NoMonths: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecognitionAssert hasRecognitionFrequency(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRecognitionFrequency();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RecognitionFrequency: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

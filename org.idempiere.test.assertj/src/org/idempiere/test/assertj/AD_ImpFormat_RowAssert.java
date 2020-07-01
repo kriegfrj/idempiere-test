@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_ImpFormat_Row;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_ImpFormat_Row;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ImpFormat_RowAssert
-	extends AbstractPOAssert<AD_ImpFormat_RowAssert,X_AD_ImpFormat_Row>
+public class AD_ImpFormat_RowAssert extends AbstractAD_ImpFormat_RowAssert<AD_ImpFormat_RowAssert, X_AD_ImpFormat_Row>
 {
 
     /** Standard Constructor */
@@ -35,178 +33,4 @@ public class AD_ImpFormat_RowAssert
       super (actual, AD_ImpFormat_RowAssert.class);
     }
 
-
-	public AD_ImpFormat_RowAssert hasAD_Column_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Column_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Column_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasAD_ImpFormat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ImpFormat_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ImpFormat_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasAD_ImpFormat_Row_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ImpFormat_Row_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ImpFormat_Row_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasAD_ImpFormat_Row_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_ImpFormat_Row_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ImpFormat_Row_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasCallout(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCallout();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Callout: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasConstantValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConstantValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConstantValue: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasDataFormat(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDataFormat();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DataFormat: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasDataType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDataType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DataType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasDecimalPoint(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDecimalPoint();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DecimalPoint: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert isDivideBy100()
-	{
-		isNotNull();
-		if (!actual.isDivideBy100()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be DivideBy100\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert isNotDivideBy100()
-	{
-		isNotNull();
-		if (actual.isDivideBy100()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be DivideBy100\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasEndNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getEndNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EndNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasScript(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getScript();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Script: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ImpFormat_RowAssert hasStartNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getStartNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have StartNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

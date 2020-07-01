@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_DunningRun;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_DunningRun;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_DunningRunAssert
-	extends AbstractPOAssert<C_DunningRunAssert,X_C_DunningRun>
+public class C_DunningRunAssert extends AbstractC_DunningRunAssert<C_DunningRunAssert, X_C_DunningRun>
 {
 
     /** Standard Constructor */
@@ -35,87 +33,4 @@ public class C_DunningRunAssert
       super (actual, C_DunningRunAssert.class);
     }
 
-
-	public C_DunningRunAssert hasC_Dunning_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Dunning_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Dunning_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningRunAssert hasC_DunningLevel_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_DunningLevel_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DunningLevel_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningRunAssert hasC_DunningRun_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_DunningRun_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DunningRun_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningRunAssert hasC_DunningRun_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_DunningRun_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DunningRun_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningRunAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningRunAssert hasDunningDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("DunningDate", actual.getDunningDate(), expected);
-		return myself;
-	}
-
-
-	public C_DunningRunAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DunningRunAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

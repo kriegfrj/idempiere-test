@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_WF_ActivityResult;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_WF_ActivityResult;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_WF_ActivityResultAssert
-	extends AbstractPOAssert<AD_WF_ActivityResultAssert,X_AD_WF_ActivityResult>
+public class AD_WF_ActivityResultAssert extends AbstractAD_WF_ActivityResultAssert<AD_WF_ActivityResultAssert, X_AD_WF_ActivityResult>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class AD_WF_ActivityResultAssert
       super (actual, AD_WF_ActivityResultAssert.class);
     }
 
-
-	public AD_WF_ActivityResultAssert hasAD_WF_Activity_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_Activity_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_Activity_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityResultAssert hasAD_WF_ActivityResult_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_ActivityResult_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_ActivityResult_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityResultAssert hasAD_WF_ActivityResult_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_WF_ActivityResult_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_ActivityResult_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityResultAssert hasAttributeName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAttributeName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AttributeName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityResultAssert hasAttributeValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAttributeValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AttributeValue: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityResultAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityResultAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

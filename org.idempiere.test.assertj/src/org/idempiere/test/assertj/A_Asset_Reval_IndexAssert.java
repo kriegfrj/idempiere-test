@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Asset_Reval_Index;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Asset_Reval_Index;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Asset_Reval_IndexAssert
-	extends AbstractPOAssert<A_Asset_Reval_IndexAssert,X_A_Asset_Reval_Index>
+public class A_Asset_Reval_IndexAssert extends AbstractA_Asset_Reval_IndexAssert<A_Asset_Reval_IndexAssert, X_A_Asset_Reval_Index>
 {
 
     /** Standard Constructor */
@@ -34,65 +32,5 @@ public class A_Asset_Reval_IndexAssert
     {
       super (actual, A_Asset_Reval_IndexAssert.class);
     }
-
-
-	public A_Asset_Reval_IndexAssert hasA_Asset_Reval_Index_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_Reval_Index_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Reval_Index_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Reval_IndexAssert hasA_Asset_Reval_Index_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Asset_Reval_Index_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Reval_Index_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Reval_IndexAssert hasA_Effective_Date(Object expected)
-	{
-		isNotNull();
-		dateAssert("A_Effective_Date", actual.getA_Effective_Date(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_Reval_IndexAssert hasA_Reval_Code(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Reval_Code();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Reval_Code: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Reval_IndexAssert hasA_Reval_Multiplier(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Reval_Multiplier();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Reval_Multiplier: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Reval_IndexAssert hasA_Reval_Rate(Object expected)
-	{
-		isNotNull();
-		bdAssert("A_Reval_Rate", actual.getA_Reval_Rate(), expected);
-		return myself;
-	}
 
 }

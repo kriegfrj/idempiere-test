@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_StyleLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_StyleLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_StyleLineAssert
-	extends AbstractPOAssert<AD_StyleLineAssert,X_AD_StyleLine>
+public class AD_StyleLineAssert extends AbstractAD_StyleLineAssert<AD_StyleLineAssert, X_AD_StyleLine>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class AD_StyleLineAssert
       super (actual, AD_StyleLineAssert.class);
     }
 
-
-	public AD_StyleLineAssert hasAD_Style_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Style_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Style_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StyleLineAssert hasAD_StyleLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_StyleLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_StyleLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StyleLineAssert hasAD_StyleLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_StyleLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_StyleLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StyleLineAssert hasDisplayLogic(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDisplayLogic();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DisplayLogic: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StyleLineAssert hasInlineStyle(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getInlineStyle();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have InlineStyle: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StyleLineAssert hasLine(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLine();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Line: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StyleLineAssert hasTheme(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTheme();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Theme: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

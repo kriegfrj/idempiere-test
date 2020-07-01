@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_User_Substitute;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_User_Substitute;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_User_SubstituteAssert
-	extends AbstractPOAssert<AD_User_SubstituteAssert,X_AD_User_Substitute>
+public class AD_User_SubstituteAssert extends AbstractAD_User_SubstituteAssert<AD_User_SubstituteAssert, X_AD_User_Substitute>
 {
 
     /** Standard Constructor */
@@ -34,87 +32,5 @@ public class AD_User_SubstituteAssert
     {
       super (actual, AD_User_SubstituteAssert.class);
     }
-
-
-	public AD_User_SubstituteAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_SubstituteAssert hasAD_User_Substitute_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_Substitute_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_Substitute_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_SubstituteAssert hasAD_User_Substitute_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_User_Substitute_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_Substitute_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_SubstituteAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_SubstituteAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_SubstituteAssert hasSubstitute_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSubstitute_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Substitute_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_SubstituteAssert hasValidFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidFrom", actual.getValidFrom(), expected);
-		return myself;
-	}
-
-
-	public AD_User_SubstituteAssert hasValidTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidTo", actual.getValidTo(), expected);
-		return myself;
-	}
 
 }

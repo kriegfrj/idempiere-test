@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_WorkflowProcessorLog;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_WorkflowProcessorLog;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_WorkflowProcessorLogAssert
-	extends AbstractPOAssert<AD_WorkflowProcessorLogAssert,X_AD_WorkflowProcessorLog>
+public class AD_WorkflowProcessorLogAssert extends AbstractAD_WorkflowProcessorLogAssert<AD_WorkflowProcessorLogAssert, X_AD_WorkflowProcessorLog>
 {
 
     /** Standard Constructor */
@@ -35,101 +33,4 @@ public class AD_WorkflowProcessorLogAssert
       super (actual, AD_WorkflowProcessorLogAssert.class);
     }
 
-
-	public AD_WorkflowProcessorLogAssert hasAD_WorkflowProcessor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WorkflowProcessor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WorkflowProcessor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert hasAD_WorkflowProcessorLog_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WorkflowProcessorLog_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WorkflowProcessorLog_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert hasAD_WorkflowProcessorLog_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_WorkflowProcessorLog_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WorkflowProcessorLog_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert isError()
-	{
-		isNotNull();
-		if (!actual.isError()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Error\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert isNotError()
-	{
-		isNotNull();
-		if (actual.isError()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Error\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert hasReference(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getReference();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Reference: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert hasSummary(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSummary();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Summary: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WorkflowProcessorLogAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

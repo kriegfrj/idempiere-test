@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_B_Seller;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_B_Seller;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class B_SellerAssert
-	extends AbstractPOAssert<B_SellerAssert,X_B_Seller>
+public class B_SellerAssert extends AbstractB_SellerAssert<B_SellerAssert, X_B_Seller>
 {
 
     /** Standard Constructor */
@@ -34,77 +32,5 @@ public class B_SellerAssert
     {
       super (actual, B_SellerAssert.class);
     }
-
-
-	public B_SellerAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerAssert hasB_Seller_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getB_Seller_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Seller_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerAssert isInternal()
-	{
-		isNotNull();
-		if (!actual.isInternal()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Internal\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_SellerAssert isNotInternal()
-	{
-		isNotNull();
-		if (actual.isInternal()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Internal\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_SellerAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerAssert hasValidTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidTo", actual.getValidTo(), expected);
-		return myself;
-	}
 
 }

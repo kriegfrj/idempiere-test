@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_NewsItem;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_NewsItem;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_NewsItemAssert
-	extends AbstractPOAssert<CM_NewsItemAssert,X_CM_NewsItem>
+public class CM_NewsItemAssert extends AbstractCM_NewsItemAssert<CM_NewsItemAssert, X_CM_NewsItem>
 {
 
     /** Standard Constructor */
@@ -35,89 +33,4 @@ public class CM_NewsItemAssert
       super (actual, CM_NewsItemAssert.class);
     }
 
-
-	public CM_NewsItemAssert hasAuthor(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAuthor();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Author: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_NewsItemAssert hasCM_NewsChannel_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_NewsChannel_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_NewsChannel_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_NewsItemAssert hasCM_NewsItem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_NewsItem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_NewsItem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_NewsItemAssert hasCM_NewsItem_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_NewsItem_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_NewsItem_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_NewsItemAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_NewsItemAssert hasLinkURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getLinkURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LinkURL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_NewsItemAssert hasPubDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("PubDate", actual.getPubDate(), expected);
-		return myself;
-	}
-
-
-	public CM_NewsItemAssert hasTitle(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTitle();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Title: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

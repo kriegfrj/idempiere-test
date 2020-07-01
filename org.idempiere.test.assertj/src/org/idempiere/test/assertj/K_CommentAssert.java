@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_Comment;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_Comment;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_CommentAssert
-	extends AbstractPOAssert<K_CommentAssert,X_K_Comment>
+public class K_CommentAssert extends AbstractK_CommentAssert<K_CommentAssert, X_K_Comment>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class K_CommentAssert
       super (actual, K_CommentAssert.class);
     }
 
-
-	public K_CommentAssert hasAD_Session_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Session_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Session_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CommentAssert isPublic()
-	{
-		isNotNull();
-		if (!actual.isPublic()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Public\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_CommentAssert isNotPublic()
-	{
-		isNotNull();
-		if (actual.isPublic()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Public\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_CommentAssert hasK_Comment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Comment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Comment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CommentAssert hasK_Comment_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_Comment_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Comment_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CommentAssert hasK_Entry_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Entry_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Entry_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CommentAssert hasRating(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getRating();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Rating: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CommentAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

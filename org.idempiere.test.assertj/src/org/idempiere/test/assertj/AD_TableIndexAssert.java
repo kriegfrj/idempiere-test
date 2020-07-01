@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_TableIndex;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_TableIndex;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_TableIndexAssert
-	extends AbstractPOAssert<AD_TableIndexAssert,X_AD_TableIndex>
+public class AD_TableIndexAssert extends AbstractAD_TableIndexAssert<AD_TableIndexAssert, X_AD_TableIndex>
 {
 
     /** Standard Constructor */
@@ -35,152 +33,4 @@ public class AD_TableIndexAssert
       super (actual, AD_TableIndexAssert.class);
     }
 
-
-	public AD_TableIndexAssert hasAD_Message_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Message_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Message_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert hasAD_TableIndex_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_TableIndex_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_TableIndex_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert hasAD_TableIndex_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_TableIndex_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_TableIndex_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert isCreateConstraint()
-	{
-		isNotNull();
-		if (!actual.isCreateConstraint()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be CreateConstraint\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert isNotCreateConstraint()
-	{
-		isNotNull();
-		if (actual.isCreateConstraint()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be CreateConstraint\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert isKey()
-	{
-		isNotNull();
-		if (!actual.isKey()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Key\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert isNotKey()
-	{
-		isNotNull();
-		if (actual.isKey()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Key\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert isUnique()
-	{
-		isNotNull();
-		if (!actual.isUnique()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Unique\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert isNotUnique()
-	{
-		isNotNull();
-		if (actual.isUnique()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Unique\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TableIndexAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

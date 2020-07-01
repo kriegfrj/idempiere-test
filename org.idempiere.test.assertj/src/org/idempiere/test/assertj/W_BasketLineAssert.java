@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_W_BasketLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_W_BasketLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class W_BasketLineAssert
-	extends AbstractPOAssert<W_BasketLineAssert,X_W_BasketLine>
+public class W_BasketLineAssert extends AbstractW_BasketLineAssert<W_BasketLineAssert, X_W_BasketLine>
 {
 
     /** Standard Constructor */
@@ -35,97 +33,4 @@ public class W_BasketLineAssert
       super (actual, W_BasketLineAssert.class);
     }
 
-
-	public W_BasketLineAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketLineAssert hasLine(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLine();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Line: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketLineAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketLineAssert hasPrice(Object expected)
-	{
-		isNotNull();
-		bdAssert("Price", actual.getPrice(), expected);
-		return myself;
-	}
-
-
-	public W_BasketLineAssert hasProduct(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getProduct();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Product: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketLineAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
-
-
-	public W_BasketLineAssert hasW_Basket_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_Basket_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_Basket_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketLineAssert hasW_BasketLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getW_BasketLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_BasketLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public W_BasketLineAssert hasW_BasketLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getW_BasketLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have W_BasketLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_User_Roles;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_User_Roles;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_User_RolesAssert
-	extends AbstractPOAssert<AD_User_RolesAssert,X_AD_User_Roles>
+public class AD_User_RolesAssert extends AbstractAD_User_RolesAssert<AD_User_RolesAssert, X_AD_User_Roles>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class AD_User_RolesAssert
       super (actual, AD_User_RolesAssert.class);
     }
 
-
-	public AD_User_RolesAssert hasAD_Role_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Role_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Role_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_RolesAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_RolesAssert hasAD_User_Roles_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_User_Roles_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_Roles_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_User_OrgAccess;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_User_OrgAccess;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_User_OrgAccessAssert
-	extends AbstractPOAssert<AD_User_OrgAccessAssert,X_AD_User_OrgAccess>
+public class AD_User_OrgAccessAssert extends AbstractAD_User_OrgAccessAssert<AD_User_OrgAccessAssert, X_AD_User_OrgAccess>
 {
 
     /** Standard Constructor */
@@ -35,46 +33,4 @@ public class AD_User_OrgAccessAssert
       super (actual, AD_User_OrgAccessAssert.class);
     }
 
-
-	public AD_User_OrgAccessAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_OrgAccessAssert hasAD_User_OrgAccess_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_User_OrgAccess_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_OrgAccess_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_User_OrgAccessAssert isReadOnly()
-	{
-		isNotNull();
-		if (!actual.isReadOnly()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be ReadOnly\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_User_OrgAccessAssert isNotReadOnly()
-	{
-		isNotNull();
-		if (actual.isReadOnly()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ReadOnly\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

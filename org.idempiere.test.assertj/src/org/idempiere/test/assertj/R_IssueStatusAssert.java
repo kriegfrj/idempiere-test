@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_IssueStatus;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_IssueStatus;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_IssueStatusAssert
-	extends AbstractPOAssert<R_IssueStatusAssert,X_R_IssueStatus>
+public class R_IssueStatusAssert extends AbstractR_IssueStatusAssert<R_IssueStatusAssert, X_R_IssueStatus>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class R_IssueStatusAssert
       super (actual, R_IssueStatusAssert.class);
     }
 
-
-	public R_IssueStatusAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueStatusAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueStatusAssert hasR_IssueStatus_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_IssueStatus_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueStatus_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueStatusAssert hasR_IssueStatus_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_IssueStatus_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueStatus_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

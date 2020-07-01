@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_GL_JournalGeneratorSource;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_GL_JournalGeneratorSource;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class GL_JournalGeneratorSourceAssert
-	extends AbstractPOAssert<GL_JournalGeneratorSourceAssert,X_GL_JournalGeneratorSource>
+public class GL_JournalGeneratorSourceAssert extends AbstractGL_JournalGeneratorSourceAssert<GL_JournalGeneratorSourceAssert, X_GL_JournalGeneratorSource>
 {
 
     /** Standard Constructor */
@@ -35,89 +33,4 @@ public class GL_JournalGeneratorSourceAssert
       super (actual, GL_JournalGeneratorSourceAssert.class);
     }
 
-
-	public GL_JournalGeneratorSourceAssert hasAmtMultiplier(Object expected)
-	{
-		isNotNull();
-		bdAssert("AmtMultiplier", actual.getAmtMultiplier(), expected);
-		return myself;
-	}
-
-
-	public GL_JournalGeneratorSourceAssert hasC_ElementValue_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_ElementValue_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ElementValue_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_JournalGeneratorSourceAssert hasGL_Category_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getGL_Category_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_Category_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_JournalGeneratorSourceAssert hasGL_JournalGeneratorLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getGL_JournalGeneratorLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_JournalGeneratorLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_JournalGeneratorSourceAssert hasGL_JournalGeneratorSource_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getGL_JournalGeneratorSource_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_JournalGeneratorSource_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_JournalGeneratorSourceAssert hasGL_JournalGeneratorSource_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getGL_JournalGeneratorSource_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GL_JournalGeneratorSource_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_JournalGeneratorSourceAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public GL_JournalGeneratorSourceAssert hasRoundFactor(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getRoundFactor();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RoundFactor: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_LandedCost;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_LandedCost;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_LandedCostAssert
-	extends AbstractPOAssert<C_LandedCostAssert,X_C_LandedCost>
+public class C_LandedCostAssert extends AbstractC_LandedCostAssert<C_LandedCostAssert, X_C_LandedCost>
 {
 
     /** Standard Constructor */
@@ -35,103 +33,4 @@ public class C_LandedCostAssert
       super (actual, C_LandedCostAssert.class);
     }
 
-
-	public C_LandedCostAssert hasC_InvoiceLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasC_LandedCost_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_LandedCost_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_LandedCost_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasC_LandedCost_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_LandedCost_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_LandedCost_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasLandedCostDistribution(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getLandedCostDistribution();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LandedCostDistribution: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasM_CostElement_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_CostElement_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_CostElement_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasM_InOut_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOut_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOut_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasM_InOutLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_LandedCostAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

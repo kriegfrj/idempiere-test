@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Find;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Find;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_FindAssert
-	extends AbstractPOAssert<AD_FindAssert,X_AD_Find>
+public class AD_FindAssert extends AbstractAD_FindAssert<AD_FindAssert, X_AD_Find>
 {
 
     /** Standard Constructor */
@@ -35,89 +33,4 @@ public class AD_FindAssert
       super (actual, AD_FindAssert.class);
     }
 
-
-	public AD_FindAssert hasAD_Column_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Column_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Column_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FindAssert hasAD_Find_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Find_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Find_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FindAssert hasAD_Find_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Find_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Find_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FindAssert hasAndOr(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAndOr();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AndOr: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FindAssert hasFind_ID(Object expected)
-	{
-		isNotNull();
-		bdAssert("Find_ID", actual.getFind_ID(), expected);
-		return myself;
-	}
-
-
-	public AD_FindAssert hasOperation(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getOperation();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Operation: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FindAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FindAssert hasValue2(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue2();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value2: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

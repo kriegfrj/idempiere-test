@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Error;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Error;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ErrorAssert
-	extends AbstractPOAssert<AD_ErrorAssert,X_AD_Error>
+public class AD_ErrorAssert extends AbstractAD_ErrorAssert<AD_ErrorAssert, X_AD_Error>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_ErrorAssert
       super (actual, AD_ErrorAssert.class);
     }
 
-
-	public AD_ErrorAssert hasAD_Error_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Error_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Error_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ErrorAssert hasAD_Error_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Error_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Error_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ErrorAssert hasAD_Language(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Language();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Language: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ErrorAssert hasCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Code: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ErrorAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

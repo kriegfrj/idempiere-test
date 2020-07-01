@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Tree;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Tree;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_TreeAssert
-	extends AbstractPOAssert<AD_TreeAssert,X_AD_Tree>
+public class AD_TreeAssert extends AbstractAD_TreeAssert<AD_TreeAssert, X_AD_Tree>
 {
 
     /** Standard Constructor */
@@ -35,181 +33,4 @@ public class AD_TreeAssert
       super (actual, AD_TreeAssert.class);
     }
 
-
-	public AD_TreeAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert hasAD_Tree_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Tree_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Tree_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert hasAD_Tree_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Tree_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Tree_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isAllNodes()
-	{
-		isNotNull();
-		if (!actual.isAllNodes()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be AllNodes\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isNotAllNodes()
-	{
-		isNotNull();
-		if (actual.isAllNodes()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be AllNodes\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isLoadAllNodesImmediately()
-	{
-		isNotNull();
-		if (!actual.isLoadAllNodesImmediately()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be LoadAllNodesImmediately\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isNotLoadAllNodesImmediately()
-	{
-		isNotNull();
-		if (actual.isLoadAllNodesImmediately()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be LoadAllNodesImmediately\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isTreeDrivenByValue()
-	{
-		isNotNull();
-		if (!actual.isTreeDrivenByValue()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be TreeDrivenByValue\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isNotTreeDrivenByValue()
-	{
-		isNotNull();
-		if (actual.isTreeDrivenByValue()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be TreeDrivenByValue\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isValueDisplayed()
-	{
-		isNotNull();
-		if (!actual.isValueDisplayed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be ValueDisplayed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert isNotValueDisplayed()
-	{
-		isNotNull();
-		if (actual.isValueDisplayed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ValueDisplayed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert hasParent_Column_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getParent_Column_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Parent_Column_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeAssert hasTreeType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTreeType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TreeType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

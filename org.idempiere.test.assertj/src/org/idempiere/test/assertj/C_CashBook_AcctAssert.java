@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_CashBook_Acct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_CashBook_Acct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_CashBook_AcctAssert
-	extends AbstractPOAssert<C_CashBook_AcctAssert,X_C_CashBook_Acct>
+public class C_CashBook_AcctAssert extends AbstractC_CashBook_AcctAssert<C_CashBook_AcctAssert, X_C_CashBook_Acct>
 {
 
     /** Standard Constructor */
@@ -35,92 +33,4 @@ public class C_CashBook_AcctAssert
       super (actual, C_CashBook_AcctAssert.class);
     }
 
-
-	public C_CashBook_AcctAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashBook_AcctAssert hasC_CashBook_Acct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_CashBook_Acct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CashBook_Acct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashBook_AcctAssert hasC_CashBook_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CashBook_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CashBook_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashBook_AcctAssert hasCB_Asset_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCB_Asset_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CB_Asset_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashBook_AcctAssert hasCB_CashTransfer_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCB_CashTransfer_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CB_CashTransfer_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashBook_AcctAssert hasCB_Differences_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCB_Differences_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CB_Differences_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashBook_AcctAssert hasCB_Expense_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCB_Expense_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CB_Expense_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashBook_AcctAssert hasCB_Receipt_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCB_Receipt_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CB_Receipt_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

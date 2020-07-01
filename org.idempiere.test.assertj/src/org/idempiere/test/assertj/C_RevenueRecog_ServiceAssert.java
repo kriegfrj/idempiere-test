@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_RevenueRecog_Service;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_RevenueRecog_Service;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RevenueRecog_ServiceAssert
-	extends AbstractPOAssert<C_RevenueRecog_ServiceAssert,X_C_RevenueRecog_Service>
+public class C_RevenueRecog_ServiceAssert extends AbstractC_RevenueRecog_ServiceAssert<C_RevenueRecog_ServiceAssert, X_C_RevenueRecog_Service>
 {
 
     /** Standard Constructor */
@@ -34,68 +32,5 @@ public class C_RevenueRecog_ServiceAssert
     {
       super (actual, C_RevenueRecog_ServiceAssert.class);
     }
-
-
-	public C_RevenueRecog_ServiceAssert hasC_RevenueRecog_Service_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RevenueRecog_Service_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecog_Service_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecog_ServiceAssert hasC_RevenueRecog_Service_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_RevenueRecog_Service_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecog_Service_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecog_ServiceAssert hasC_RevenueRecognition_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RevenueRecognition_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RevenueRecognition_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecog_ServiceAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecog_ServiceAssert hasLine(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLine();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Line: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RevenueRecog_ServiceAssert hasPercent(Object expected)
-	{
-		isNotNull();
-		bdAssert("Percent", actual.getPercent(), expected);
-		return myself;
-	}
 
 }

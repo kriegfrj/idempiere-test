@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_SerNoCtl;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_SerNoCtl;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_SerNoCtlAssert
-	extends AbstractPOAssert<M_SerNoCtlAssert,X_M_SerNoCtl>
+public class M_SerNoCtlAssert extends AbstractM_SerNoCtlAssert<M_SerNoCtlAssert, X_M_SerNoCtl>
 {
 
     /** Standard Constructor */
@@ -35,103 +33,4 @@ public class M_SerNoCtlAssert
       super (actual, M_SerNoCtlAssert.class);
     }
 
-
-	public M_SerNoCtlAssert hasCurrentNext(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCurrentNext();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CurrentNext: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasIncrementNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getIncrementNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IncrementNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasM_SerNoCtl_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_SerNoCtl_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_SerNoCtl_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasM_SerNoCtl_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_SerNoCtl_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_SerNoCtl_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasPrefix(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPrefix();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Prefix: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasStartNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getStartNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have StartNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_SerNoCtlAssert hasSuffix(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSuffix();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Suffix: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

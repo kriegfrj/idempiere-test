@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_Fact_Reconciliation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_Fact_Reconciliation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class Fact_ReconciliationAssert
-	extends AbstractPOAssert<Fact_ReconciliationAssert,X_Fact_Reconciliation>
+public class Fact_ReconciliationAssert extends AbstractFact_ReconciliationAssert<Fact_ReconciliationAssert, X_Fact_Reconciliation>
 {
 
     /** Standard Constructor */
@@ -35,86 +33,4 @@ public class Fact_ReconciliationAssert
       super (actual, Fact_ReconciliationAssert.class);
     }
 
-
-	public Fact_ReconciliationAssert hasAccount_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAccount_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Account_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public Fact_ReconciliationAssert hasAmtAcct(Object expected)
-	{
-		isNotNull();
-		bdAssert("AmtAcct", actual.getAmtAcct(), expected);
-		return myself;
-	}
-
-
-	public Fact_ReconciliationAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public Fact_ReconciliationAssert hasDateAcct(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateAcct", actual.getDateAcct(), expected);
-		return myself;
-	}
-
-
-	public Fact_ReconciliationAssert hasFact_Acct_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getFact_Acct_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Fact_Acct_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public Fact_ReconciliationAssert hasFact_Reconciliation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getFact_Reconciliation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Fact_Reconciliation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public Fact_ReconciliationAssert hasFact_Reconciliation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFact_Reconciliation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Fact_Reconciliation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public Fact_ReconciliationAssert hasMatchCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMatchCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have MatchCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

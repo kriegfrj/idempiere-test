@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_SalesStage;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_SalesStage;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_SalesStageAssert
-	extends AbstractPOAssert<C_SalesStageAssert,X_C_SalesStage>
+public class C_SalesStageAssert extends AbstractC_SalesStageAssert<C_SalesStageAssert, X_C_SalesStage>
 {
 
     /** Standard Constructor */
@@ -35,107 +33,4 @@ public class C_SalesStageAssert
       super (actual, C_SalesStageAssert.class);
     }
 
-
-	public C_SalesStageAssert hasC_SalesStage_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_SalesStage_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_SalesStage_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert hasC_SalesStage_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_SalesStage_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_SalesStage_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert isClosed()
-	{
-		isNotNull();
-		if (!actual.isClosed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Closed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert isNotClosed()
-	{
-		isNotNull();
-		if (actual.isClosed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Closed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert isWon()
-	{
-		isNotNull();
-		if (!actual.isWon()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Won\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert isNotWon()
-	{
-		isNotNull();
-		if (actual.isWon()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Won\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SalesStageAssert hasProbability(Object expected)
-	{
-		isNotNull();
-		bdAssert("Probability", actual.getProbability(), expected);
-		return myself;
-	}
-
-
-	public C_SalesStageAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

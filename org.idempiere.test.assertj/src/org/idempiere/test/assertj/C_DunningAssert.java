@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Dunning;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Dunning;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_DunningAssert
-	extends AbstractPOAssert<C_DunningAssert,X_C_Dunning>
+public class C_DunningAssert extends AbstractC_DunningAssert<C_DunningAssert, X_C_Dunning>
 {
 
     /** Standard Constructor */
@@ -35,108 +33,4 @@ public class C_DunningAssert
       super (actual, C_DunningAssert.class);
     }
 
-
-	public C_DunningAssert hasC_Dunning_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Dunning_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Dunning_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningAssert hasC_Dunning_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Dunning_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Dunning_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningAssert isCreateLevelsSequentially()
-	{
-		isNotNull();
-		if (!actual.isCreateLevelsSequentially()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be CreateLevelsSequentially\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DunningAssert isNotCreateLevelsSequentially()
-	{
-		isNotNull();
-		if (actual.isCreateLevelsSequentially()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be CreateLevelsSequentially\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DunningAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DunningAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DunningAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DunningAssert isSendDunningLetter()
-	{
-		isNotNull();
-		if (!actual.isSendDunningLetter()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SendDunningLetter\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DunningAssert isNotSendDunningLetter()
-	{
-		isNotNull();
-		if (actual.isSendDunningLetter()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SendDunningLetter\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

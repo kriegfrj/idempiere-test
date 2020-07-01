@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Depreciation_Table_Header;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Depreciation_Table_Header;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Depreciation_Table_HeaderAssert
-	extends AbstractPOAssert<A_Depreciation_Table_HeaderAssert,X_A_Depreciation_Table_Header>
+public class A_Depreciation_Table_HeaderAssert extends AbstractA_Depreciation_Table_HeaderAssert<A_Depreciation_Table_HeaderAssert, X_A_Depreciation_Table_Header>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class A_Depreciation_Table_HeaderAssert
       super (actual, A_Depreciation_Table_HeaderAssert.class);
     }
 
-
-	public A_Depreciation_Table_HeaderAssert hasA_Depreciation_Table_Code(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Depreciation_Table_Code();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Table_Code: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_Table_HeaderAssert hasA_Depreciation_Table_Header_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Depreciation_Table_Header_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Table_Header_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_Table_HeaderAssert hasA_Depreciation_Table_Header_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Depreciation_Table_Header_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Depreciation_Table_Header_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_Table_HeaderAssert hasA_Table_Rate_Type(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Table_Rate_Type();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Table_Rate_Type: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_Table_HeaderAssert hasA_Term(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Term();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Term: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_Table_HeaderAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Depreciation_Table_HeaderAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public A_Depreciation_Table_HeaderAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

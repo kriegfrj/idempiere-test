@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Asset_Product;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Asset_Product;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Asset_ProductAssert
-	extends AbstractPOAssert<A_Asset_ProductAssert,X_A_Asset_Product>
+public class A_Asset_ProductAssert extends AbstractA_Asset_ProductAssert<A_Asset_ProductAssert, X_A_Asset_Product>
 {
 
     /** Standard Constructor */
@@ -35,89 +33,4 @@ public class A_Asset_ProductAssert
       super (actual, A_Asset_ProductAssert.class);
     }
 
-
-	public A_Asset_ProductAssert hasA_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_ProductAssert hasA_Asset_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_ProductAssert hasA_Asset_Product_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Asset_Product_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Product_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_ProductAssert hasA_QTY_Current(Object expected)
-	{
-		isNotNull();
-		bdAssert("A_QTY_Current", actual.getA_QTY_Current(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_ProductAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_ProductAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_ProductAssert hasM_Locator_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Locator_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Locator_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_ProductAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

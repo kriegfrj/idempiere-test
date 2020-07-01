@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_PromotionGroup;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_PromotionGroup;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_PromotionGroupAssert
-	extends AbstractPOAssert<M_PromotionGroupAssert,X_M_PromotionGroup>
+public class M_PromotionGroupAssert extends AbstractM_PromotionGroupAssert<M_PromotionGroupAssert, X_M_PromotionGroup>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class M_PromotionGroupAssert
       super (actual, M_PromotionGroupAssert.class);
     }
 
-
-	public M_PromotionGroupAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionGroupAssert hasM_PromotionGroup_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PromotionGroup_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PromotionGroup_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionGroupAssert hasM_PromotionGroup_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_PromotionGroup_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PromotionGroup_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionGroupAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

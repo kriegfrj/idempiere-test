@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_MediaDeploy;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_MediaDeploy;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_MediaDeployAssert
-	extends AbstractPOAssert<CM_MediaDeployAssert,X_CM_MediaDeploy>
+public class CM_MediaDeployAssert extends AbstractCM_MediaDeployAssert<CM_MediaDeployAssert, X_CM_MediaDeploy>
 {
 
     /** Standard Constructor */
@@ -34,88 +32,5 @@ public class CM_MediaDeployAssert
     {
       super (actual, CM_MediaDeployAssert.class);
     }
-
-
-	public CM_MediaDeployAssert hasCM_Media_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Media_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Media_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaDeployAssert hasCM_Media_Server_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Media_Server_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Media_Server_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaDeployAssert hasCM_MediaDeploy_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_MediaDeploy_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_MediaDeploy_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaDeployAssert hasCM_MediaDeploy_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_MediaDeploy_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_MediaDeploy_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaDeployAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_MediaDeployAssert isDeployed()
-	{
-		isNotNull();
-		if (!actual.isDeployed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Deployed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_MediaDeployAssert isNotDeployed()
-	{
-		isNotNull();
-		if (actual.isDeployed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Deployed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_MediaDeployAssert hasLastSynchronized(Object expected)
-	{
-		isNotNull();
-		dateAssert("LastSynchronized", actual.getLastSynchronized(), expected);
-		return myself;
-	}
 
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Year;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Year;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_YearAssert
-	extends AbstractPOAssert<C_YearAssert,X_C_Year>
+public class C_YearAssert extends AbstractC_YearAssert<C_YearAssert, X_C_Year>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class C_YearAssert
       super (actual, C_YearAssert.class);
     }
 
-
-	public C_YearAssert hasC_Calendar_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Calendar_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Calendar_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_YearAssert hasC_Year_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Year_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Year_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_YearAssert hasC_Year_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Year_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Year_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_YearAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_YearAssert hasFiscalYear(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFiscalYear();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FiscalYear: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

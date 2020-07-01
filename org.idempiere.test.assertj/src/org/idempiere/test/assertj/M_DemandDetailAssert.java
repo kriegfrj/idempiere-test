@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_DemandDetail;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_DemandDetail;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_DemandDetailAssert
-	extends AbstractPOAssert<M_DemandDetailAssert,X_M_DemandDetail>
+public class M_DemandDetailAssert extends AbstractM_DemandDetailAssert<M_DemandDetailAssert, X_M_DemandDetail>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class M_DemandDetailAssert
       super (actual, M_DemandDetailAssert.class);
     }
 
-
-	public M_DemandDetailAssert hasC_OrderLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrderLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DemandDetailAssert hasM_DemandDetail_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DemandDetail_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DemandDetail_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DemandDetailAssert hasM_DemandDetail_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_DemandDetail_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DemandDetail_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DemandDetailAssert hasM_DemandLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DemandLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DemandLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DemandDetailAssert hasM_ForecastLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ForecastLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ForecastLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_DemandDetailAssert hasM_RequisitionLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_RequisitionLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_RequisitionLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

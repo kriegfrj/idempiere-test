@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_BOMAlternative;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_BOMAlternative;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_BOMAlternativeAssert
-	extends AbstractPOAssert<M_BOMAlternativeAssert,X_M_BOMAlternative>
+public class M_BOMAlternativeAssert extends AbstractM_BOMAlternativeAssert<M_BOMAlternativeAssert, X_M_BOMAlternative>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class M_BOMAlternativeAssert
       super (actual, M_BOMAlternativeAssert.class);
     }
 
-
-	public M_BOMAlternativeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BOMAlternativeAssert hasM_BOMAlternative_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_BOMAlternative_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_BOMAlternative_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BOMAlternativeAssert hasM_BOMAlternative_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_BOMAlternative_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_BOMAlternative_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BOMAlternativeAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_BOMAlternativeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

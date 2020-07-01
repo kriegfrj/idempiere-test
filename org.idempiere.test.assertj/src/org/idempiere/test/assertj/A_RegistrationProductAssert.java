@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_RegistrationProduct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_RegistrationProduct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_RegistrationProductAssert
-	extends AbstractPOAssert<A_RegistrationProductAssert,X_A_RegistrationProduct>
+public class A_RegistrationProductAssert extends AbstractA_RegistrationProductAssert<A_RegistrationProductAssert, X_A_RegistrationProduct>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class A_RegistrationProductAssert
       super (actual, A_RegistrationProductAssert.class);
     }
 
-
-	public A_RegistrationProductAssert hasA_RegistrationAttribute_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_RegistrationAttribute_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_RegistrationAttribute_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_RegistrationProductAssert hasA_RegistrationProduct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_RegistrationProduct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_RegistrationProduct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_RegistrationProductAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_RegistrationProductAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

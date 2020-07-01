@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Charge;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Charge;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_ChargeAssert
-	extends AbstractPOAssert<C_ChargeAssert,X_C_Charge>
+public class C_ChargeAssert extends AbstractC_ChargeAssert<C_ChargeAssert, X_C_Charge>
 {
 
     /** Standard Constructor */
@@ -35,149 +33,4 @@ public class C_ChargeAssert
       super (actual, C_ChargeAssert.class);
     }
 
-
-	public C_ChargeAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert hasC_Charge_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Charge_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert hasC_Charge_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Charge_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert hasC_ChargeType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_ChargeType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ChargeType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert hasC_TaxCategory_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_TaxCategory_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxCategory_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert hasChargeAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("ChargeAmt", actual.getChargeAmt(), expected);
-		return myself;
-	}
-
-
-	public C_ChargeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert isSameCurrency()
-	{
-		isNotNull();
-		if (!actual.isSameCurrency()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SameCurrency\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert isNotSameCurrency()
-	{
-		isNotNull();
-		if (actual.isSameCurrency()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SameCurrency\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert isSameTax()
-	{
-		isNotNull();
-		if (!actual.isSameTax()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SameTax\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert isNotSameTax()
-	{
-		isNotNull();
-		if (actual.isSameTax()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SameTax\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert isTaxIncluded()
-	{
-		isNotNull();
-		if (!actual.isTaxIncluded()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be TaxIncluded\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert isNotTaxIncluded()
-	{
-		isNotNull();
-		if (actual.isTaxIncluded()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be TaxIncluded\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ChargeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

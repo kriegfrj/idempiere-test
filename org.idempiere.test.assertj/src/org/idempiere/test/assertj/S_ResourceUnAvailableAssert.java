@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_S_ResourceUnAvailable;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_S_ResourceUnAvailable;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class S_ResourceUnAvailableAssert
-	extends AbstractPOAssert<S_ResourceUnAvailableAssert,X_S_ResourceUnAvailable>
+public class S_ResourceUnAvailableAssert extends AbstractS_ResourceUnAvailableAssert<S_ResourceUnAvailableAssert, X_S_ResourceUnAvailable>
 {
 
     /** Standard Constructor */
@@ -35,64 +33,4 @@ public class S_ResourceUnAvailableAssert
       super (actual, S_ResourceUnAvailableAssert.class);
     }
 
-
-	public S_ResourceUnAvailableAssert hasDateFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateFrom", actual.getDateFrom(), expected);
-		return myself;
-	}
-
-
-	public S_ResourceUnAvailableAssert hasDateTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateTo", actual.getDateTo(), expected);
-		return myself;
-	}
-
-
-	public S_ResourceUnAvailableAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ResourceUnAvailableAssert hasS_Resource_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_Resource_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_Resource_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ResourceUnAvailableAssert hasS_ResourceUnAvailable_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_ResourceUnAvailable_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_ResourceUnAvailable_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ResourceUnAvailableAssert hasS_ResourceUnAvailable_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getS_ResourceUnAvailable_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_ResourceUnAvailable_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

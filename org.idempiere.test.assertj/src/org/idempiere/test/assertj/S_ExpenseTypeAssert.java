@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_S_ExpenseType;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_S_ExpenseType;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class S_ExpenseTypeAssert
-	extends AbstractPOAssert<S_ExpenseTypeAssert,X_S_ExpenseType>
+public class S_ExpenseTypeAssert extends AbstractS_ExpenseTypeAssert<S_ExpenseTypeAssert, X_S_ExpenseType>
 {
 
     /** Standard Constructor */
@@ -35,112 +33,4 @@ public class S_ExpenseTypeAssert
       super (actual, S_ExpenseTypeAssert.class);
     }
 
-
-	public S_ExpenseTypeAssert hasC_TaxCategory_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_TaxCategory_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxCategory_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert hasC_UOM_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_UOM_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UOM_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert isInvoiced()
-	{
-		isNotNull();
-		if (!actual.isInvoiced()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Invoiced\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert isNotInvoiced()
-	{
-		isNotNull();
-		if (actual.isInvoiced()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Invoiced\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert hasM_Product_Category_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_Category_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_Category_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert hasS_ExpenseType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_ExpenseType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_ExpenseType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert hasS_ExpenseType_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getS_ExpenseType_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_ExpenseType_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ExpenseTypeAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_CommodityShipment;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_CommodityShipment;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_CommodityShipmentAssert
-	extends AbstractPOAssert<M_CommodityShipmentAssert,X_M_CommodityShipment>
+public class M_CommodityShipmentAssert extends AbstractM_CommodityShipmentAssert<M_CommodityShipmentAssert, X_M_CommodityShipment>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class M_CommodityShipmentAssert
       super (actual, M_CommodityShipmentAssert.class);
     }
 
-
-	public M_CommodityShipmentAssert hasCountryOfManufacture_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCountryOfManufacture_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CountryOfManufacture_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CommodityShipmentAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CommodityShipmentAssert hasExportLicenseNum(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getExportLicenseNum();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ExportLicenseNum: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CommodityShipmentAssert hasHarmonizedCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHarmonizedCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have HarmonizedCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CommodityShipmentAssert hasM_CommodityShipment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_CommodityShipment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_CommodityShipment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CommodityShipmentAssert hasM_CommodityShipment_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_CommodityShipment_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_CommodityShipment_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CommodityShipmentAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

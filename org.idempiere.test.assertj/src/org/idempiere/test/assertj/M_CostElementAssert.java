@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_CostElement;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_CostElement;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_CostElementAssert
-	extends AbstractPOAssert<M_CostElementAssert,X_M_CostElement>
+public class M_CostElementAssert extends AbstractM_CostElementAssert<M_CostElementAssert, X_M_CostElement>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class M_CostElementAssert
       super (actual, M_CostElementAssert.class);
     }
 
-
-	public M_CostElementAssert hasCostElementType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCostElementType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CostElementType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CostElementAssert hasCostingMethod(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCostingMethod();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CostingMethod: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CostElementAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CostElementAssert isCalculated()
-	{
-		isNotNull();
-		if (!actual.isCalculated()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Calculated\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_CostElementAssert isNotCalculated()
-	{
-		isNotNull();
-		if (actual.isCalculated()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Calculated\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_CostElementAssert hasM_CostElement_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_CostElement_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_CostElement_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CostElementAssert hasM_CostElement_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_CostElement_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_CostElement_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_CostElementAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

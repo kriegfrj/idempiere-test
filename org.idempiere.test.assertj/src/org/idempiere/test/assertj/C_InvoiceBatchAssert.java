@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_InvoiceBatch;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_InvoiceBatch;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_InvoiceBatchAssert
-	extends AbstractPOAssert<C_InvoiceBatchAssert,X_C_InvoiceBatch>
+public class C_InvoiceBatchAssert extends AbstractC_InvoiceBatchAssert<C_InvoiceBatchAssert, X_C_InvoiceBatch>
 {
 
     /** Standard Constructor */
@@ -35,145 +33,4 @@ public class C_InvoiceBatchAssert
       super (actual, C_InvoiceBatchAssert.class);
     }
 
-
-	public C_InvoiceBatchAssert hasC_ConversionType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_ConversionType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ConversionType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert hasC_Currency_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Currency_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Currency_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert hasC_InvoiceBatch_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceBatch_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceBatch_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert hasC_InvoiceBatch_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_InvoiceBatch_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceBatch_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert hasControlAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("ControlAmt", actual.getControlAmt(), expected);
-		return myself;
-	}
-
-
-	public C_InvoiceBatchAssert hasDateDoc(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateDoc", actual.getDateDoc(), expected);
-		return myself;
-	}
-
-
-	public C_InvoiceBatchAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert hasDocumentAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DocumentAmt", actual.getDocumentAmt(), expected);
-		return myself;
-	}
-
-
-	public C_InvoiceBatchAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert isSOTrx()
-	{
-		isNotNull();
-		if (!actual.isSOTrx()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SOTrx\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert isNotSOTrx()
-	{
-		isNotNull();
-		if (actual.isSOTrx()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SOTrx\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_InvoiceBatchAssert hasSalesRep_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSalesRep_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SalesRep_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_PrintGraph;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_PrintGraph;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_PrintGraphAssert
-	extends AbstractPOAssert<AD_PrintGraphAssert,X_AD_PrintGraph>
+public class AD_PrintGraphAssert extends AbstractAD_PrintGraphAssert<AD_PrintGraphAssert, X_AD_PrintGraph>
 {
 
     /** Standard Constructor */
@@ -35,136 +33,4 @@ public class AD_PrintGraphAssert
       super (actual, AD_PrintGraphAssert.class);
     }
 
-
-	public AD_PrintGraphAssert hasAD_PrintFormat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_PrintFormat_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PrintFormat_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasAD_PrintGraph_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_PrintGraph_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PrintGraph_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasAD_PrintGraph_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_PrintGraph_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PrintGraph_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasData_PrintFormatItem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getData_PrintFormatItem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Data_PrintFormatItem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasData1_PrintFormatItem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getData1_PrintFormatItem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Data1_PrintFormatItem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasData2_PrintFormatItem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getData2_PrintFormatItem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Data2_PrintFormatItem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasData3_PrintFormatItem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getData3_PrintFormatItem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Data3_PrintFormatItem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasData4_PrintFormatItem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getData4_PrintFormatItem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Data4_PrintFormatItem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasDescription_PrintFormatItem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getDescription_PrintFormatItem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description_PrintFormatItem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasGraphType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getGraphType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have GraphType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PrintGraphAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_OrgType;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_OrgType;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_OrgTypeAssert
-	extends AbstractPOAssert<AD_OrgTypeAssert,X_AD_OrgType>
+public class AD_OrgTypeAssert extends AbstractAD_OrgTypeAssert<AD_OrgTypeAssert, X_AD_OrgType>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_OrgTypeAssert
       super (actual, AD_OrgTypeAssert.class);
     }
 
-
-	public AD_OrgTypeAssert hasAD_OrgType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_OrgType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_OrgType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgTypeAssert hasAD_OrgType_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_OrgType_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_OrgType_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgTypeAssert hasAD_PrintColor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_PrintColor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PrintColor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgTypeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_OrgTypeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

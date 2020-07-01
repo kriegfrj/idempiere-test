@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_RfQ_TopicSubscriberOnly;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_RfQ_TopicSubscriberOnly;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RfQ_TopicSubscriberOnlyAssert
-	extends AbstractPOAssert<C_RfQ_TopicSubscriberOnlyAssert,X_C_RfQ_TopicSubscriberOnly>
+public class C_RfQ_TopicSubscriberOnlyAssert extends AbstractC_RfQ_TopicSubscriberOnlyAssert<C_RfQ_TopicSubscriberOnlyAssert, X_C_RfQ_TopicSubscriberOnly>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class C_RfQ_TopicSubscriberOnlyAssert
       super (actual, C_RfQ_TopicSubscriberOnlyAssert.class);
     }
 
-
-	public C_RfQ_TopicSubscriberOnlyAssert hasC_RfQ_TopicSubscriber_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQ_TopicSubscriber_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQ_TopicSubscriber_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicSubscriberOnlyAssert hasC_RfQ_TopicSubscriberOnly_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQ_TopicSubscriberOnly_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQ_TopicSubscriberOnly_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicSubscriberOnlyAssert hasC_RfQ_TopicSubscriberOnly_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_RfQ_TopicSubscriberOnly_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQ_TopicSubscriberOnly_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicSubscriberOnlyAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicSubscriberOnlyAssert hasM_Product_Category_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_Category_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_Category_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicSubscriberOnlyAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

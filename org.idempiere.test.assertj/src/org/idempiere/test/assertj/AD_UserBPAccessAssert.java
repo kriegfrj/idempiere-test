@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_UserBPAccess;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_UserBPAccess;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_UserBPAccessAssert
-	extends AbstractPOAssert<AD_UserBPAccessAssert,X_AD_UserBPAccess>
+public class AD_UserBPAccessAssert extends AbstractAD_UserBPAccessAssert<AD_UserBPAccessAssert, X_AD_UserBPAccess>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class AD_UserBPAccessAssert
       super (actual, AD_UserBPAccessAssert.class);
     }
 
-
-	public AD_UserBPAccessAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserBPAccessAssert hasAD_UserBPAccess_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_UserBPAccess_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_UserBPAccess_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserBPAccessAssert hasAD_UserBPAccess_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_UserBPAccess_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_UserBPAccess_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserBPAccessAssert hasBPAccessType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getBPAccessType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have BPAccessType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserBPAccessAssert hasDocBaseType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocBaseType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocBaseType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_UserBPAccessAssert hasR_RequestType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_RequestType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_RequestType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_CyclePhase;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_CyclePhase;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_CyclePhaseAssert
-	extends AbstractPOAssert<C_CyclePhaseAssert,X_C_CyclePhase>
+public class C_CyclePhaseAssert extends AbstractC_CyclePhaseAssert<C_CyclePhaseAssert, X_C_CyclePhase>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class C_CyclePhaseAssert
       super (actual, C_CyclePhaseAssert.class);
     }
 
-
-	public C_CyclePhaseAssert hasC_CyclePhase_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_CyclePhase_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CyclePhase_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CyclePhaseAssert hasC_CycleStep_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CycleStep_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CycleStep_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CyclePhaseAssert hasC_Phase_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Phase_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Phase_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

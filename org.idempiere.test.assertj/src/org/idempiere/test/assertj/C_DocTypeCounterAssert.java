@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_DocTypeCounter;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_DocTypeCounter;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_DocTypeCounterAssert
-	extends AbstractPOAssert<C_DocTypeCounterAssert,X_C_DocTypeCounter>
+public class C_DocTypeCounterAssert extends AbstractC_DocTypeCounterAssert<C_DocTypeCounterAssert, X_C_DocTypeCounter>
 {
 
     /** Standard Constructor */
@@ -35,121 +33,4 @@ public class C_DocTypeCounterAssert
       super (actual, C_DocTypeCounterAssert.class);
     }
 
-
-	public C_DocTypeCounterAssert hasC_DocType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_DocType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DocType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert hasC_DocTypeCounter_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_DocTypeCounter_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DocTypeCounter_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert hasC_DocTypeCounter_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_DocTypeCounter_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DocTypeCounter_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert hasCounter_C_DocType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCounter_C_DocType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Counter_C_DocType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert hasDocAction(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocAction();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocAction: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert isCreateCounter()
-	{
-		isNotNull();
-		if (!actual.isCreateCounter()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be CreateCounter\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert isNotCreateCounter()
-	{
-		isNotNull();
-		if (actual.isCreateCounter()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be CreateCounter\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert isValid()
-	{
-		isNotNull();
-		if (!actual.isValid()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Valid\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert isNotValid()
-	{
-		isNotNull();
-		if (actual.isValid()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Valid\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DocTypeCounterAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

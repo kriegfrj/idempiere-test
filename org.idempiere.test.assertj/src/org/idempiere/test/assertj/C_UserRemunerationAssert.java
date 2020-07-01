@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_UserRemuneration;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_UserRemuneration;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_UserRemunerationAssert
-	extends AbstractPOAssert<C_UserRemunerationAssert,X_C_UserRemuneration>
+public class C_UserRemunerationAssert extends AbstractC_UserRemunerationAssert<C_UserRemunerationAssert, X_C_UserRemuneration>
 {
 
     /** Standard Constructor */
@@ -34,108 +32,5 @@ public class C_UserRemunerationAssert
     {
       super (actual, C_UserRemunerationAssert.class);
     }
-
-
-	public C_UserRemunerationAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UserRemunerationAssert hasC_Remuneration_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Remuneration_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Remuneration_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UserRemunerationAssert hasC_UserRemuneration_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_UserRemuneration_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UserRemuneration_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UserRemunerationAssert hasC_UserRemuneration_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_UserRemuneration_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UserRemuneration_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UserRemunerationAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UserRemunerationAssert hasGrossRAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("GrossRAmt", actual.getGrossRAmt(), expected);
-		return myself;
-	}
-
-
-	public C_UserRemunerationAssert hasGrossRCost(Object expected)
-	{
-		isNotNull();
-		bdAssert("GrossRCost", actual.getGrossRCost(), expected);
-		return myself;
-	}
-
-
-	public C_UserRemunerationAssert hasOvertimeAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("OvertimeAmt", actual.getOvertimeAmt(), expected);
-		return myself;
-	}
-
-
-	public C_UserRemunerationAssert hasOvertimeCost(Object expected)
-	{
-		isNotNull();
-		bdAssert("OvertimeCost", actual.getOvertimeCost(), expected);
-		return myself;
-	}
-
-
-	public C_UserRemunerationAssert hasValidFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidFrom", actual.getValidFrom(), expected);
-		return myself;
-	}
-
-
-	public C_UserRemunerationAssert hasValidTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("ValidTo", actual.getValidTo(), expected);
-		return myself;
-	}
 
 }

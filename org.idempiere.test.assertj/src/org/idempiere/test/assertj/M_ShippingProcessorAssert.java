@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ShippingProcessor;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ShippingProcessor;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ShippingProcessorAssert
-	extends AbstractPOAssert<M_ShippingProcessorAssert,X_M_ShippingProcessor>
+public class M_ShippingProcessorAssert extends AbstractM_ShippingProcessorAssert<M_ShippingProcessorAssert, X_M_ShippingProcessor>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class M_ShippingProcessorAssert
       super (actual, M_ShippingProcessorAssert.class);
     }
 
-
-	public M_ShippingProcessorAssert hasConnectionKey(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConnectionKey();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConnectionKey: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShippingProcessorAssert hasConnectionPassword(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConnectionPassword();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConnectionPassword: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShippingProcessorAssert hasM_ShippingProcessor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShippingProcessor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShippingProcessor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShippingProcessorAssert hasM_ShippingProcessor_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ShippingProcessor_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShippingProcessor_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShippingProcessorAssert hasM_ShippingProcessorCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShippingProcessorCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShippingProcessorCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShippingProcessorAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShippingProcessorAssert hasUserID(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getUserID();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have UserID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

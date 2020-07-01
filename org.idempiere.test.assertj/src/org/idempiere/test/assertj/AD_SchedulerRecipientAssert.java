@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_SchedulerRecipient;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_SchedulerRecipient;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_SchedulerRecipientAssert
-	extends AbstractPOAssert<AD_SchedulerRecipientAssert,X_AD_SchedulerRecipient>
+public class AD_SchedulerRecipientAssert extends AbstractAD_SchedulerRecipientAssert<AD_SchedulerRecipientAssert, X_AD_SchedulerRecipient>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_SchedulerRecipientAssert
       super (actual, AD_SchedulerRecipientAssert.class);
     }
 
-
-	public AD_SchedulerRecipientAssert hasAD_Role_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Role_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Role_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerRecipientAssert hasAD_Scheduler_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Scheduler_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Scheduler_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerRecipientAssert hasAD_SchedulerRecipient_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_SchedulerRecipient_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_SchedulerRecipient_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerRecipientAssert hasAD_SchedulerRecipient_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_SchedulerRecipient_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_SchedulerRecipient_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerRecipientAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

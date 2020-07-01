@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ChangeNotice;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ChangeNotice;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ChangeNoticeAssert
-	extends AbstractPOAssert<M_ChangeNoticeAssert,X_M_ChangeNotice>
+public class M_ChangeNoticeAssert extends AbstractM_ChangeNoticeAssert<M_ChangeNoticeAssert, X_M_ChangeNotice>
 {
 
     /** Standard Constructor */
@@ -35,99 +33,4 @@ public class M_ChangeNoticeAssert
       super (actual, M_ChangeNoticeAssert.class);
     }
 
-
-	public M_ChangeNoticeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert isApproved()
-	{
-		isNotNull();
-		if (!actual.isApproved()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Approved\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert isNotApproved()
-	{
-		isNotNull();
-		if (actual.isApproved()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Approved\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert hasM_ChangeNotice_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ChangeNotice_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ChangeNotice_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert hasM_ChangeNotice_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ChangeNotice_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ChangeNotice_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ChangeNoticeAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

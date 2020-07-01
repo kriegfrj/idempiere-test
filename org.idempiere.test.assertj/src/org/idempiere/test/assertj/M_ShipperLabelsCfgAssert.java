@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ShipperLabelsCfg;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ShipperLabelsCfg;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ShipperLabelsCfgAssert
-	extends AbstractPOAssert<M_ShipperLabelsCfgAssert,X_M_ShipperLabelsCfg>
+public class M_ShipperLabelsCfgAssert extends AbstractM_ShipperLabelsCfgAssert<M_ShipperLabelsCfgAssert, X_M_ShipperLabelsCfg>
 {
 
     /** Standard Constructor */
@@ -34,118 +32,5 @@ public class M_ShipperLabelsCfgAssert
     {
       super (actual, M_ShipperLabelsCfgAssert.class);
     }
-
-
-	public M_ShipperLabelsCfgAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasHeight(Object expected)
-	{
-		isNotNull();
-		bdAssert("Height", actual.getHeight(), expected);
-		return myself;
-	}
-
-
-	public M_ShipperLabelsCfgAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasLabelPrintMethod(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getLabelPrintMethod();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LabelPrintMethod: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasM_ShipperCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShipperCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasM_ShipperLabelsCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ShipperLabelsCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperLabelsCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasM_ShipperLabelsCfg_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ShipperLabelsCfg_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ShipperLabelsCfg_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ShipperLabelsCfgAssert hasWidth(Object expected)
-	{
-		isNotNull();
-		bdAssert("Width", actual.getWidth(), expected);
-		return myself;
-	}
 
 }

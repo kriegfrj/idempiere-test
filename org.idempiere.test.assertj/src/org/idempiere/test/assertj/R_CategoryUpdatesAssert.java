@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_CategoryUpdates;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_CategoryUpdates;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_CategoryUpdatesAssert
-	extends AbstractPOAssert<R_CategoryUpdatesAssert,X_R_CategoryUpdates>
+public class R_CategoryUpdatesAssert extends AbstractR_CategoryUpdatesAssert<R_CategoryUpdatesAssert, X_R_CategoryUpdates>
 {
 
     /** Standard Constructor */
@@ -35,57 +33,4 @@ public class R_CategoryUpdatesAssert
       super (actual, R_CategoryUpdatesAssert.class);
     }
 
-
-	public R_CategoryUpdatesAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_CategoryUpdatesAssert isSelfService()
-	{
-		isNotNull();
-		if (!actual.isSelfService()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SelfService\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_CategoryUpdatesAssert isNotSelfService()
-	{
-		isNotNull();
-		if (actual.isSelfService()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SelfService\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_CategoryUpdatesAssert hasR_Category_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_Category_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_Category_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_CategoryUpdatesAssert hasR_CategoryUpdates_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_CategoryUpdates_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_CategoryUpdates_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

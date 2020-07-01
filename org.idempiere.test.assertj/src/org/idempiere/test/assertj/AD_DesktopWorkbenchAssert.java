@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_DesktopWorkbench;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_DesktopWorkbench;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_DesktopWorkbenchAssert
-	extends AbstractPOAssert<AD_DesktopWorkbenchAssert,X_AD_DesktopWorkbench>
+public class AD_DesktopWorkbenchAssert extends AbstractAD_DesktopWorkbenchAssert<AD_DesktopWorkbenchAssert, X_AD_DesktopWorkbench>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_DesktopWorkbenchAssert
       super (actual, AD_DesktopWorkbenchAssert.class);
     }
 
-
-	public AD_DesktopWorkbenchAssert hasAD_Desktop_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Desktop_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Desktop_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_DesktopWorkbenchAssert hasAD_DesktopWorkbench_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_DesktopWorkbench_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_DesktopWorkbench_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_DesktopWorkbenchAssert hasAD_DesktopWorkbench_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_DesktopWorkbench_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_DesktopWorkbench_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_DesktopWorkbenchAssert hasAD_Workbench_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Workbench_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Workbench_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_DesktopWorkbenchAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

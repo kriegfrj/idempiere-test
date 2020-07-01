@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Period;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Period;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_PeriodAssert
-	extends AbstractPOAssert<C_PeriodAssert,X_C_Period>
+public class C_PeriodAssert extends AbstractC_PeriodAssert<C_PeriodAssert, X_C_Period>
 {
 
     /** Standard Constructor */
@@ -34,87 +32,5 @@ public class C_PeriodAssert
     {
       super (actual, C_PeriodAssert.class);
     }
-
-
-	public C_PeriodAssert hasC_Period_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Period_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Period_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodAssert hasC_Period_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Period_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Period_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodAssert hasC_Year_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Year_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Year_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodAssert hasEndDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("EndDate", actual.getEndDate(), expected);
-		return myself;
-	}
-
-
-	public C_PeriodAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodAssert hasPeriodNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPeriodNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PeriodNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodAssert hasPeriodType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPeriodType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PeriodType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PeriodAssert hasStartDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("StartDate", actual.getStartDate(), expected);
-		return myself;
-	}
 
 }

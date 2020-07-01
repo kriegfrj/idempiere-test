@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_RequestProcessorLog;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_RequestProcessorLog;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_RequestProcessorLogAssert
-	extends AbstractPOAssert<R_RequestProcessorLogAssert,X_R_RequestProcessorLog>
+public class R_RequestProcessorLogAssert extends AbstractR_RequestProcessorLogAssert<R_RequestProcessorLogAssert, X_R_RequestProcessorLog>
 {
 
     /** Standard Constructor */
@@ -35,101 +33,4 @@ public class R_RequestProcessorLogAssert
       super (actual, R_RequestProcessorLogAssert.class);
     }
 
-
-	public R_RequestProcessorLogAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert isError()
-	{
-		isNotNull();
-		if (!actual.isError()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Error\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert isNotError()
-	{
-		isNotNull();
-		if (actual.isError()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Error\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert hasR_RequestProcessor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_RequestProcessor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_RequestProcessor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert hasR_RequestProcessorLog_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_RequestProcessorLog_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_RequestProcessorLog_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert hasR_RequestProcessorLog_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_RequestProcessorLog_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_RequestProcessorLog_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert hasReference(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getReference();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Reference: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert hasSummary(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSummary();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Summary: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestProcessorLogAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

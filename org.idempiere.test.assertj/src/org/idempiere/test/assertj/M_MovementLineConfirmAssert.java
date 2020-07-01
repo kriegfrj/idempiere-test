@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_MovementLineConfirm;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_MovementLineConfirm;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_MovementLineConfirmAssert
-	extends AbstractPOAssert<M_MovementLineConfirmAssert,X_M_MovementLineConfirm>
+public class M_MovementLineConfirmAssert extends AbstractM_MovementLineConfirmAssert<M_MovementLineConfirmAssert, X_M_MovementLineConfirm>
 {
 
     /** Standard Constructor */
@@ -34,123 +32,5 @@ public class M_MovementLineConfirmAssert
     {
       super (actual, M_MovementLineConfirmAssert.class);
     }
-
-
-	public M_MovementLineConfirmAssert hasConfirmedQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("ConfirmedQty", actual.getConfirmedQty(), expected);
-		return myself;
-	}
-
-
-	public M_MovementLineConfirmAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert hasDifferenceQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("DifferenceQty", actual.getDifferenceQty(), expected);
-		return myself;
-	}
-
-
-	public M_MovementLineConfirmAssert hasM_InventoryLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InventoryLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InventoryLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert hasM_MovementConfirm_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_MovementConfirm_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MovementConfirm_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert hasM_MovementLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_MovementLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MovementLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert hasM_MovementLineConfirm_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_MovementLineConfirm_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MovementLineConfirm_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert hasM_MovementLineConfirm_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_MovementLineConfirm_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MovementLineConfirm_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MovementLineConfirmAssert hasScrappedQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("ScrappedQty", actual.getScrappedQty(), expected);
-		return myself;
-	}
-
-
-	public M_MovementLineConfirmAssert hasTargetQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("TargetQty", actual.getTargetQty(), expected);
-		return myself;
-	}
 
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Package_Imp_Detail;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Package_Imp_Detail;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Package_Imp_DetailAssert
-	extends AbstractPOAssert<AD_Package_Imp_DetailAssert,X_AD_Package_Imp_Detail>
+public class AD_Package_Imp_DetailAssert extends AbstractAD_Package_Imp_DetailAssert<AD_Package_Imp_DetailAssert, X_AD_Package_Imp_Detail>
 {
 
     /** Standard Constructor */
@@ -35,134 +33,4 @@ public class AD_Package_Imp_DetailAssert
       super (actual, AD_Package_Imp_DetailAssert.class);
     }
 
-
-	public AD_Package_Imp_DetailAssert hasAction(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAction();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Action: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasAD_Backup_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Backup_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Backup_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasAD_Package_Imp_Detail_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Package_Imp_Detail_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Imp_Detail_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasAD_Package_Imp_Detail_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Package_Imp_Detail_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Imp_Detail_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasAD_Package_Imp_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Package_Imp_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Package_Imp_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasSuccess(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSuccess();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Success: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasTableName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTableName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TableName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert hasType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Type: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert isUninstall()
-	{
-		isNotNull();
-		if (!actual.isUninstall()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Uninstall\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_Package_Imp_DetailAssert isNotUninstall()
-	{
-		isNotNull();
-		if (actual.isUninstall()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Uninstall\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

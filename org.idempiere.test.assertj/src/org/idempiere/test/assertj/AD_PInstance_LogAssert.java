@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_PInstance_Log;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_PInstance_Log;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_PInstance_LogAssert
-	extends AbstractPOAssert<AD_PInstance_LogAssert,X_AD_PInstance_Log>
+public class AD_PInstance_LogAssert extends AbstractAD_PInstance_LogAssert<AD_PInstance_LogAssert, X_AD_PInstance_Log>
 {
 
     /** Standard Constructor */
@@ -34,87 +32,5 @@ public class AD_PInstance_LogAssert
     {
       super (actual, AD_PInstance_LogAssert.class);
     }
-
-
-	public AD_PInstance_LogAssert hasAD_PInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_PInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PInstance_LogAssert hasAD_PInstance_Log_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_PInstance_Log_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PInstance_Log_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PInstance_LogAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PInstance_LogAssert hasLog_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLog_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Log_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PInstance_LogAssert hasP_Date(Object expected)
-	{
-		isNotNull();
-		dateAssert("P_Date", actual.getP_Date(), expected);
-		return myself;
-	}
-
-
-	public AD_PInstance_LogAssert hasP_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getP_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have P_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PInstance_LogAssert hasP_Msg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getP_Msg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have P_Msg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_PInstance_LogAssert hasP_Number(Object expected)
-	{
-		isNotNull();
-		bdAssert("P_Number", actual.getP_Number(), expected);
-		return myself;
-	}
 
 }

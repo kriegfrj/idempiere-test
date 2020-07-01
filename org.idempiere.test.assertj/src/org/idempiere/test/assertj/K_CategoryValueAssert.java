@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_CategoryValue;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_CategoryValue;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_CategoryValueAssert
-	extends AbstractPOAssert<K_CategoryValueAssert,X_K_CategoryValue>
+public class K_CategoryValueAssert extends AbstractK_CategoryValueAssert<K_CategoryValueAssert, X_K_CategoryValue>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class K_CategoryValueAssert
       super (actual, K_CategoryValueAssert.class);
     }
 
-
-	public K_CategoryValueAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CategoryValueAssert hasK_Category_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Category_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Category_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CategoryValueAssert hasK_CategoryValue_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_CategoryValue_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_CategoryValue_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CategoryValueAssert hasK_CategoryValue_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_CategoryValue_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_CategoryValue_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_CategoryValueAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

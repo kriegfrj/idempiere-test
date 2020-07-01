@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Withholding_Acct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Withholding_Acct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_Withholding_AcctAssert
-	extends AbstractPOAssert<C_Withholding_AcctAssert,X_C_Withholding_Acct>
+public class C_Withholding_AcctAssert extends AbstractC_Withholding_AcctAssert<C_Withholding_AcctAssert, X_C_Withholding_Acct>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class C_Withholding_AcctAssert
       super (actual, C_Withholding_AcctAssert.class);
     }
 
-
-	public C_Withholding_AcctAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Withholding_AcctAssert hasC_Withholding_Acct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Withholding_Acct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Withholding_Acct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Withholding_AcctAssert hasC_Withholding_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Withholding_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Withholding_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_Withholding_AcctAssert hasWithholding_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getWithholding_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Withholding_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

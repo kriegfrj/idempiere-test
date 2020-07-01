@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_Template_Ad_Cat;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_Template_Ad_Cat;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_Template_Ad_CatAssert
-	extends AbstractPOAssert<CM_Template_Ad_CatAssert,X_CM_Template_Ad_Cat>
+public class CM_Template_Ad_CatAssert extends AbstractCM_Template_Ad_CatAssert<CM_Template_Ad_CatAssert, X_CM_Template_Ad_Cat>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class CM_Template_Ad_CatAssert
       super (actual, CM_Template_Ad_CatAssert.class);
     }
 
-
-	public CM_Template_Ad_CatAssert hasCM_Ad_Cat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Ad_Cat_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Ad_Cat_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Template_Ad_CatAssert hasCM_Template_Ad_Cat_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_Template_Ad_Cat_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Template_Ad_Cat_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Template_Ad_CatAssert hasCM_Template_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Template_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Template_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Template_Ad_CatAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_Template_Ad_CatAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

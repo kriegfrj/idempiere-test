@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_StandardResponse;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_StandardResponse;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_StandardResponseAssert
-	extends AbstractPOAssert<R_StandardResponseAssert,X_R_StandardResponse>
+public class R_StandardResponseAssert extends AbstractR_StandardResponseAssert<R_StandardResponseAssert, X_R_StandardResponse>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class R_StandardResponseAssert
       super (actual, R_StandardResponseAssert.class);
     }
 
-
-	public R_StandardResponseAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_StandardResponseAssert hasR_StandardResponse_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_StandardResponse_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_StandardResponse_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_StandardResponseAssert hasR_StandardResponse_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_StandardResponse_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_StandardResponse_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_StandardResponseAssert hasResponseText(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getResponseText();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ResponseText: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

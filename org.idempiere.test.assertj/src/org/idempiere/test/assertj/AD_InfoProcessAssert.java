@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_InfoProcess;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_InfoProcess;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_InfoProcessAssert
-	extends AbstractPOAssert<AD_InfoProcessAssert,X_AD_InfoProcess>
+public class AD_InfoProcessAssert extends AbstractAD_InfoProcessAssert<AD_InfoProcessAssert, X_AD_InfoProcess>
 {
 
     /** Standard Constructor */
@@ -35,103 +33,4 @@ public class AD_InfoProcessAssert
       super (actual, AD_InfoProcessAssert.class);
     }
 
-
-	public AD_InfoProcessAssert hasAD_InfoColumn_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_InfoColumn_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_InfoColumn_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasAD_InfoProcess_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_InfoProcess_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_InfoProcess_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasAD_InfoProcess_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_InfoProcess_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_InfoProcess_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasAD_InfoWindow_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_InfoWindow_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_InfoWindow_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasAD_Process_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Process_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Process_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasDisplayLogic(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDisplayLogic();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DisplayLogic: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasImageURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getImageURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ImageURL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasLayoutType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getLayoutType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have LayoutType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoProcessAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

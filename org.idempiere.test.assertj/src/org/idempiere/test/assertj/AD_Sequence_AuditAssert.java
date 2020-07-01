@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Sequence_Audit;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Sequence_Audit;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Sequence_AuditAssert
-	extends AbstractPOAssert<AD_Sequence_AuditAssert,X_AD_Sequence_Audit>
+public class AD_Sequence_AuditAssert extends AbstractAD_Sequence_AuditAssert<AD_Sequence_AuditAssert, X_AD_Sequence_Audit>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class AD_Sequence_AuditAssert
       super (actual, AD_Sequence_AuditAssert.class);
     }
 
-
-	public AD_Sequence_AuditAssert hasAD_Sequence_Audit_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Sequence_Audit_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Sequence_Audit_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Sequence_AuditAssert hasAD_Sequence_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Sequence_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Sequence_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Sequence_AuditAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Sequence_AuditAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

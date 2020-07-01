@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Campaign;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Campaign;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_CampaignAssert
-	extends AbstractPOAssert<C_CampaignAssert,X_C_Campaign>
+public class C_CampaignAssert extends AbstractC_CampaignAssert<C_CampaignAssert, X_C_Campaign>
 {
 
     /** Standard Constructor */
@@ -35,114 +33,4 @@ public class C_CampaignAssert
       super (actual, C_CampaignAssert.class);
     }
 
-
-	public C_CampaignAssert hasC_Campaign_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Campaign_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Campaign_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CampaignAssert hasC_Campaign_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Campaign_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Campaign_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CampaignAssert hasC_Channel_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Channel_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Channel_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CampaignAssert hasCosts(Object expected)
-	{
-		isNotNull();
-		bdAssert("Costs", actual.getCosts(), expected);
-		return myself;
-	}
-
-
-	public C_CampaignAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CampaignAssert hasEndDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("EndDate", actual.getEndDate(), expected);
-		return myself;
-	}
-
-
-	public C_CampaignAssert isSummary()
-	{
-		isNotNull();
-		if (!actual.isSummary()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Summary\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_CampaignAssert isNotSummary()
-	{
-		isNotNull();
-		if (actual.isSummary()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Summary\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_CampaignAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CampaignAssert hasStartDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("StartDate", actual.getStartDate(), expected);
-		return myself;
-	}
-
-
-	public C_CampaignAssert hasValue(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValue();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Value: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

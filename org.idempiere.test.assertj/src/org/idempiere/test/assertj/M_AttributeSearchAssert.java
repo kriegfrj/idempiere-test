@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_AttributeSearch;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_AttributeSearch;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_AttributeSearchAssert
-	extends AbstractPOAssert<M_AttributeSearchAssert,X_M_AttributeSearch>
+public class M_AttributeSearchAssert extends AbstractM_AttributeSearchAssert<M_AttributeSearchAssert, X_M_AttributeSearch>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class M_AttributeSearchAssert
       super (actual, M_AttributeSearchAssert.class);
     }
 
-
-	public M_AttributeSearchAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSearchAssert hasM_AttributeSearch_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSearch_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSearch_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSearchAssert hasM_AttributeSearch_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_AttributeSearch_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSearch_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSearchAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

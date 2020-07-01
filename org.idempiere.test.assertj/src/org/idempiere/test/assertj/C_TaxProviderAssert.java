@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_TaxProvider;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_TaxProvider;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_TaxProviderAssert
-	extends AbstractPOAssert<C_TaxProviderAssert,X_C_TaxProvider>
+public class C_TaxProviderAssert extends AbstractC_TaxProviderAssert<C_TaxProviderAssert, X_C_TaxProvider>
 {
 
     /** Standard Constructor */
@@ -35,92 +33,4 @@ public class C_TaxProviderAssert
       super (actual, C_TaxProviderAssert.class);
     }
 
-
-	public C_TaxProviderAssert hasAccount(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAccount();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Account: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxProviderAssert hasC_TaxProvider_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_TaxProvider_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxProvider_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxProviderAssert hasC_TaxProvider_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_TaxProvider_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxProvider_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxProviderAssert hasC_TaxProviderCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_TaxProviderCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_TaxProviderCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxProviderAssert hasCompanyCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCompanyCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CompanyCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxProviderAssert hasLicense(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getLicense();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have License: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxProviderAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_TaxProviderAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_UOM_Conversion;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_UOM_Conversion;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_UOM_ConversionAssert
-	extends AbstractPOAssert<C_UOM_ConversionAssert,X_C_UOM_Conversion>
+public class C_UOM_ConversionAssert extends AbstractC_UOM_ConversionAssert<C_UOM_ConversionAssert, X_C_UOM_Conversion>
 {
 
     /** Standard Constructor */
@@ -34,76 +32,5 @@ public class C_UOM_ConversionAssert
     {
       super (actual, C_UOM_ConversionAssert.class);
     }
-
-
-	public C_UOM_ConversionAssert hasC_UOM_Conversion_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_UOM_Conversion_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UOM_Conversion_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UOM_ConversionAssert hasC_UOM_Conversion_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_UOM_Conversion_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UOM_Conversion_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UOM_ConversionAssert hasC_UOM_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_UOM_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UOM_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UOM_ConversionAssert hasC_UOM_To_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_UOM_To_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UOM_To_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UOM_ConversionAssert hasDivideRate(Object expected)
-	{
-		isNotNull();
-		bdAssert("DivideRate", actual.getDivideRate(), expected);
-		return myself;
-	}
-
-
-	public C_UOM_ConversionAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_UOM_ConversionAssert hasMultiplyRate(Object expected)
-	{
-		isNotNull();
-		bdAssert("MultiplyRate", actual.getMultiplyRate(), expected);
-		return myself;
-	}
 
 }

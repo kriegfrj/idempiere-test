@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_RfQ_Topic;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_RfQ_Topic;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RfQ_TopicAssert
-	extends AbstractPOAssert<C_RfQ_TopicAssert,X_C_RfQ_Topic>
+public class C_RfQ_TopicAssert extends AbstractC_RfQ_TopicAssert<C_RfQ_TopicAssert, X_C_RfQ_Topic>
 {
 
     /** Standard Constructor */
@@ -35,79 +33,4 @@ public class C_RfQ_TopicAssert
       super (actual, C_RfQ_TopicAssert.class);
     }
 
-
-	public C_RfQ_TopicAssert hasAD_PrintFormat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_PrintFormat_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PrintFormat_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicAssert hasC_RfQ_Topic_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQ_Topic_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQ_Topic_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicAssert hasC_RfQ_Topic_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_RfQ_Topic_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQ_Topic_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicAssert isSelfService()
-	{
-		isNotNull();
-		if (!actual.isSelfService()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SelfService\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicAssert isNotSelfService()
-	{
-		isNotNull();
-		if (actual.isSelfService()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SelfService\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQ_TopicAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

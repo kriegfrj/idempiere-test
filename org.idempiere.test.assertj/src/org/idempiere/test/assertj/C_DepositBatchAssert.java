@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_DepositBatch;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_DepositBatch;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_DepositBatchAssert
-	extends AbstractPOAssert<C_DepositBatchAssert,X_C_DepositBatch>
+public class C_DepositBatchAssert extends AbstractC_DepositBatchAssert<C_DepositBatchAssert, X_C_DepositBatch>
 {
 
     /** Standard Constructor */
@@ -35,125 +33,4 @@ public class C_DepositBatchAssert
       super (actual, C_DepositBatchAssert.class);
     }
 
-
-	public C_DepositBatchAssert hasC_BankAccount_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BankAccount_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BankAccount_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert hasC_DepositBatch_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_DepositBatch_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DepositBatch_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert hasC_DepositBatch_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_DepositBatch_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DepositBatch_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert hasC_DocType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_DocType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DocType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert hasDateDeposit(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateDeposit", actual.getDateDeposit(), expected);
-		return myself;
-	}
-
-
-	public C_DepositBatchAssert hasDateDoc(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateDoc", actual.getDateDoc(), expected);
-		return myself;
-	}
-
-
-	public C_DepositBatchAssert hasDepositAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DepositAmt", actual.getDepositAmt(), expected);
-		return myself;
-	}
-
-
-	public C_DepositBatchAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert hasDocStatus(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocStatus();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocStatus: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_DepositBatchAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

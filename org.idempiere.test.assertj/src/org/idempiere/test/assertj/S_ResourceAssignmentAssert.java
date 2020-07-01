@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_S_ResourceAssignment;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_S_ResourceAssignment;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class S_ResourceAssignmentAssert
-	extends AbstractPOAssert<S_ResourceAssignmentAssert,X_S_ResourceAssignment>
+public class S_ResourceAssignmentAssert extends AbstractS_ResourceAssignmentAssert<S_ResourceAssignmentAssert, X_S_ResourceAssignment>
 {
 
     /** Standard Constructor */
@@ -35,103 +33,4 @@ public class S_ResourceAssignmentAssert
       super (actual, S_ResourceAssignmentAssert.class);
     }
 
-
-	public S_ResourceAssignmentAssert hasAssignDateFrom(Object expected)
-	{
-		isNotNull();
-		dateAssert("AssignDateFrom", actual.getAssignDateFrom(), expected);
-		return myself;
-	}
-
-
-	public S_ResourceAssignmentAssert hasAssignDateTo(Object expected)
-	{
-		isNotNull();
-		dateAssert("AssignDateTo", actual.getAssignDateTo(), expected);
-		return myself;
-	}
-
-
-	public S_ResourceAssignmentAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ResourceAssignmentAssert isConfirmed()
-	{
-		isNotNull();
-		if (!actual.isConfirmed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Confirmed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public S_ResourceAssignmentAssert isNotConfirmed()
-	{
-		isNotNull();
-		if (actual.isConfirmed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Confirmed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public S_ResourceAssignmentAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ResourceAssignmentAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
-
-
-	public S_ResourceAssignmentAssert hasS_Resource_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_Resource_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_Resource_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ResourceAssignmentAssert hasS_ResourceAssignment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_ResourceAssignment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_ResourceAssignment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_ResourceAssignmentAssert hasS_ResourceAssignment_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getS_ResourceAssignment_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_ResourceAssignment_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

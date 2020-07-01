@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_RatioElement;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_RatioElement;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_RatioElementAssert
-	extends AbstractPOAssert<PA_RatioElementAssert,X_PA_RatioElement>
+public class PA_RatioElementAssert extends AbstractPA_RatioElementAssert<PA_RatioElementAssert, X_PA_RatioElement>
 {
 
     /** Standard Constructor */
@@ -35,144 +33,4 @@ public class PA_RatioElementAssert
       super (actual, PA_RatioElementAssert.class);
     }
 
-
-	public PA_RatioElementAssert hasAccount_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAccount_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Account_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasConstantValue(Object expected)
-	{
-		isNotNull();
-		bdAssert("ConstantValue", actual.getConstantValue(), expected);
-		return myself;
-	}
-
-
-	public PA_RatioElementAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasPA_MeasureCalc_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_MeasureCalc_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_MeasureCalc_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasPA_Ratio_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_Ratio_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_Ratio_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasPA_RatioElement_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_RatioElement_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_RatioElement_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasPA_RatioElement_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_RatioElement_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_RatioElement_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasPA_RatioUsed_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_RatioUsed_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_RatioUsed_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasPostingType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPostingType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PostingType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasRatioElementType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRatioElementType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RatioElementType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasRatioOperand(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRatioOperand();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RatioOperand: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_RatioElementAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

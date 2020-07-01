@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_IssueSystem;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_IssueSystem;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_IssueSystemAssert
-	extends AbstractPOAssert<R_IssueSystemAssert,X_R_IssueSystem>
+public class R_IssueSystemAssert extends AbstractR_IssueSystemAssert<R_IssueSystemAssert, X_R_IssueSystem>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class R_IssueSystemAssert
       super (actual, R_IssueSystemAssert.class);
     }
 
-
-	public R_IssueSystemAssert hasA_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueSystemAssert hasDBAddress(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDBAddress();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DBAddress: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueSystemAssert hasProfileInfo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getProfileInfo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ProfileInfo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueSystemAssert hasR_IssueSystem_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_IssueSystem_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueSystem_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueSystemAssert hasR_IssueSystem_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_IssueSystem_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueSystem_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueSystemAssert hasStatisticsInfo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getStatisticsInfo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have StatisticsInfo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueSystemAssert hasSystemStatus(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSystemStatus();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SystemStatus: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_BenchmarkData;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_BenchmarkData;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_BenchmarkDataAssert
-	extends AbstractPOAssert<PA_BenchmarkDataAssert,X_PA_BenchmarkData>
+public class PA_BenchmarkDataAssert extends AbstractPA_BenchmarkDataAssert<PA_BenchmarkDataAssert, X_PA_BenchmarkData>
 {
 
     /** Standard Constructor */
@@ -35,75 +33,4 @@ public class PA_BenchmarkDataAssert
       super (actual, PA_BenchmarkDataAssert.class);
     }
 
-
-	public PA_BenchmarkDataAssert hasBenchmarkDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("BenchmarkDate", actual.getBenchmarkDate(), expected);
-		return myself;
-	}
-
-
-	public PA_BenchmarkDataAssert hasBenchmarkValue(Object expected)
-	{
-		isNotNull();
-		bdAssert("BenchmarkValue", actual.getBenchmarkValue(), expected);
-		return myself;
-	}
-
-
-	public PA_BenchmarkDataAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_BenchmarkDataAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_BenchmarkDataAssert hasPA_Benchmark_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_Benchmark_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_Benchmark_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_BenchmarkDataAssert hasPA_BenchmarkData_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_BenchmarkData_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_BenchmarkData_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_BenchmarkDataAssert hasPA_BenchmarkData_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_BenchmarkData_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_BenchmarkData_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

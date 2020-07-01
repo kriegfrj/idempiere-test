@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_RfQLineQty;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_RfQLineQty;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RfQLineQtyAssert
-	extends AbstractPOAssert<C_RfQLineQtyAssert,X_C_RfQLineQty>
+public class C_RfQLineQtyAssert extends AbstractC_RfQLineQtyAssert<C_RfQLineQtyAssert, X_C_RfQLineQty>
 {
 
     /** Standard Constructor */
@@ -34,149 +32,5 @@ public class C_RfQLineQtyAssert
     {
       super (actual, C_RfQLineQtyAssert.class);
     }
-
-
-	public C_RfQLineQtyAssert hasBenchmarkPrice(Object expected)
-	{
-		isNotNull();
-		bdAssert("BenchmarkPrice", actual.getBenchmarkPrice(), expected);
-		return myself;
-	}
-
-
-	public C_RfQLineQtyAssert hasBestResponseAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("BestResponseAmt", actual.getBestResponseAmt(), expected);
-		return myself;
-	}
-
-
-	public C_RfQLineQtyAssert hasC_RfQLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert hasC_RfQLineQty_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_RfQLineQty_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQLineQty_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert hasC_RfQLineQty_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_RfQLineQty_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_RfQLineQty_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert hasC_UOM_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_UOM_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_UOM_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert isOfferQty()
-	{
-		isNotNull();
-		if (!actual.isOfferQty()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be OfferQty\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert isNotOfferQty()
-	{
-		isNotNull();
-		if (actual.isOfferQty()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be OfferQty\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert isPurchaseQty()
-	{
-		isNotNull();
-		if (!actual.isPurchaseQty()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be PurchaseQty\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert isNotPurchaseQty()
-	{
-		isNotNull();
-		if (actual.isPurchaseQty()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be PurchaseQty\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert isRfQQty()
-	{
-		isNotNull();
-		if (!actual.isRfQQty()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be RfQQty\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert isNotRfQQty()
-	{
-		isNotNull();
-		if (actual.isRfQQty()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be RfQQty\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_RfQLineQtyAssert hasMargin(Object expected)
-	{
-		isNotNull();
-		bdAssert("Margin", actual.getMargin(), expected);
-		return myself;
-	}
-
-
-	public C_RfQLineQtyAssert hasOfferAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("OfferAmt", actual.getOfferAmt(), expected);
-		return myself;
-	}
-
-
-	public C_RfQLineQtyAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
 
 }

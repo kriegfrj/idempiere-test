@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_QualityTestResult;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_QualityTestResult;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_QualityTestResultAssert
-	extends AbstractPOAssert<M_QualityTestResultAssert,X_M_QualityTestResult>
+public class M_QualityTestResultAssert extends AbstractM_QualityTestResultAssert<M_QualityTestResultAssert, X_M_QualityTestResult>
 {
 
     /** Standard Constructor */
@@ -35,121 +33,4 @@ public class M_QualityTestResultAssert
       super (actual, M_QualityTestResultAssert.class);
     }
 
-
-	public M_QualityTestResultAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert hasExpectedResult(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getExpectedResult();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ExpectedResult: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert isQCPass()
-	{
-		isNotNull();
-		if (!actual.isQCPass()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be QCPass\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert isNotQCPass()
-	{
-		isNotNull();
-		if (actual.isQCPass()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be QCPass\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert hasM_QualityTest_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_QualityTest_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_QualityTest_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert hasM_QualityTestResult_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_QualityTestResult_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_QualityTestResult_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert hasM_QualityTestResult_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_QualityTestResult_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_QualityTestResult_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_QualityTestResultAssert hasResult(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getResult();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Result: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

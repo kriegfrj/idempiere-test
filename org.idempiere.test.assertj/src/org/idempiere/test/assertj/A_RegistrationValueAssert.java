@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_RegistrationValue;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_RegistrationValue;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_RegistrationValueAssert
-	extends AbstractPOAssert<A_RegistrationValueAssert,X_A_RegistrationValue>
+public class A_RegistrationValueAssert extends AbstractA_RegistrationValueAssert<A_RegistrationValueAssert, X_A_RegistrationValue>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class A_RegistrationValueAssert
       super (actual, A_RegistrationValueAssert.class);
     }
 
-
-	public A_RegistrationValueAssert hasA_Registration_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Registration_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Registration_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_RegistrationValueAssert hasA_RegistrationAttribute_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_RegistrationAttribute_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_RegistrationAttribute_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_RegistrationValueAssert hasA_RegistrationValue_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_RegistrationValue_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_RegistrationValue_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_RegistrationValueAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_RegistrationValueAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_CashLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_CashLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_CashLineAssert
-	extends AbstractPOAssert<C_CashLineAssert,X_C_CashLine>
+public class C_CashLineAssert extends AbstractC_CashLineAssert<C_CashLineAssert, X_C_CashLine>
 {
 
     /** Standard Constructor */
@@ -34,190 +32,5 @@ public class C_CashLineAssert
     {
       super (actual, C_CashLineAssert.class);
     }
-
-
-	public C_CashLineAssert hasAmount(Object expected)
-	{
-		isNotNull();
-		bdAssert("Amount", actual.getAmount(), expected);
-		return myself;
-	}
-
-
-	public C_CashLineAssert hasC_BankAccount_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BankAccount_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BankAccount_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasC_Cash_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Cash_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Cash_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasC_CashLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CashLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CashLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasC_CashLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_CashLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CashLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasC_Charge_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Charge_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasC_Currency_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Currency_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Currency_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasC_Invoice_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Invoice_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Invoice_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasC_Payment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Payment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Payment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasCashType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCashType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CashType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasDiscountAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DiscountAmt", actual.getDiscountAmt(), expected);
-		return myself;
-	}
-
-
-	public C_CashLineAssert isGenerated()
-	{
-		isNotNull();
-		if (!actual.isGenerated()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Generated\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert isNotGenerated()
-	{
-		isNotNull();
-		if (actual.isGenerated()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Generated\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasLine(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getLine();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Line: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_CashLineAssert hasWriteOffAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("WriteOffAmt", actual.getWriteOffAmt(), expected);
-		return myself;
-	}
 
 }

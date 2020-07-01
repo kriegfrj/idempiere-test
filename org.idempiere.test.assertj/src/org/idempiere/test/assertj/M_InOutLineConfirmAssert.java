@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_InOutLineConfirm;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_InOutLineConfirm;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_InOutLineConfirmAssert
-	extends AbstractPOAssert<M_InOutLineConfirmAssert,X_M_InOutLineConfirm>
+public class M_InOutLineConfirmAssert extends AbstractM_InOutLineConfirmAssert<M_InOutLineConfirmAssert, X_M_InOutLineConfirm>
 {
 
     /** Standard Constructor */
@@ -34,145 +32,5 @@ public class M_InOutLineConfirmAssert
     {
       super (actual, M_InOutLineConfirmAssert.class);
     }
-
-
-	public M_InOutLineConfirmAssert hasC_InvoiceLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasConfirmationNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConfirmationNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConfirmationNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasConfirmedQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("ConfirmedQty", actual.getConfirmedQty(), expected);
-		return myself;
-	}
-
-
-	public M_InOutLineConfirmAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasDifferenceQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("DifferenceQty", actual.getDifferenceQty(), expected);
-		return myself;
-	}
-
-
-	public M_InOutLineConfirmAssert hasM_InOutConfirm_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutConfirm_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutConfirm_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasM_InOutLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasM_InOutLineConfirm_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InOutLineConfirm_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLineConfirm_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasM_InOutLineConfirm_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_InOutLineConfirm_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InOutLineConfirm_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasM_InventoryLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_InventoryLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_InventoryLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_InOutLineConfirmAssert hasScrappedQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("ScrappedQty", actual.getScrappedQty(), expected);
-		return myself;
-	}
-
-
-	public M_InOutLineConfirmAssert hasTargetQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("TargetQty", actual.getTargetQty(), expected);
-		return myself;
-	}
 
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_OrderPaySchedule;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_OrderPaySchedule;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_OrderPayScheduleAssert
-	extends AbstractPOAssert<C_OrderPayScheduleAssert,X_C_OrderPaySchedule>
+public class C_OrderPayScheduleAssert extends AbstractC_OrderPayScheduleAssert<C_OrderPayScheduleAssert, X_C_OrderPaySchedule>
 {
 
     /** Standard Constructor */
@@ -35,120 +33,4 @@ public class C_OrderPayScheduleAssert
       super (actual, C_OrderPayScheduleAssert.class);
     }
 
-
-	public C_OrderPayScheduleAssert hasC_Order_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Order_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Order_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderPayScheduleAssert hasC_OrderPaySchedule_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrderPaySchedule_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderPaySchedule_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderPayScheduleAssert hasC_OrderPaySchedule_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_OrderPaySchedule_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderPaySchedule_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderPayScheduleAssert hasC_PaySchedule_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_PaySchedule_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaySchedule_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_OrderPayScheduleAssert hasDiscountAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DiscountAmt", actual.getDiscountAmt(), expected);
-		return myself;
-	}
-
-
-	public C_OrderPayScheduleAssert hasDiscountDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("DiscountDate", actual.getDiscountDate(), expected);
-		return myself;
-	}
-
-
-	public C_OrderPayScheduleAssert hasDueAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DueAmt", actual.getDueAmt(), expected);
-		return myself;
-	}
-
-
-	public C_OrderPayScheduleAssert hasDueDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("DueDate", actual.getDueDate(), expected);
-		return myself;
-	}
-
-
-	public C_OrderPayScheduleAssert isValid()
-	{
-		isNotNull();
-		if (!actual.isValid()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Valid\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OrderPayScheduleAssert isNotValid()
-	{
-		isNotNull();
-		if (actual.isValid()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Valid\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OrderPayScheduleAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_OrderPayScheduleAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

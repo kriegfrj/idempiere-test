@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Reference;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Reference;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ReferenceAssert
-	extends AbstractPOAssert<AD_ReferenceAssert,X_AD_Reference>
+public class AD_ReferenceAssert extends AbstractAD_ReferenceAssert<AD_ReferenceAssert, X_AD_Reference>
 {
 
     /** Standard Constructor */
@@ -35,112 +33,4 @@ public class AD_ReferenceAssert
       super (actual, AD_ReferenceAssert.class);
     }
 
-
-	public AD_ReferenceAssert hasAD_Reference_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Reference_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Reference_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert hasAD_Reference_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Reference_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Reference_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert isOrderByValue()
-	{
-		isNotNull();
-		if (!actual.isOrderByValue()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be OrderByValue\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert isNotOrderByValue()
-	{
-		isNotNull();
-		if (actual.isOrderByValue()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be OrderByValue\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert hasValidationType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getValidationType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ValidationType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReferenceAssert hasVFormat(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getVFormat();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have VFormat: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_S_Training_Class;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_S_Training_Class;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class S_Training_ClassAssert
-	extends AbstractPOAssert<S_Training_ClassAssert,X_S_Training_Class>
+public class S_Training_ClassAssert extends AbstractS_Training_ClassAssert<S_Training_ClassAssert, X_S_Training_Class>
 {
 
     /** Standard Constructor */
@@ -34,65 +32,5 @@ public class S_Training_ClassAssert
     {
       super (actual, S_Training_ClassAssert.class);
     }
-
-
-	public S_Training_ClassAssert hasEndDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("EndDate", actual.getEndDate(), expected);
-		return myself;
-	}
-
-
-	public S_Training_ClassAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_Training_ClassAssert hasS_Training_Class_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_Training_Class_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_Training_Class_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_Training_ClassAssert hasS_Training_Class_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getS_Training_Class_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_Training_Class_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_Training_ClassAssert hasS_Training_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getS_Training_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have S_Training_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public S_Training_ClassAssert hasStartDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("StartDate", actual.getStartDate(), expected);
-		return myself;
-	}
 
 }

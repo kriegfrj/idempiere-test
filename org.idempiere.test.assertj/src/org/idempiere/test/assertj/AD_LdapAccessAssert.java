@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_LdapAccess;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_LdapAccess;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_LdapAccessAssert
-	extends AbstractPOAssert<AD_LdapAccessAssert,X_AD_LdapAccess>
+public class AD_LdapAccessAssert extends AbstractAD_LdapAccessAssert<AD_LdapAccessAssert, X_AD_LdapAccess>
 {
 
     /** Standard Constructor */
@@ -35,101 +33,4 @@ public class AD_LdapAccessAssert
       super (actual, AD_LdapAccessAssert.class);
     }
 
-
-	public AD_LdapAccessAssert hasAD_LdapAccess_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_LdapAccess_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LdapAccess_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert hasAD_LdapAccess_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_LdapAccess_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LdapAccess_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert hasAD_LdapProcessor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_LdapProcessor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LdapProcessor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert isError()
-	{
-		isNotNull();
-		if (!actual.isError()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Error\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert isNotError()
-	{
-		isNotNull();
-		if (actual.isError()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Error\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert hasR_InterestArea_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_InterestArea_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_InterestArea_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LdapAccessAssert hasSummary(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSummary();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Summary: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

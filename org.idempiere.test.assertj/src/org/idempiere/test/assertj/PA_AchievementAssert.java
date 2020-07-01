@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_Achievement;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_Achievement;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_AchievementAssert
-	extends AbstractPOAssert<PA_AchievementAssert,X_PA_Achievement>
+public class PA_AchievementAssert extends AbstractPA_AchievementAssert<PA_AchievementAssert, X_PA_Achievement>
 {
 
     /** Standard Constructor */
@@ -35,117 +33,4 @@ public class PA_AchievementAssert
       super (actual, PA_AchievementAssert.class);
     }
 
-
-	public PA_AchievementAssert hasDateDoc(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateDoc", actual.getDateDoc(), expected);
-		return myself;
-	}
-
-
-	public PA_AchievementAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert isAchieved()
-	{
-		isNotNull();
-		if (!actual.isAchieved()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Achieved\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert isNotAchieved()
-	{
-		isNotNull();
-		if (actual.isAchieved()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Achieved\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert hasManualActual(Object expected)
-	{
-		isNotNull();
-		bdAssert("ManualActual", actual.getManualActual(), expected);
-		return myself;
-	}
-
-
-	public PA_AchievementAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert hasNote(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getNote();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Note: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert hasPA_Achievement_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_Achievement_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_Achievement_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert hasPA_Achievement_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_Achievement_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_Achievement_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert hasPA_Measure_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_Measure_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_Measure_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_AchievementAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

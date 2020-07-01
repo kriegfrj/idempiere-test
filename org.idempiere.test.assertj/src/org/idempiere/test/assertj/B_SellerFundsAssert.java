@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_B_SellerFunds;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_B_SellerFunds;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class B_SellerFundsAssert
-	extends AbstractPOAssert<B_SellerFundsAssert,X_B_SellerFunds>
+public class B_SellerFundsAssert extends AbstractB_SellerFundsAssert<B_SellerFundsAssert, X_B_SellerFunds>
 {
 
     /** Standard Constructor */
@@ -34,76 +32,5 @@ public class B_SellerFundsAssert
     {
       super (actual, B_SellerFundsAssert.class);
     }
-
-
-	public B_SellerFundsAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerFundsAssert hasB_SellerFunds_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_SellerFunds_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_SellerFunds_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerFundsAssert hasB_SellerFunds_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getB_SellerFunds_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_SellerFunds_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerFundsAssert hasC_Order_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Order_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Order_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerFundsAssert hasC_Payment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Payment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Payment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_SellerFundsAssert hasCommittedAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("CommittedAmt", actual.getCommittedAmt(), expected);
-		return myself;
-	}
-
-
-	public B_SellerFundsAssert hasNonCommittedAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("NonCommittedAmt", actual.getNonCommittedAmt(), expected);
-		return myself;
-	}
 
 }

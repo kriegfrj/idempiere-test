@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_FieldGroup;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_FieldGroup;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_FieldGroupAssert
-	extends AbstractPOAssert<AD_FieldGroupAssert,X_AD_FieldGroup>
+public class AD_FieldGroupAssert extends AbstractAD_FieldGroupAssert<AD_FieldGroupAssert, X_AD_FieldGroup>
 {
 
     /** Standard Constructor */
@@ -35,79 +33,4 @@ public class AD_FieldGroupAssert
       super (actual, AD_FieldGroupAssert.class);
     }
 
-
-	public AD_FieldGroupAssert hasAD_FieldGroup_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_FieldGroup_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_FieldGroup_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FieldGroupAssert hasAD_FieldGroup_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_FieldGroup_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_FieldGroup_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FieldGroupAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FieldGroupAssert hasFieldGroupType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFieldGroupType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FieldGroupType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_FieldGroupAssert isCollapsedByDefault()
-	{
-		isNotNull();
-		if (!actual.isCollapsedByDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be CollapsedByDefault\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_FieldGroupAssert isNotCollapsedByDefault()
-	{
-		isNotNull();
-		if (actual.isCollapsedByDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be CollapsedByDefault\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_FieldGroupAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

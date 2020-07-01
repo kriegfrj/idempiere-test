@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ProductDownload;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ProductDownload;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ProductDownloadAssert
-	extends AbstractPOAssert<M_ProductDownloadAssert,X_M_ProductDownload>
+public class M_ProductDownloadAssert extends AbstractM_ProductDownloadAssert<M_ProductDownloadAssert, X_M_ProductDownload>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class M_ProductDownloadAssert
       super (actual, M_ProductDownloadAssert.class);
     }
 
-
-	public M_ProductDownloadAssert hasDownloadURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDownloadURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DownloadURL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductDownloadAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductDownloadAssert hasM_ProductDownload_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ProductDownload_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductDownload_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductDownloadAssert hasM_ProductDownload_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ProductDownload_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductDownload_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductDownloadAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

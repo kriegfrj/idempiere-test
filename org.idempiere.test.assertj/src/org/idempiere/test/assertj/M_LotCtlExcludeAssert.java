@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_LotCtlExclude;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_LotCtlExclude;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_LotCtlExcludeAssert
-	extends AbstractPOAssert<M_LotCtlExcludeAssert,X_M_LotCtlExclude>
+public class M_LotCtlExcludeAssert extends AbstractM_LotCtlExcludeAssert<M_LotCtlExcludeAssert, X_M_LotCtlExclude>
 {
 
     /** Standard Constructor */
@@ -35,68 +33,4 @@ public class M_LotCtlExcludeAssert
       super (actual, M_LotCtlExcludeAssert.class);
     }
 
-
-	public M_LotCtlExcludeAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_LotCtlExcludeAssert isSOTrx()
-	{
-		isNotNull();
-		if (!actual.isSOTrx()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SOTrx\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_LotCtlExcludeAssert isNotSOTrx()
-	{
-		isNotNull();
-		if (actual.isSOTrx()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SOTrx\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_LotCtlExcludeAssert hasM_LotCtl_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_LotCtl_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_LotCtl_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_LotCtlExcludeAssert hasM_LotCtlExclude_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_LotCtlExclude_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_LotCtlExclude_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_LotCtlExcludeAssert hasM_LotCtlExclude_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_LotCtlExclude_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_LotCtlExclude_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

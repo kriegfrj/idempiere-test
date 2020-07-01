@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Greeting;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Greeting;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_GreetingAssert
-	extends AbstractPOAssert<C_GreetingAssert,X_C_Greeting>
+public class C_GreetingAssert extends AbstractC_GreetingAssert<C_GreetingAssert, X_C_Greeting>
 {
 
     /** Standard Constructor */
@@ -35,88 +33,4 @@ public class C_GreetingAssert
       super (actual, C_GreetingAssert.class);
     }
 
-
-	public C_GreetingAssert hasC_Greeting_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Greeting_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Greeting_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_GreetingAssert hasC_Greeting_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Greeting_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Greeting_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_GreetingAssert hasGreeting(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getGreeting();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Greeting: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_GreetingAssert isDefault()
-	{
-		isNotNull();
-		if (!actual.isDefault()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Default\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_GreetingAssert isNotDefault()
-	{
-		isNotNull();
-		if (actual.isDefault()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Default\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_GreetingAssert isFirstNameOnly()
-	{
-		isNotNull();
-		if (!actual.isFirstNameOnly()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be FirstNameOnly\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_GreetingAssert isNotFirstNameOnly()
-	{
-		isNotNull();
-		if (actual.isFirstNameOnly()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be FirstNameOnly\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_GreetingAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

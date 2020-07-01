@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_StorageReservation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_StorageReservation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_StorageReservationAssert
-	extends AbstractPOAssert<M_StorageReservationAssert,X_M_StorageReservation>
+public class M_StorageReservationAssert extends AbstractM_StorageReservationAssert<M_StorageReservationAssert, X_M_StorageReservation>
 {
 
     /** Standard Constructor */
@@ -34,85 +32,5 @@ public class M_StorageReservationAssert
     {
       super (actual, M_StorageReservationAssert.class);
     }
-
-
-	public M_StorageReservationAssert hasDateLastInventory(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateLastInventory", actual.getDateLastInventory(), expected);
-		return myself;
-	}
-
-
-	public M_StorageReservationAssert isSOTrx()
-	{
-		isNotNull();
-		if (!actual.isSOTrx()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SOTrx\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_StorageReservationAssert isNotSOTrx()
-	{
-		isNotNull();
-		if (actual.isSOTrx()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SOTrx\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_StorageReservationAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageReservationAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageReservationAssert hasM_StorageReservation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_StorageReservation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_StorageReservation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageReservationAssert hasM_Warehouse_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Warehouse_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Warehouse_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_StorageReservationAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
 
 }

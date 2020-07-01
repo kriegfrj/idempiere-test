@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_AlertRecipient;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_AlertRecipient;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_AlertRecipientAssert
-	extends AbstractPOAssert<AD_AlertRecipientAssert,X_AD_AlertRecipient>
+public class AD_AlertRecipientAssert extends AbstractAD_AlertRecipientAssert<AD_AlertRecipientAssert, X_AD_AlertRecipient>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_AlertRecipientAssert
       super (actual, AD_AlertRecipientAssert.class);
     }
 
-
-	public AD_AlertRecipientAssert hasAD_Alert_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Alert_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Alert_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRecipientAssert hasAD_AlertRecipient_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_AlertRecipient_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_AlertRecipient_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRecipientAssert hasAD_AlertRecipient_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_AlertRecipient_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_AlertRecipient_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRecipientAssert hasAD_Role_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Role_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Role_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_AlertRecipientAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

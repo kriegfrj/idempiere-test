@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_RequestUpdate;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_RequestUpdate;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_RequestUpdateAssert
-	extends AbstractPOAssert<R_RequestUpdateAssert,X_R_RequestUpdate>
+public class R_RequestUpdateAssert extends AbstractR_RequestUpdateAssert<R_RequestUpdateAssert, X_R_RequestUpdate>
 {
 
     /** Standard Constructor */
@@ -34,103 +32,5 @@ public class R_RequestUpdateAssert
     {
       super (actual, R_RequestUpdateAssert.class);
     }
-
-
-	public R_RequestUpdateAssert hasConfidentialTypeEntry(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getConfidentialTypeEntry();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ConfidentialTypeEntry: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdateAssert hasEndTime(Object expected)
-	{
-		isNotNull();
-		dateAssert("EndTime", actual.getEndTime(), expected);
-		return myself;
-	}
-
-
-	public R_RequestUpdateAssert hasM_ProductSpent_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ProductSpent_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductSpent_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdateAssert hasQtyInvoiced(Object expected)
-	{
-		isNotNull();
-		bdAssert("QtyInvoiced", actual.getQtyInvoiced(), expected);
-		return myself;
-	}
-
-
-	public R_RequestUpdateAssert hasQtySpent(Object expected)
-	{
-		isNotNull();
-		bdAssert("QtySpent", actual.getQtySpent(), expected);
-		return myself;
-	}
-
-
-	public R_RequestUpdateAssert hasR_Request_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_Request_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_Request_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdateAssert hasR_RequestUpdate_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_RequestUpdate_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_RequestUpdate_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdateAssert hasR_RequestUpdate_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_RequestUpdate_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_RequestUpdate_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdateAssert hasResult(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getResult();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Result: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_RequestUpdateAssert hasStartTime(Object expected)
-	{
-		isNotNull();
-		dateAssert("StartTime", actual.getStartTime(), expected);
-		return myself;
-	}
 
 }

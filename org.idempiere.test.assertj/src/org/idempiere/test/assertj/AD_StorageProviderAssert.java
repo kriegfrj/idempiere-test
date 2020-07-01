@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_StorageProvider;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_StorageProvider;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_StorageProviderAssert
-	extends AbstractPOAssert<AD_StorageProviderAssert,X_AD_StorageProvider>
+public class AD_StorageProviderAssert extends AbstractAD_StorageProviderAssert<AD_StorageProviderAssert, X_AD_StorageProvider>
 {
 
     /** Standard Constructor */
@@ -35,92 +33,4 @@ public class AD_StorageProviderAssert
       super (actual, AD_StorageProviderAssert.class);
     }
 
-
-	public AD_StorageProviderAssert hasAD_StorageProvider_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_StorageProvider_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_StorageProvider_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StorageProviderAssert hasAD_StorageProvider_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_StorageProvider_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_StorageProvider_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StorageProviderAssert hasFolder(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFolder();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Folder: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StorageProviderAssert hasMethod(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getMethod();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Method: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StorageProviderAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StorageProviderAssert hasPassword(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPassword();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Password: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StorageProviderAssert hasURL(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getURL();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have URL: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_StorageProviderAssert hasUserName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getUserName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have UserName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

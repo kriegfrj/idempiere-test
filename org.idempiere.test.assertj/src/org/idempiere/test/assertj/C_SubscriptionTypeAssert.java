@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_SubscriptionType;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_SubscriptionType;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_SubscriptionTypeAssert
-	extends AbstractPOAssert<C_SubscriptionTypeAssert,X_C_SubscriptionType>
+public class C_SubscriptionTypeAssert extends AbstractC_SubscriptionTypeAssert<C_SubscriptionTypeAssert, X_C_SubscriptionType>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class C_SubscriptionTypeAssert
       super (actual, C_SubscriptionTypeAssert.class);
     }
 
-
-	public C_SubscriptionTypeAssert hasC_SubscriptionType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_SubscriptionType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_SubscriptionType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SubscriptionTypeAssert hasC_SubscriptionType_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_SubscriptionType_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_SubscriptionType_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SubscriptionTypeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SubscriptionTypeAssert hasFrequency(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getFrequency();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Frequency: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SubscriptionTypeAssert hasFrequencyType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFrequencyType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FrequencyType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_SubscriptionTypeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

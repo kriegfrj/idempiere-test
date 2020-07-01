@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_ASP_Field;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_ASP_Field;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class ASP_FieldAssert
-	extends AbstractPOAssert<ASP_FieldAssert,X_ASP_Field>
+public class ASP_FieldAssert extends AbstractASP_FieldAssert<ASP_FieldAssert, X_ASP_Field>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class ASP_FieldAssert
       super (actual, ASP_FieldAssert.class);
     }
 
-
-	public ASP_FieldAssert hasAD_Field_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Field_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Field_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FieldAssert hasASP_Field_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Field_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Field_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FieldAssert hasASP_Field_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Field_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Field_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FieldAssert hasASP_Status(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Status();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Status: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_FieldAssert hasASP_Tab_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Tab_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Tab_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

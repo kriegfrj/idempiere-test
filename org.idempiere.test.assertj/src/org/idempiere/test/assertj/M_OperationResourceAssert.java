@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_OperationResource;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_OperationResource;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_OperationResourceAssert
-	extends AbstractPOAssert<M_OperationResourceAssert,X_M_OperationResource>
+public class M_OperationResourceAssert extends AbstractM_OperationResourceAssert<M_OperationResourceAssert, X_M_OperationResource>
 {
 
     /** Standard Constructor */
@@ -34,117 +32,5 @@ public class M_OperationResourceAssert
     {
       super (actual, M_OperationResourceAssert.class);
     }
-
-
-	public M_OperationResourceAssert hasA_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasC_Job_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Job_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Job_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasM_OperationResource_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_OperationResource_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_OperationResource_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasM_OperationResource_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_OperationResource_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_OperationResource_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasM_ProductOperation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ProductOperation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductOperation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_OperationResourceAssert hasSetupTime(Object expected)
-	{
-		isNotNull();
-		bdAssert("SetupTime", actual.getSetupTime(), expected);
-		return myself;
-	}
-
-
-	public M_OperationResourceAssert hasTeardownTime(Object expected)
-	{
-		isNotNull();
-		bdAssert("TeardownTime", actual.getTeardownTime(), expected);
-		return myself;
-	}
-
-
-	public M_OperationResourceAssert hasUnitRuntime(Object expected)
-	{
-		isNotNull();
-		bdAssert("UnitRuntime", actual.getUnitRuntime(), expected);
-		return myself;
-	}
 
 }

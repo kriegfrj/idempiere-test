@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_ASP_ClientLevel;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_ASP_ClientLevel;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class ASP_ClientLevelAssert
-	extends AbstractPOAssert<ASP_ClientLevelAssert,X_ASP_ClientLevel>
+public class ASP_ClientLevelAssert extends AbstractASP_ClientLevelAssert<ASP_ClientLevelAssert, X_ASP_ClientLevel>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class ASP_ClientLevelAssert
       super (actual, ASP_ClientLevelAssert.class);
     }
 
-
-	public ASP_ClientLevelAssert hasASP_ClientLevel_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_ClientLevel_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_ClientLevel_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_ClientLevelAssert hasASP_ClientLevel_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_ClientLevel_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_ClientLevel_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_ClientLevelAssert hasASP_Level_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Level_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Level_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_ClientLevelAssert hasASP_Module_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Module_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Module_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_ClientLevelAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

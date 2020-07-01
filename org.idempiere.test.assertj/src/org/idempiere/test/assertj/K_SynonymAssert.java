@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_Synonym;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_Synonym;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_SynonymAssert
-	extends AbstractPOAssert<K_SynonymAssert,X_K_Synonym>
+public class K_SynonymAssert extends AbstractK_SynonymAssert<K_SynonymAssert, X_K_Synonym>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class K_SynonymAssert
       super (actual, K_SynonymAssert.class);
     }
 
-
-	public K_SynonymAssert hasAD_Language(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Language();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Language: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_SynonymAssert hasK_Synonym_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Synonym_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Synonym_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_SynonymAssert hasK_Synonym_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_Synonym_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Synonym_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_SynonymAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_SynonymAssert hasSynonymName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSynonymName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SynonymName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

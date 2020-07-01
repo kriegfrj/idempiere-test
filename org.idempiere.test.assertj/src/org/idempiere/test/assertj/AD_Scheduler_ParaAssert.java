@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Scheduler_Para;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Scheduler_Para;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Scheduler_ParaAssert
-	extends AbstractPOAssert<AD_Scheduler_ParaAssert,X_AD_Scheduler_Para>
+public class AD_Scheduler_ParaAssert extends AbstractAD_Scheduler_ParaAssert<AD_Scheduler_ParaAssert, X_AD_Scheduler_Para>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class AD_Scheduler_ParaAssert
       super (actual, AD_Scheduler_ParaAssert.class);
     }
 
-
-	public AD_Scheduler_ParaAssert hasAD_Process_Para_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Process_Para_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Process_Para_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Scheduler_ParaAssert hasAD_Scheduler_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Scheduler_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Scheduler_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Scheduler_ParaAssert hasAD_Scheduler_Para_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Scheduler_Para_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Scheduler_Para_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Scheduler_ParaAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Scheduler_ParaAssert hasParameterDefault(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getParameterDefault();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ParameterDefault: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Scheduler_ParaAssert hasParameterToDefault(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getParameterToDefault();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ParameterToDefault: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

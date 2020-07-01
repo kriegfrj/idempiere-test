@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_RelationType;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_RelationType;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_RelationTypeAssert
-	extends AbstractPOAssert<AD_RelationTypeAssert,X_AD_RelationType>
+public class AD_RelationTypeAssert extends AbstractAD_RelationTypeAssert<AD_RelationTypeAssert, X_AD_RelationType>
 {
 
     /** Standard Constructor */
@@ -35,123 +33,4 @@ public class AD_RelationTypeAssert
       super (actual, AD_RelationTypeAssert.class);
     }
 
-
-	public AD_RelationTypeAssert hasAD_Reference_Source_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Reference_Source_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Reference_Source_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasAD_Reference_Target_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Reference_Target_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Reference_Target_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasAD_RelationType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_RelationType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_RelationType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasAD_RelationType_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_RelationType_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_RelationType_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert isDirected()
-	{
-		isNotNull();
-		if (!actual.isDirected()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Directed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert isNotDirected()
-	{
-		isNotNull();
-		if (actual.isDirected()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Directed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasRole_Source(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRole_Source();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Role_Source: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasRole_Target(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRole_Target();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Role_Target: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_RelationTypeAssert hasType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Type: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

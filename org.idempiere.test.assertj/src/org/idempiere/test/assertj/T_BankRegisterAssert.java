@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_T_BankRegister;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_T_BankRegister;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class T_BankRegisterAssert
-	extends AbstractPOAssert<T_BankRegisterAssert,X_T_BankRegister>
+public class T_BankRegisterAssert extends AbstractT_BankRegisterAssert<T_BankRegisterAssert, X_T_BankRegister>
 {
 
     /** Standard Constructor */
@@ -35,124 +33,4 @@ public class T_BankRegisterAssert
       super (actual, T_BankRegisterAssert.class);
     }
 
-
-	public T_BankRegisterAssert hasAccount(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAccount();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Account: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_BankRegisterAssert hasAD_PInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_PInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_PInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_BankRegisterAssert hasAmtAcctCr(Object expected)
-	{
-		isNotNull();
-		bdAssert("AmtAcctCr", actual.getAmtAcctCr(), expected);
-		return myself;
-	}
-
-
-	public T_BankRegisterAssert hasAmtAcctDr(Object expected)
-	{
-		isNotNull();
-		bdAssert("AmtAcctDr", actual.getAmtAcctDr(), expected);
-		return myself;
-	}
-
-
-	public T_BankRegisterAssert hasBalance(Object expected)
-	{
-		isNotNull();
-		bdAssert("Balance", actual.getBalance(), expected);
-		return myself;
-	}
-
-
-	public T_BankRegisterAssert hasBankName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getBankName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have BankName: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_BankRegisterAssert hasBPartner(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getBPartner();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have BPartner: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_BankRegisterAssert hasC_Bank_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Bank_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Bank_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_BankRegisterAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_BankRegisterAssert hasDateAcct(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateAcct", actual.getDateAcct(), expected);
-		return myself;
-	}
-
-
-	public T_BankRegisterAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_BankRegisterAssert hasT_BankRegister_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getT_BankRegister_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have T_BankRegister_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

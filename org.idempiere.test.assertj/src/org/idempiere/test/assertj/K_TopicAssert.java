@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_Topic;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_Topic;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_TopicAssert
-	extends AbstractPOAssert<K_TopicAssert,X_K_Topic>
+public class K_TopicAssert extends AbstractK_TopicAssert<K_TopicAssert, X_K_Topic>
 {
 
     /** Standard Constructor */
@@ -35,110 +33,4 @@ public class K_TopicAssert
       super (actual, K_TopicAssert.class);
     }
 
-
-	public K_TopicAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_TopicAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_TopicAssert isPublic()
-	{
-		isNotNull();
-		if (!actual.isPublic()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Public\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_TopicAssert isNotPublic()
-	{
-		isNotNull();
-		if (actual.isPublic()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Public\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_TopicAssert isPublicWrite()
-	{
-		isNotNull();
-		if (!actual.isPublicWrite()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be PublicWrite\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_TopicAssert isNotPublicWrite()
-	{
-		isNotNull();
-		if (actual.isPublicWrite()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be PublicWrite\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public K_TopicAssert hasK_Topic_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Topic_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Topic_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_TopicAssert hasK_Topic_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_Topic_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Topic_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_TopicAssert hasK_Type_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Type_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Type_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_TopicAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

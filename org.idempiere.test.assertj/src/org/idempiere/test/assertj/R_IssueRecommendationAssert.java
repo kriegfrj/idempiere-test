@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_IssueRecommendation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_IssueRecommendation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_IssueRecommendationAssert
-	extends AbstractPOAssert<R_IssueRecommendationAssert,X_R_IssueRecommendation>
+public class R_IssueRecommendationAssert extends AbstractR_IssueRecommendationAssert<R_IssueRecommendationAssert, X_R_IssueRecommendation>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class R_IssueRecommendationAssert
       super (actual, R_IssueRecommendationAssert.class);
     }
 
-
-	public R_IssueRecommendationAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueRecommendationAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueRecommendationAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueRecommendationAssert hasR_IssueRecommendation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_IssueRecommendation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueRecommendation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_IssueRecommendationAssert hasR_IssueRecommendation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_IssueRecommendation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_IssueRecommendation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

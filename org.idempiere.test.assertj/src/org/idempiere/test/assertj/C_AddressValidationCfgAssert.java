@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_AddressValidationCfg;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_AddressValidationCfg;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_AddressValidationCfgAssert
-	extends AbstractPOAssert<C_AddressValidationCfgAssert,X_C_AddressValidationCfg>
+public class C_AddressValidationCfgAssert extends AbstractC_AddressValidationCfgAssert<C_AddressValidationCfgAssert, X_C_AddressValidationCfg>
 {
 
     /** Standard Constructor */
@@ -35,136 +33,4 @@ public class C_AddressValidationCfgAssert
       super (actual, C_AddressValidationCfgAssert.class);
     }
 
-
-	public C_AddressValidationCfgAssert hasAddressValidationClass(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAddressValidationClass();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AddressValidationClass: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasC_AddressValidationCfg_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AddressValidationCfg_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AddressValidationCfg_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasC_AddressValidationCfg_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_AddressValidationCfg_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AddressValidationCfg_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasHostAddress(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHostAddress();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have HostAddress: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasHostPort(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getHostPort();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have HostPort: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasProxyAddress(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getProxyAddress();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ProxyAddress: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasProxyLogon(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getProxyLogon();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ProxyLogon: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasProxyPassword(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getProxyPassword();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ProxyPassword: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasProxyPort(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getProxyPort();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ProxyPort: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AddressValidationCfgAssert hasServicePath(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getServicePath();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ServicePath: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

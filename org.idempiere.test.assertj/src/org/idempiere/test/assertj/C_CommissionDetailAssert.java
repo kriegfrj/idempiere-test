@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_CommissionDetail;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_CommissionDetail;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_CommissionDetailAssert
-	extends AbstractPOAssert<C_CommissionDetailAssert,X_C_CommissionDetail>
+public class C_CommissionDetailAssert extends AbstractC_CommissionDetailAssert<C_CommissionDetailAssert, X_C_CommissionDetail>
 {
 
     /** Standard Constructor */
@@ -35,116 +33,4 @@ public class C_CommissionDetailAssert
       super (actual, C_CommissionDetailAssert.class);
     }
 
-
-	public C_CommissionDetailAssert hasActualAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("ActualAmt", actual.getActualAmt(), expected);
-		return myself;
-	}
-
-
-	public C_CommissionDetailAssert hasActualQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("ActualQty", actual.getActualQty(), expected);
-		return myself;
-	}
-
-
-	public C_CommissionDetailAssert hasC_CommissionAmt_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CommissionAmt_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CommissionAmt_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CommissionDetailAssert hasC_CommissionDetail_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CommissionDetail_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CommissionDetail_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CommissionDetailAssert hasC_CommissionDetail_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_CommissionDetail_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CommissionDetail_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CommissionDetailAssert hasC_Currency_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Currency_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Currency_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CommissionDetailAssert hasC_InvoiceLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_InvoiceLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InvoiceLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CommissionDetailAssert hasC_OrderLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_OrderLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_OrderLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CommissionDetailAssert hasConvertedAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("ConvertedAmt", actual.getConvertedAmt(), expected);
-		return myself;
-	}
-
-
-	public C_CommissionDetailAssert hasInfo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getInfo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Info: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_CommissionDetailAssert hasReference(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getReference();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Reference: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

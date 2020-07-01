@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_BP_Customer_Acct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_BP_Customer_Acct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_BP_Customer_AcctAssert
-	extends AbstractPOAssert<C_BP_Customer_AcctAssert,X_C_BP_Customer_Acct>
+public class C_BP_Customer_AcctAssert extends AbstractC_BP_Customer_AcctAssert<C_BP_Customer_AcctAssert, X_C_BP_Customer_Acct>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class C_BP_Customer_AcctAssert
       super (actual, C_BP_Customer_AcctAssert.class);
     }
 
-
-	public C_BP_Customer_AcctAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_Customer_AcctAssert hasC_BP_Customer_Acct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_BP_Customer_Acct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_Customer_Acct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_Customer_AcctAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_Customer_AcctAssert hasC_Prepayment_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Prepayment_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Prepayment_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_Customer_AcctAssert hasC_Receivable_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Receivable_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Receivable_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_Customer_AcctAssert hasC_Receivable_Services_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Receivable_Services_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Receivable_Services_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_A_Asset_Info_Ins;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_A_Asset_Info_Ins;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class A_Asset_Info_InsAssert
-	extends AbstractPOAssert<A_Asset_Info_InsAssert,X_A_Asset_Info_Ins>
+public class A_Asset_Info_InsAssert extends AbstractA_Asset_Info_InsAssert<A_Asset_Info_InsAssert, X_A_Asset_Info_Ins>
 {
 
     /** Standard Constructor */
@@ -35,102 +33,4 @@ public class A_Asset_Info_InsAssert
       super (actual, A_Asset_Info_InsAssert.class);
     }
 
-
-	public A_Asset_Info_InsAssert hasA_Asset_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_InsAssert hasA_Asset_Info_Ins_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getA_Asset_Info_Ins_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Ins_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_InsAssert hasA_Asset_Info_Ins_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Asset_Info_Ins_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Asset_Info_Ins_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_InsAssert hasA_Ins_Premium(Object expected)
-	{
-		isNotNull();
-		bdAssert("A_Ins_Premium", actual.getA_Ins_Premium(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_Info_InsAssert hasA_Ins_Value(Object expected)
-	{
-		isNotNull();
-		bdAssert("A_Ins_Value", actual.getA_Ins_Value(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_Info_InsAssert hasA_Insurance_Co(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Insurance_Co();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Insurance_Co: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_InsAssert hasA_Policy_No(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getA_Policy_No();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have A_Policy_No: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public A_Asset_Info_InsAssert hasA_Renewal_Date(Object expected)
-	{
-		isNotNull();
-		dateAssert("A_Renewal_Date", actual.getA_Renewal_Date(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_Info_InsAssert hasA_Replace_Cost(Object expected)
-	{
-		isNotNull();
-		bdAssert("A_Replace_Cost", actual.getA_Replace_Cost(), expected);
-		return myself;
-	}
-
-
-	public A_Asset_Info_InsAssert hasText(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getText();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Text: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

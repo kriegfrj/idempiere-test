@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_AcctProcessor;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_AcctProcessor;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_AcctProcessorAssert
-	extends AbstractPOAssert<C_AcctProcessorAssert,X_C_AcctProcessor>
+public class C_AcctProcessorAssert extends AbstractC_AcctProcessorAssert<C_AcctProcessorAssert, X_C_AcctProcessor>
 {
 
     /** Standard Constructor */
@@ -35,119 +33,4 @@ public class C_AcctProcessorAssert
       super (actual, C_AcctProcessorAssert.class);
     }
 
-
-	public C_AcctProcessorAssert hasAD_Schedule_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Schedule_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Schedule_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasC_AcctProcessor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctProcessor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctProcessor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasC_AcctProcessor_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_AcctProcessor_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctProcessor_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasDateLastRun(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateLastRun", actual.getDateLastRun(), expected);
-		return myself;
-	}
-
-
-	public C_AcctProcessorAssert hasDateNextRun(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateNextRun", actual.getDateNextRun(), expected);
-		return myself;
-	}
-
-
-	public C_AcctProcessorAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasKeepLogDays(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getKeepLogDays();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have KeepLogDays: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctProcessorAssert hasSupervisor_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSupervisor_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Supervisor_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

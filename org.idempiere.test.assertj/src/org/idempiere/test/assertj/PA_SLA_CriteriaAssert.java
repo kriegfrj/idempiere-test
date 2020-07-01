@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_SLA_Criteria;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_SLA_Criteria;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_SLA_CriteriaAssert
-	extends AbstractPOAssert<PA_SLA_CriteriaAssert,X_PA_SLA_Criteria>
+public class PA_SLA_CriteriaAssert extends AbstractPA_SLA_CriteriaAssert<PA_SLA_CriteriaAssert, X_PA_SLA_Criteria>
 {
 
     /** Standard Constructor */
@@ -35,90 +33,4 @@ public class PA_SLA_CriteriaAssert
       super (actual, PA_SLA_CriteriaAssert.class);
     }
 
-
-	public PA_SLA_CriteriaAssert hasClassname(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getClassname();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Classname: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_CriteriaAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_CriteriaAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_CriteriaAssert isManual()
-	{
-		isNotNull();
-		if (!actual.isManual()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Manual\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public PA_SLA_CriteriaAssert isNotManual()
-	{
-		isNotNull();
-		if (actual.isManual()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Manual\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public PA_SLA_CriteriaAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_CriteriaAssert hasPA_SLA_Criteria_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_SLA_Criteria_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Criteria_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_CriteriaAssert hasPA_SLA_Criteria_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_SLA_Criteria_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Criteria_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_ASP_Workflow;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_ASP_Workflow;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class ASP_WorkflowAssert
-	extends AbstractPOAssert<ASP_WorkflowAssert,X_ASP_Workflow>
+public class ASP_WorkflowAssert extends AbstractASP_WorkflowAssert<ASP_WorkflowAssert, X_ASP_Workflow>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class ASP_WorkflowAssert
       super (actual, ASP_WorkflowAssert.class);
     }
 
-
-	public ASP_WorkflowAssert hasAD_Workflow_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Workflow_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Workflow_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WorkflowAssert hasASP_Level_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Level_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Level_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WorkflowAssert hasASP_Status(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Status();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Status: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WorkflowAssert hasASP_Workflow_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Workflow_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Workflow_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_WorkflowAssert hasASP_Workflow_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Workflow_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Workflow_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_GroupUpdates;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_GroupUpdates;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_GroupUpdatesAssert
-	extends AbstractPOAssert<R_GroupUpdatesAssert,X_R_GroupUpdates>
+public class R_GroupUpdatesAssert extends AbstractR_GroupUpdatesAssert<R_GroupUpdatesAssert, X_R_GroupUpdates>
 {
 
     /** Standard Constructor */
@@ -35,57 +33,4 @@ public class R_GroupUpdatesAssert
       super (actual, R_GroupUpdatesAssert.class);
     }
 
-
-	public R_GroupUpdatesAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_GroupUpdatesAssert isSelfService()
-	{
-		isNotNull();
-		if (!actual.isSelfService()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SelfService\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_GroupUpdatesAssert isNotSelfService()
-	{
-		isNotNull();
-		if (actual.isSelfService()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SelfService\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public R_GroupUpdatesAssert hasR_Group_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_Group_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_Group_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_GroupUpdatesAssert hasR_GroupUpdates_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_GroupUpdates_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_GroupUpdates_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

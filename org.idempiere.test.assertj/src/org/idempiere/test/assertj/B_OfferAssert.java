@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_B_Offer;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_B_Offer;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class B_OfferAssert
-	extends AbstractPOAssert<B_OfferAssert,X_B_Offer>
+public class B_OfferAssert extends AbstractB_OfferAssert<B_OfferAssert, X_B_Offer>
 {
 
     /** Standard Constructor */
@@ -35,112 +33,4 @@ public class B_OfferAssert
       super (actual, B_OfferAssert.class);
     }
 
-
-	public B_OfferAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_OfferAssert hasB_Offer_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_Offer_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Offer_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_OfferAssert hasB_Offer_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getB_Offer_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Offer_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_OfferAssert hasB_SellerFunds_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_SellerFunds_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_SellerFunds_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_OfferAssert hasB_Topic_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_Topic_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Topic_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_OfferAssert isWillingToCommit()
-	{
-		isNotNull();
-		if (!actual.isWillingToCommit()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be WillingToCommit\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_OfferAssert isNotWillingToCommit()
-	{
-		isNotNull();
-		if (actual.isWillingToCommit()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be WillingToCommit\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_OfferAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_OfferAssert hasPrivateNote(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPrivateNote();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PrivateNote: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_OfferAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_PromotionDistribution;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_PromotionDistribution;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_PromotionDistributionAssert
-	extends AbstractPOAssert<M_PromotionDistributionAssert,X_M_PromotionDistribution>
+public class M_PromotionDistributionAssert extends AbstractM_PromotionDistributionAssert<M_PromotionDistributionAssert, X_M_PromotionDistribution>
 {
 
     /** Standard Constructor */
@@ -35,100 +33,4 @@ public class M_PromotionDistributionAssert
       super (actual, M_PromotionDistributionAssert.class);
     }
 
-
-	public M_PromotionDistributionAssert hasDistributionSorting(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDistributionSorting();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DistributionSorting: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionDistributionAssert hasDistributionType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDistributionType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DistributionType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionDistributionAssert hasM_Promotion_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Promotion_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Promotion_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionDistributionAssert hasM_PromotionDistribution_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PromotionDistribution_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PromotionDistribution_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionDistributionAssert hasM_PromotionDistribution_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_PromotionDistribution_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PromotionDistribution_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionDistributionAssert hasM_PromotionLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_PromotionLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_PromotionLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionDistributionAssert hasOperation(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getOperation();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Operation: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_PromotionDistributionAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
-
-
-	public M_PromotionDistributionAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

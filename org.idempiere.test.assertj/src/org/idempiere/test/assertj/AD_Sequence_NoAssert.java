@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Sequence_No;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Sequence_No;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Sequence_NoAssert
-	extends AbstractPOAssert<AD_Sequence_NoAssert,X_AD_Sequence_No>
+public class AD_Sequence_NoAssert extends AbstractAD_Sequence_NoAssert<AD_Sequence_NoAssert, X_AD_Sequence_No>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class AD_Sequence_NoAssert
       super (actual, AD_Sequence_NoAssert.class);
     }
 
-
-	public AD_Sequence_NoAssert hasAD_Sequence_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Sequence_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Sequence_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Sequence_NoAssert hasAD_Sequence_No_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Sequence_No_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Sequence_No_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Sequence_NoAssert hasCalendarYearMonth(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCalendarYearMonth();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CalendarYearMonth: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Sequence_NoAssert hasCurrentNext(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCurrentNext();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CurrentNext: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_InfoWindow_Access;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_InfoWindow_Access;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_InfoWindow_AccessAssert
-	extends AbstractPOAssert<AD_InfoWindow_AccessAssert,X_AD_InfoWindow_Access>
+public class AD_InfoWindow_AccessAssert extends AbstractAD_InfoWindow_AccessAssert<AD_InfoWindow_AccessAssert, X_AD_InfoWindow_Access>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class AD_InfoWindow_AccessAssert
       super (actual, AD_InfoWindow_AccessAssert.class);
     }
 
-
-	public AD_InfoWindow_AccessAssert hasAD_InfoWindow_Access_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_InfoWindow_Access_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_InfoWindow_Access_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoWindow_AccessAssert hasAD_InfoWindow_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_InfoWindow_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_InfoWindow_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_InfoWindow_AccessAssert hasAD_Role_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Role_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Role_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

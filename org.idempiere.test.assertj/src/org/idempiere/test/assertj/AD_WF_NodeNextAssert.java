@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_WF_NodeNext;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_WF_NodeNext;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_WF_NodeNextAssert
-	extends AbstractPOAssert<AD_WF_NodeNextAssert,X_AD_WF_NodeNext>
+public class AD_WF_NodeNextAssert extends AbstractAD_WF_NodeNextAssert<AD_WF_NodeNextAssert, X_AD_WF_NodeNext>
 {
 
     /** Standard Constructor */
@@ -35,112 +33,4 @@ public class AD_WF_NodeNextAssert
       super (actual, AD_WF_NodeNextAssert.class);
     }
 
-
-	public AD_WF_NodeNextAssert hasAD_WF_Next_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_Next_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_Next_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert hasAD_WF_Node_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_Node_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_Node_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert hasAD_WF_NodeNext_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_NodeNext_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_NodeNext_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert hasAD_WF_NodeNext_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_WF_NodeNext_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_NodeNext_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert hasEntityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getEntityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have EntityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert isStdUserWorkflow()
-	{
-		isNotNull();
-		if (!actual.isStdUserWorkflow()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be StdUserWorkflow\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert isNotStdUserWorkflow()
-	{
-		isNotNull();
-		if (actual.isStdUserWorkflow()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be StdUserWorkflow\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_NodeNextAssert hasTransitionCode(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTransitionCode();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TransitionCode: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

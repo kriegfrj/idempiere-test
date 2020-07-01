@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_WF_ActivityApprover;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_WF_ActivityApprover;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_WF_ActivityApproverAssert
-	extends AbstractPOAssert<AD_WF_ActivityApproverAssert,X_AD_WF_ActivityApprover>
+public class AD_WF_ActivityApproverAssert extends AbstractAD_WF_ActivityApproverAssert<AD_WF_ActivityApproverAssert, X_AD_WF_ActivityApprover>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class AD_WF_ActivityApproverAssert
       super (actual, AD_WF_ActivityApproverAssert.class);
     }
 
-
-	public AD_WF_ActivityApproverAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityApproverAssert hasAD_WF_Activity_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_Activity_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_Activity_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityApproverAssert hasAD_WF_ActivityApprover_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_WF_ActivityApprover_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_ActivityApprover_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_WF_ActivityApproverAssert hasAD_WF_ActivityApprover_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_WF_ActivityApprover_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_WF_ActivityApprover_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

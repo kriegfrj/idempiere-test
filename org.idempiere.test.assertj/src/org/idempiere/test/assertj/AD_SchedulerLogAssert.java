@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_SchedulerLog;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_SchedulerLog;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_SchedulerLogAssert
-	extends AbstractPOAssert<AD_SchedulerLogAssert,X_AD_SchedulerLog>
+public class AD_SchedulerLogAssert extends AbstractAD_SchedulerLogAssert<AD_SchedulerLogAssert, X_AD_SchedulerLog>
 {
 
     /** Standard Constructor */
@@ -35,101 +33,4 @@ public class AD_SchedulerLogAssert
       super (actual, AD_SchedulerLogAssert.class);
     }
 
-
-	public AD_SchedulerLogAssert hasAD_Scheduler_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Scheduler_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Scheduler_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert hasAD_SchedulerLog_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_SchedulerLog_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_SchedulerLog_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert hasAD_SchedulerLog_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_SchedulerLog_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_SchedulerLog_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert isError()
-	{
-		isNotNull();
-		if (!actual.isError()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Error\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert isNotError()
-	{
-		isNotNull();
-		if (actual.isError()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Error\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert hasReference(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getReference();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Reference: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert hasSummary(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSummary();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Summary: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_SchedulerLogAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

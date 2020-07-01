@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_LabelPrinter;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_LabelPrinter;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_LabelPrinterAssert
-	extends AbstractPOAssert<AD_LabelPrinterAssert,X_AD_LabelPrinter>
+public class AD_LabelPrinterAssert extends AbstractAD_LabelPrinterAssert<AD_LabelPrinterAssert, X_AD_LabelPrinter>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class AD_LabelPrinterAssert
       super (actual, AD_LabelPrinterAssert.class);
     }
 
-
-	public AD_LabelPrinterAssert hasAD_LabelPrinter_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_LabelPrinter_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LabelPrinter_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterAssert hasAD_LabelPrinter_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_LabelPrinter_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_LabelPrinter_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_LabelPrinterAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

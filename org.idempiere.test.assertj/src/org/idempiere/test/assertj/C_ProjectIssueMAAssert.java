@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_ProjectIssueMA;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_ProjectIssueMA;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_ProjectIssueMAAssert
-	extends AbstractPOAssert<C_ProjectIssueMAAssert,X_C_ProjectIssueMA>
+public class C_ProjectIssueMAAssert extends AbstractC_ProjectIssueMAAssert<C_ProjectIssueMAAssert, X_C_ProjectIssueMA>
 {
 
     /** Standard Constructor */
@@ -34,46 +32,5 @@ public class C_ProjectIssueMAAssert
     {
       super (actual, C_ProjectIssueMAAssert.class);
     }
-
-
-	public C_ProjectIssueMAAssert hasC_ProjectIssue_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_ProjectIssue_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ProjectIssue_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueMAAssert hasC_ProjectIssueMA_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_ProjectIssueMA_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ProjectIssueMA_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueMAAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ProjectIssueMAAssert hasMovementQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("MovementQty", actual.getMovementQty(), expected);
-		return myself;
-	}
 
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_B_TopicCategory;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_B_TopicCategory;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class B_TopicCategoryAssert
-	extends AbstractPOAssert<B_TopicCategoryAssert,X_B_TopicCategory>
+public class B_TopicCategoryAssert extends AbstractB_TopicCategoryAssert<B_TopicCategoryAssert, X_B_TopicCategory>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class B_TopicCategoryAssert
       super (actual, B_TopicCategoryAssert.class);
     }
 
-
-	public B_TopicCategoryAssert hasB_TopicCategory_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_TopicCategory_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_TopicCategory_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicCategoryAssert hasB_TopicCategory_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getB_TopicCategory_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_TopicCategory_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicCategoryAssert hasB_TopicType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_TopicType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_TopicType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicCategoryAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_TopicCategoryAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_B_Bid;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_B_Bid;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class B_BidAssert
-	extends AbstractPOAssert<B_BidAssert,X_B_Bid>
+public class B_BidAssert extends AbstractB_BidAssert<B_BidAssert, X_B_Bid>
 {
 
     /** Standard Constructor */
@@ -35,112 +33,4 @@ public class B_BidAssert
       super (actual, B_BidAssert.class);
     }
 
-
-	public B_BidAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_BidAssert hasB_Bid_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_Bid_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Bid_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_BidAssert hasB_Bid_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getB_Bid_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Bid_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_BidAssert hasB_BuyerFunds_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_BuyerFunds_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_BuyerFunds_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_BidAssert hasB_Topic_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getB_Topic_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have B_Topic_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_BidAssert isWillingToCommit()
-	{
-		isNotNull();
-		if (!actual.isWillingToCommit()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be WillingToCommit\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_BidAssert isNotWillingToCommit()
-	{
-		isNotNull();
-		if (actual.isWillingToCommit()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be WillingToCommit\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public B_BidAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_BidAssert hasPrivateNote(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPrivateNote();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PrivateNote: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public B_BidAssert hasTextMsg(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getTextMsg();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have TextMsg: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

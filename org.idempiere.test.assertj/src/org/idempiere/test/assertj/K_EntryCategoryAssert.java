@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_K_EntryCategory;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_K_EntryCategory;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class K_EntryCategoryAssert
-	extends AbstractPOAssert<K_EntryCategoryAssert,X_K_EntryCategory>
+public class K_EntryCategoryAssert extends AbstractK_EntryCategoryAssert<K_EntryCategoryAssert, X_K_EntryCategory>
 {
 
     /** Standard Constructor */
@@ -35,48 +33,4 @@ public class K_EntryCategoryAssert
       super (actual, K_EntryCategoryAssert.class);
     }
 
-
-	public K_EntryCategoryAssert hasK_Category_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Category_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Category_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryCategoryAssert hasK_CategoryValue_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_CategoryValue_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_CategoryValue_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryCategoryAssert hasK_Entry_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getK_Entry_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_Entry_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public K_EntryCategoryAssert hasK_EntryCategory_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getK_EntryCategory_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have K_EntryCategory_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

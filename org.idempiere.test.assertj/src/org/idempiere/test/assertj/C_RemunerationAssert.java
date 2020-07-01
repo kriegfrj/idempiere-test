@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_Remuneration;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_Remuneration;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_RemunerationAssert
-	extends AbstractPOAssert<C_RemunerationAssert,X_C_Remuneration>
+public class C_RemunerationAssert extends AbstractC_RemunerationAssert<C_RemunerationAssert, X_C_Remuneration>
 {
 
     /** Standard Constructor */
@@ -35,113 +33,4 @@ public class C_RemunerationAssert
       super (actual, C_RemunerationAssert.class);
     }
 
-
-	public C_RemunerationAssert hasC_Remuneration_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Remuneration_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Remuneration_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RemunerationAssert hasC_Remuneration_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_Remuneration_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Remuneration_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RemunerationAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RemunerationAssert hasGrossRAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("GrossRAmt", actual.getGrossRAmt(), expected);
-		return myself;
-	}
-
-
-	public C_RemunerationAssert hasGrossRCost(Object expected)
-	{
-		isNotNull();
-		bdAssert("GrossRCost", actual.getGrossRCost(), expected);
-		return myself;
-	}
-
-
-	public C_RemunerationAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RemunerationAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RemunerationAssert hasOvertimeAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("OvertimeAmt", actual.getOvertimeAmt(), expected);
-		return myself;
-	}
-
-
-	public C_RemunerationAssert hasOvertimeCost(Object expected)
-	{
-		isNotNull();
-		bdAssert("OvertimeCost", actual.getOvertimeCost(), expected);
-		return myself;
-	}
-
-
-	public C_RemunerationAssert hasRemunerationType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getRemunerationType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have RemunerationType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_RemunerationAssert hasStandardHours(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getStandardHours();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have StandardHours: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

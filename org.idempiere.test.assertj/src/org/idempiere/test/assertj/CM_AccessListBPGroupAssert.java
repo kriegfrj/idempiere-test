@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_AccessListBPGroup;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_AccessListBPGroup;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_AccessListBPGroupAssert
-	extends AbstractPOAssert<CM_AccessListBPGroupAssert,X_CM_AccessListBPGroup>
+public class CM_AccessListBPGroupAssert extends AbstractCM_AccessListBPGroupAssert<CM_AccessListBPGroupAssert, X_CM_AccessListBPGroup>
 {
 
     /** Standard Constructor */
@@ -35,37 +33,4 @@ public class CM_AccessListBPGroupAssert
       super (actual, CM_AccessListBPGroupAssert.class);
     }
 
-
-	public CM_AccessListBPGroupAssert hasC_BP_Group_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BP_Group_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_Group_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessListBPGroupAssert hasCM_AccessListBPGroup_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_AccessListBPGroup_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessListBPGroup_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_AccessListBPGroupAssert hasCM_AccessProfile_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_AccessProfile_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_AccessProfile_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

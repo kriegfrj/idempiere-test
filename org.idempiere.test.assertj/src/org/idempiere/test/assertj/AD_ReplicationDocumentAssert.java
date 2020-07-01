@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_ReplicationDocument;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_ReplicationDocument;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_ReplicationDocumentAssert
-	extends AbstractPOAssert<AD_ReplicationDocumentAssert,X_AD_ReplicationDocument>
+public class AD_ReplicationDocumentAssert extends AbstractAD_ReplicationDocumentAssert<AD_ReplicationDocumentAssert, X_AD_ReplicationDocument>
 {
 
     /** Standard Constructor */
@@ -35,81 +33,4 @@ public class AD_ReplicationDocumentAssert
       super (actual, AD_ReplicationDocumentAssert.class);
     }
 
-
-	public AD_ReplicationDocumentAssert hasAD_ReplicationDocument_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ReplicationDocument_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ReplicationDocument_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReplicationDocumentAssert hasAD_ReplicationDocument_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_ReplicationDocument_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ReplicationDocument_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReplicationDocumentAssert hasAD_ReplicationStrategy_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_ReplicationStrategy_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_ReplicationStrategy_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReplicationDocumentAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReplicationDocumentAssert hasC_DocType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_DocType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_DocType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReplicationDocumentAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_ReplicationDocumentAssert hasReplicationType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getReplicationType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ReplicationType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

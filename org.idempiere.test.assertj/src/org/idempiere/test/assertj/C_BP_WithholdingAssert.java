@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_BP_Withholding;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_BP_Withholding;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_BP_WithholdingAssert
-	extends AbstractPOAssert<C_BP_WithholdingAssert,X_C_BP_Withholding>
+public class C_BP_WithholdingAssert extends AbstractC_BP_WithholdingAssert<C_BP_WithholdingAssert, X_C_BP_Withholding>
 {
 
     /** Standard Constructor */
@@ -35,88 +33,4 @@ public class C_BP_WithholdingAssert
       super (actual, C_BP_WithholdingAssert.class);
     }
 
-
-	public C_BP_WithholdingAssert hasC_BP_Withholding_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_BP_Withholding_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BP_Withholding_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_WithholdingAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_WithholdingAssert hasC_Withholding_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Withholding_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Withholding_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_WithholdingAssert hasExemptReason(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getExemptReason();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ExemptReason: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_BP_WithholdingAssert isMandatoryWithholding()
-	{
-		isNotNull();
-		if (!actual.isMandatoryWithholding()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be MandatoryWithholding\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_WithholdingAssert isNotMandatoryWithholding()
-	{
-		isNotNull();
-		if (actual.isMandatoryWithholding()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be MandatoryWithholding\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_WithholdingAssert isTemporaryExempt()
-	{
-		isNotNull();
-		if (!actual.isTemporaryExempt()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be TemporaryExempt\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_BP_WithholdingAssert isNotTemporaryExempt()
-	{
-		isNotNull();
-		if (actual.isTemporaryExempt()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be TemporaryExempt\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

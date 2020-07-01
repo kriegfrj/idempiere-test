@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_PaySelection;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_PaySelection;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_PaySelectionAssert
-	extends AbstractPOAssert<C_PaySelectionAssert,X_C_PaySelection>
+public class C_PaySelectionAssert extends AbstractC_PaySelectionAssert<C_PaySelectionAssert, X_C_PaySelection>
 {
 
     /** Standard Constructor */
@@ -34,116 +32,5 @@ public class C_PaySelectionAssert
     {
       super (actual, C_PaySelectionAssert.class);
     }
-
-
-	public C_PaySelectionAssert hasC_BankAccount_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BankAccount_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BankAccount_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert hasC_PaySelection_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_PaySelection_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaySelection_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert hasC_PaySelection_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_PaySelection_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_PaySelection_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert isApproved()
-	{
-		isNotNull();
-		if (!actual.isApproved()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Approved\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert isNotApproved()
-	{
-		isNotNull();
-		if (actual.isApproved()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Approved\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert hasPayDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("PayDate", actual.getPayDate(), expected);
-		return myself;
-	}
-
-
-	public C_PaySelectionAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_PaySelectionAssert hasTotalAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("TotalAmt", actual.getTotalAmt(), expected);
-		return myself;
-	}
 
 }

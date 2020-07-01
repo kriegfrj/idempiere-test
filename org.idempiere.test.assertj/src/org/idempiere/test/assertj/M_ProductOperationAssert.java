@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ProductOperation;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ProductOperation;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ProductOperationAssert
-	extends AbstractPOAssert<M_ProductOperationAssert,X_M_ProductOperation>
+public class M_ProductOperationAssert extends AbstractM_ProductOperationAssert<M_ProductOperationAssert, X_M_ProductOperation>
 {
 
     /** Standard Constructor */
@@ -34,95 +32,5 @@ public class M_ProductOperationAssert
     {
       super (actual, M_ProductOperationAssert.class);
     }
-
-
-	public M_ProductOperationAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductOperationAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductOperationAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductOperationAssert hasM_ProductOperation_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ProductOperation_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductOperation_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductOperationAssert hasM_ProductOperation_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ProductOperation_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductOperation_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductOperationAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductOperationAssert hasSetupTime(Object expected)
-	{
-		isNotNull();
-		bdAssert("SetupTime", actual.getSetupTime(), expected);
-		return myself;
-	}
-
-
-	public M_ProductOperationAssert hasTeardownTime(Object expected)
-	{
-		isNotNull();
-		bdAssert("TeardownTime", actual.getTeardownTime(), expected);
-		return myself;
-	}
-
-
-	public M_ProductOperationAssert hasUnitRuntime(Object expected)
-	{
-		isNotNull();
-		bdAssert("UnitRuntime", actual.getUnitRuntime(), expected);
-		return myself;
-	}
 
 }

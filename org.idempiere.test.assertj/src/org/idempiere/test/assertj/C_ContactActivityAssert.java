@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_ContactActivity;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_ContactActivity;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_ContactActivityAssert
-	extends AbstractPOAssert<C_ContactActivityAssert,X_C_ContactActivity>
+public class C_ContactActivityAssert extends AbstractC_ContactActivityAssert<C_ContactActivityAssert, X_C_ContactActivity>
 {
 
     /** Standard Constructor */
@@ -34,129 +32,5 @@ public class C_ContactActivityAssert
     {
       super (actual, C_ContactActivityAssert.class);
     }
-
-
-	public C_ContactActivityAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasC_ContactActivity_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_ContactActivity_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ContactActivity_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasC_ContactActivity_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_ContactActivity_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_ContactActivity_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasC_Opportunity_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Opportunity_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Opportunity_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasComments(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getComments();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Comments: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasContactActivityType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getContactActivityType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ContactActivityType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasEndDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("EndDate", actual.getEndDate(), expected);
-		return myself;
-	}
-
-
-	public C_ContactActivityAssert isComplete()
-	{
-		isNotNull();
-		if (!actual.isComplete()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Complete\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert isNotComplete()
-	{
-		isNotNull();
-		if (actual.isComplete()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Complete\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasSalesRep_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSalesRep_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SalesRep_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_ContactActivityAssert hasStartDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("StartDate", actual.getStartDate(), expected);
-		return myself;
-	}
 
 }

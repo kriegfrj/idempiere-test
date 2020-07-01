@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_ChatUpdate;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_ChatUpdate;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_ChatUpdateAssert
-	extends AbstractPOAssert<CM_ChatUpdateAssert,X_CM_ChatUpdate>
+public class CM_ChatUpdateAssert extends AbstractCM_ChatUpdateAssert<CM_ChatUpdateAssert, X_CM_ChatUpdate>
 {
 
     /** Standard Constructor */
@@ -35,57 +33,4 @@ public class CM_ChatUpdateAssert
       super (actual, CM_ChatUpdateAssert.class);
     }
 
-
-	public CM_ChatUpdateAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatUpdateAssert hasCM_Chat_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Chat_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Chat_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatUpdateAssert hasCM_ChatUpdate_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_ChatUpdate_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_ChatUpdate_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_ChatUpdateAssert isSelfService()
-	{
-		isNotNull();
-		if (!actual.isSelfService()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be SelfService\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public CM_ChatUpdateAssert isNotSelfService()
-	{
-		isNotNull();
-		if (actual.isSelfService()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be SelfService\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

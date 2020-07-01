@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_R_ContactInterest;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_R_ContactInterest;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class R_ContactInterestAssert
-	extends AbstractPOAssert<R_ContactInterestAssert,X_R_ContactInterest>
+public class R_ContactInterestAssert extends AbstractR_ContactInterestAssert<R_ContactInterestAssert, X_R_ContactInterest>
 {
 
     /** Standard Constructor */
@@ -34,54 +32,5 @@ public class R_ContactInterestAssert
     {
       super (actual, R_ContactInterestAssert.class);
     }
-
-
-	public R_ContactInterestAssert hasAD_User_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_User_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_User_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_ContactInterestAssert hasOptOutDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("OptOutDate", actual.getOptOutDate(), expected);
-		return myself;
-	}
-
-
-	public R_ContactInterestAssert hasR_ContactInterest_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getR_ContactInterest_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_ContactInterest_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_ContactInterestAssert hasR_InterestArea_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getR_InterestArea_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have R_InterestArea_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public R_ContactInterestAssert hasSubscribeDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("SubscribeDate", actual.getSubscribeDate(), expected);
-		return myself;
-	}
 
 }

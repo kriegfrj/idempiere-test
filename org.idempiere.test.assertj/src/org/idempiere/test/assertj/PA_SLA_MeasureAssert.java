@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_PA_SLA_Measure;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_PA_SLA_Measure;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class PA_SLA_MeasureAssert
-	extends AbstractPOAssert<PA_SLA_MeasureAssert,X_PA_SLA_Measure>
+public class PA_SLA_MeasureAssert extends AbstractPA_SLA_MeasureAssert<PA_SLA_MeasureAssert, X_PA_SLA_Measure>
 {
 
     /** Standard Constructor */
@@ -35,95 +33,4 @@ public class PA_SLA_MeasureAssert
       super (actual, PA_SLA_MeasureAssert.class);
     }
 
-
-	public PA_SLA_MeasureAssert hasAD_Table_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Table_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Table_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_MeasureAssert hasDateTrx(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateTrx", actual.getDateTrx(), expected);
-		return myself;
-	}
-
-
-	public PA_SLA_MeasureAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_MeasureAssert hasMeasureActual(Object expected)
-	{
-		isNotNull();
-		bdAssert("MeasureActual", actual.getMeasureActual(), expected);
-		return myself;
-	}
-
-
-	public PA_SLA_MeasureAssert hasPA_SLA_Goal_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_SLA_Goal_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Goal_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_MeasureAssert hasPA_SLA_Measure_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPA_SLA_Measure_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Measure_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_MeasureAssert hasPA_SLA_Measure_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getPA_SLA_Measure_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PA_SLA_Measure_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public PA_SLA_MeasureAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public PA_SLA_MeasureAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

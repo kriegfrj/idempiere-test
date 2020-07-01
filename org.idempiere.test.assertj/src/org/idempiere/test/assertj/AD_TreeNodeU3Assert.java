@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_TreeNodeU3;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_TreeNodeU3;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_TreeNodeU3Assert
-	extends AbstractPOAssert<AD_TreeNodeU3Assert,X_AD_TreeNodeU3>
+public class AD_TreeNodeU3Assert extends AbstractAD_TreeNodeU3Assert<AD_TreeNodeU3Assert, X_AD_TreeNodeU3>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_TreeNodeU3Assert
       super (actual, AD_TreeNodeU3Assert.class);
     }
 
-
-	public AD_TreeNodeU3Assert hasAD_Tree_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Tree_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Tree_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeNodeU3Assert hasAD_TreeNodeU3_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_TreeNodeU3_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_TreeNodeU3_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeNodeU3Assert hasNode_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getNode_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Node_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeNodeU3Assert hasParent_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getParent_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Parent_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_TreeNodeU3Assert hasSeqNo(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSeqNo();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SeqNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

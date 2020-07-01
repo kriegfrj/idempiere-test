@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_T_DistributionRunDetail;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_T_DistributionRunDetail;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class T_DistributionRunDetailAssert
-	extends AbstractPOAssert<T_DistributionRunDetailAssert,X_T_DistributionRunDetail>
+public class T_DistributionRunDetailAssert extends AbstractT_DistributionRunDetailAssert<T_DistributionRunDetailAssert, X_T_DistributionRunDetail>
 {
 
     /** Standard Constructor */
@@ -35,116 +33,4 @@ public class T_DistributionRunDetailAssert
       super (actual, T_DistributionRunDetailAssert.class);
     }
 
-
-	public T_DistributionRunDetailAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_DistributionRunDetailAssert hasC_BPartner_Location_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_Location_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_Location_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_DistributionRunDetailAssert hasM_DistributionList_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionList_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionList_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_DistributionRunDetailAssert hasM_DistributionListLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionListLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionListLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_DistributionRunDetailAssert hasM_DistributionRun_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionRun_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionRun_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_DistributionRunDetailAssert hasM_DistributionRunLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_DistributionRunLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_DistributionRunLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_DistributionRunDetailAssert hasM_Product_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Product_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Product_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public T_DistributionRunDetailAssert hasMinQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("MinQty", actual.getMinQty(), expected);
-		return myself;
-	}
-
-
-	public T_DistributionRunDetailAssert hasQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("Qty", actual.getQty(), expected);
-		return myself;
-	}
-
-
-	public T_DistributionRunDetailAssert hasRatio(Object expected)
-	{
-		isNotNull();
-		bdAssert("Ratio", actual.getRatio(), expected);
-		return myself;
-	}
-
-
-	public T_DistributionRunDetailAssert hasT_DistributionRunDetail_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getT_DistributionRunDetail_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have T_DistributionRunDetail_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

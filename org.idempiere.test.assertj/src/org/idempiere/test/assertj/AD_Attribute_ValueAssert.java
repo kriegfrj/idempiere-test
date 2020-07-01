@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_Attribute_Value;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_Attribute_Value;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_Attribute_ValueAssert
-	extends AbstractPOAssert<AD_Attribute_ValueAssert,X_AD_Attribute_Value>
+public class AD_Attribute_ValueAssert extends AbstractAD_Attribute_ValueAssert<AD_Attribute_ValueAssert, X_AD_Attribute_Value>
 {
 
     /** Standard Constructor */
@@ -35,56 +33,4 @@ public class AD_Attribute_ValueAssert
       super (actual, AD_Attribute_ValueAssert.class);
     }
 
-
-	public AD_Attribute_ValueAssert hasAD_Attribute_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Attribute_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Attribute_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Attribute_ValueAssert hasAD_Attribute_Value_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_Attribute_Value_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Attribute_Value_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Attribute_ValueAssert hasV_Date(Object expected)
-	{
-		isNotNull();
-		dateAssert("V_Date", actual.getV_Date(), expected);
-		return myself;
-	}
-
-
-	public AD_Attribute_ValueAssert hasV_Number(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getV_Number();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have V_Number: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_Attribute_ValueAssert hasV_String(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getV_String();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have V_String: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

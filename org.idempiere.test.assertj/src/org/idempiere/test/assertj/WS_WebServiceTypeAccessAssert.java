@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_WS_WebServiceTypeAccess;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_WS_WebServiceTypeAccess;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class WS_WebServiceTypeAccessAssert
-	extends AbstractPOAssert<WS_WebServiceTypeAccessAssert,X_WS_WebServiceTypeAccess>
+public class WS_WebServiceTypeAccessAssert extends AbstractWS_WebServiceTypeAccessAssert<WS_WebServiceTypeAccessAssert, X_WS_WebServiceTypeAccess>
 {
 
     /** Standard Constructor */
@@ -35,57 +33,4 @@ public class WS_WebServiceTypeAccessAssert
       super (actual, WS_WebServiceTypeAccessAssert.class);
     }
 
-
-	public WS_WebServiceTypeAccessAssert hasAD_Role_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Role_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Role_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public WS_WebServiceTypeAccessAssert isReadWrite()
-	{
-		isNotNull();
-		if (!actual.isReadWrite()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be ReadWrite\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public WS_WebServiceTypeAccessAssert isNotReadWrite()
-	{
-		isNotNull();
-		if (actual.isReadWrite()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be ReadWrite\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public WS_WebServiceTypeAccessAssert hasWS_WebServiceType_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getWS_WebServiceType_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WS_WebServiceType_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public WS_WebServiceTypeAccessAssert hasWS_WebServiceTypeAccess_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getWS_WebServiceTypeAccess_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have WS_WebServiceTypeAccess_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

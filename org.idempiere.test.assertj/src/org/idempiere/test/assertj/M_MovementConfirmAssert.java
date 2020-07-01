@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_MovementConfirm;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_MovementConfirm;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_MovementConfirmAssert
-	extends AbstractPOAssert<M_MovementConfirmAssert,X_M_MovementConfirm>
+public class M_MovementConfirmAssert extends AbstractM_MovementConfirmAssert<M_MovementConfirmAssert, X_M_MovementConfirm>
 {
 
     /** Standard Constructor */
@@ -35,149 +33,4 @@ public class M_MovementConfirmAssert
       super (actual, M_MovementConfirmAssert.class);
     }
 
-
-	public M_MovementConfirmAssert hasApprovalAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("ApprovalAmt", actual.getApprovalAmt(), expected);
-		return myself;
-	}
-
-
-	public M_MovementConfirmAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert hasDocStatus(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocStatus();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocStatus: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert hasDocumentNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDocumentNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have DocumentNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert isApproved()
-	{
-		isNotNull();
-		if (!actual.isApproved()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Approved\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert isNotApproved()
-	{
-		isNotNull();
-		if (actual.isApproved()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Approved\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert hasM_Inventory_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Inventory_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Inventory_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert hasM_Movement_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Movement_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Movement_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert hasM_MovementConfirm_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_MovementConfirm_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MovementConfirm_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert hasM_MovementConfirm_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_MovementConfirm_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_MovementConfirm_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert isProcessed()
-	{
-		isNotNull();
-		if (!actual.isProcessed()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processed\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert isNotProcessed()
-	{
-		isNotNull();
-		if (actual.isProcessed()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processed\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert isProcessing()
-	{
-		isNotNull();
-		if (!actual.isProcessing()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Processing\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public M_MovementConfirmAssert isNotProcessing()
-	{
-		isNotNull();
-		if (actual.isProcessing()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Processing\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }

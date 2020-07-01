@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_InterOrg_Acct;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_InterOrg_Acct;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_InterOrg_AcctAssert
-	extends AbstractPOAssert<C_InterOrg_AcctAssert,X_C_InterOrg_Acct>
+public class C_InterOrg_AcctAssert extends AbstractC_InterOrg_AcctAssert<C_InterOrg_AcctAssert, X_C_InterOrg_Acct>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class C_InterOrg_AcctAssert
       super (actual, C_InterOrg_AcctAssert.class);
     }
 
-
-	public C_InterOrg_AcctAssert hasAD_OrgTo_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_OrgTo_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_OrgTo_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InterOrg_AcctAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InterOrg_AcctAssert hasC_InterOrg_Acct_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_InterOrg_Acct_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_InterOrg_Acct_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InterOrg_AcctAssert hasIntercompanyDueFrom_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getIntercompanyDueFrom_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IntercompanyDueFrom_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_InterOrg_AcctAssert hasIntercompanyDueTo_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getIntercompanyDueTo_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IntercompanyDueTo_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

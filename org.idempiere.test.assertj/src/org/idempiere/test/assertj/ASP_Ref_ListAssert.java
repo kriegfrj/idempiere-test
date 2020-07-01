@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_ASP_Ref_List;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_ASP_Ref_List;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class ASP_Ref_ListAssert
-	extends AbstractPOAssert<ASP_Ref_ListAssert,X_ASP_Ref_List>
+public class ASP_Ref_ListAssert extends AbstractASP_Ref_ListAssert<ASP_Ref_ListAssert, X_ASP_Ref_List>
 {
 
     /** Standard Constructor */
@@ -35,70 +33,4 @@ public class ASP_Ref_ListAssert
       super (actual, ASP_Ref_ListAssert.class);
     }
 
-
-	public ASP_Ref_ListAssert hasAD_Ref_List_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Ref_List_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Ref_List_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_Ref_ListAssert hasAD_Reference_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_Reference_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_Reference_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_Ref_ListAssert hasASP_Level_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Level_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Level_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_Ref_ListAssert hasASP_Ref_List_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getASP_Ref_List_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Ref_List_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_Ref_ListAssert hasASP_Ref_List_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Ref_List_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Ref_List_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public ASP_Ref_ListAssert hasASP_Status(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getASP_Status();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have ASP_Status: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

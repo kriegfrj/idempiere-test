@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_CM_WebProject_Domain;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_CM_WebProject_Domain;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class CM_WebProject_DomainAssert
-	extends AbstractPOAssert<CM_WebProject_DomainAssert,X_CM_WebProject_Domain>
+public class CM_WebProject_DomainAssert extends AbstractCM_WebProject_DomainAssert<CM_WebProject_DomainAssert, X_CM_WebProject_Domain>
 {
 
     /** Standard Constructor */
@@ -35,92 +33,4 @@ public class CM_WebProject_DomainAssert
       super (actual, CM_WebProject_DomainAssert.class);
     }
 
-
-	public CM_WebProject_DomainAssert hasCM_Container_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_Container_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_Container_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_WebProject_DomainAssert hasCM_WebProject_Domain_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_WebProject_Domain_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_WebProject_Domain_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_WebProject_DomainAssert hasCM_WebProject_Domain_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCM_WebProject_Domain_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_WebProject_Domain_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_WebProject_DomainAssert hasCM_WebProject_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCM_WebProject_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CM_WebProject_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_WebProject_DomainAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_WebProject_DomainAssert hasFQDN(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getFQDN();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have FQDN: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_WebProject_DomainAssert hasHelp(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getHelp();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Help: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public CM_WebProject_DomainAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

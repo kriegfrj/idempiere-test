@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_ProductionLineMA;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_ProductionLineMA;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_ProductionLineMAAssert
-	extends AbstractPOAssert<M_ProductionLineMAAssert,X_M_ProductionLineMA>
+public class M_ProductionLineMAAssert extends AbstractM_ProductionLineMAAssert<M_ProductionLineMAAssert, X_M_ProductionLineMA>
 {
 
     /** Standard Constructor */
@@ -34,54 +32,5 @@ public class M_ProductionLineMAAssert
     {
       super (actual, M_ProductionLineMAAssert.class);
     }
-
-
-	public M_ProductionLineMAAssert hasDateMaterialPolicy(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateMaterialPolicy", actual.getDateMaterialPolicy(), expected);
-		return myself;
-	}
-
-
-	public M_ProductionLineMAAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineMAAssert hasM_ProductionLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_ProductionLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductionLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineMAAssert hasM_ProductionLineMA_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_ProductionLineMA_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_ProductionLineMA_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_ProductionLineMAAssert hasMovementQty(Object expected)
-	{
-		isNotNull();
-		bdAssert("MovementQty", actual.getMovementQty(), expected);
-		return myself;
-	}
 
 }

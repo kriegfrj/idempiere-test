@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_AllocationLine;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_AllocationLine;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_AllocationLineAssert
-	extends AbstractPOAssert<C_AllocationLineAssert,X_C_AllocationLine>
+public class C_AllocationLineAssert extends AbstractC_AllocationLineAssert<C_AllocationLineAssert, X_C_AllocationLine>
 {
 
     /** Standard Constructor */
@@ -34,164 +32,5 @@ public class C_AllocationLineAssert
     {
       super (actual, C_AllocationLineAssert.class);
     }
-
-
-	public C_AllocationLineAssert hasAmount(Object expected)
-	{
-		isNotNull();
-		bdAssert("Amount", actual.getAmount(), expected);
-		return myself;
-	}
-
-
-	public C_AllocationLineAssert hasC_AllocationHdr_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AllocationHdr_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AllocationHdr_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_AllocationLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AllocationLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AllocationLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_AllocationLine_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_AllocationLine_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AllocationLine_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_BPartner_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_BPartner_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_BPartner_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_CashLine_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_CashLine_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_CashLine_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_Charge_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Charge_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Charge_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_Invoice_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Invoice_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Invoice_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_Order_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Order_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Order_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasC_Payment_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_Payment_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_Payment_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasDateTrx(Object expected)
-	{
-		isNotNull();
-		dateAssert("DateTrx", actual.getDateTrx(), expected);
-		return myself;
-	}
-
-
-	public C_AllocationLineAssert hasDiscountAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("DiscountAmt", actual.getDiscountAmt(), expected);
-		return myself;
-	}
-
-
-	public C_AllocationLineAssert isManual()
-	{
-		isNotNull();
-		if (!actual.isManual()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be Manual\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert isNotManual()
-	{
-		isNotNull();
-		if (actual.isManual()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be Manual\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_AllocationLineAssert hasOverUnderAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("OverUnderAmt", actual.getOverUnderAmt(), expected);
-		return myself;
-	}
-
-
-	public C_AllocationLineAssert hasWriteOffAmt(Object expected)
-	{
-		isNotNull();
-		bdAssert("WriteOffAmt", actual.getWriteOffAmt(), expected);
-		return myself;
-	}
 
 }

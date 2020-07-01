@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_M_AttributeSetInstance;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_M_AttributeSetInstance;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class M_AttributeSetInstanceAssert
-	extends AbstractPOAssert<M_AttributeSetInstanceAssert,X_M_AttributeSetInstance>
+public class M_AttributeSetInstanceAssert extends AbstractM_AttributeSetInstanceAssert<M_AttributeSetInstanceAssert, X_M_AttributeSetInstance>
 {
 
     /** Standard Constructor */
@@ -35,89 +33,4 @@ public class M_AttributeSetInstanceAssert
       super (actual, M_AttributeSetInstanceAssert.class);
     }
 
-
-	public M_AttributeSetInstanceAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSetInstanceAssert hasGuaranteeDate(Object expected)
-	{
-		isNotNull();
-		dateAssert("GuaranteeDate", actual.getGuaranteeDate(), expected);
-		return myself;
-	}
-
-
-	public M_AttributeSetInstanceAssert hasLot(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getLot();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Lot: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSetInstanceAssert hasM_AttributeSet_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSet_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSet_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSetInstanceAssert hasM_AttributeSetInstance_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_AttributeSetInstance_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSetInstanceAssert hasM_AttributeSetInstance_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getM_AttributeSetInstance_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_AttributeSetInstance_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSetInstanceAssert hasM_Lot_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getM_Lot_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have M_Lot_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public M_AttributeSetInstanceAssert hasSerNo(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getSerNo();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SerNo: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

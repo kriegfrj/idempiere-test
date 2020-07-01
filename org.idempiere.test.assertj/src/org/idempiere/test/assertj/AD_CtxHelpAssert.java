@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_AD_CtxHelp;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_AD_CtxHelp;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class AD_CtxHelpAssert
-	extends AbstractPOAssert<AD_CtxHelpAssert,X_AD_CtxHelp>
+public class AD_CtxHelpAssert extends AbstractAD_CtxHelpAssert<AD_CtxHelpAssert, X_AD_CtxHelp>
 {
 
     /** Standard Constructor */
@@ -35,59 +33,4 @@ public class AD_CtxHelpAssert
       super (actual, AD_CtxHelpAssert.class);
     }
 
-
-	public AD_CtxHelpAssert hasAD_CtxHelp_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getAD_CtxHelp_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_CtxHelp_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_CtxHelpAssert hasAD_CtxHelp_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getAD_CtxHelp_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have AD_CtxHelp_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_CtxHelpAssert hasCtxType(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getCtxType();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CtxType: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_CtxHelpAssert hasDescription(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getDescription();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Description: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public AD_CtxHelpAssert hasName(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getName();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have Name: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
 }

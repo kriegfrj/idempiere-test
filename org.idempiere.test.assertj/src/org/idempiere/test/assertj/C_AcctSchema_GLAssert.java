@@ -17,7 +17,6 @@
 /** Generated Assertion Class - DO NOT CHANGE */
 package org.idempiere.test.assertj;
 
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.compiere.model.X_C_AcctSchema_GL;
 
@@ -25,8 +24,7 @@ import org.compiere.model.X_C_AcctSchema_GL;
  *  @author idempiere-test (generated) 
  *  @version Release 6.2 - $Id$ */
 @Generated("class org.idempiere.test.generator.ModelAssertionGenerator")
-public class C_AcctSchema_GLAssert
-	extends AbstractPOAssert<C_AcctSchema_GLAssert,X_C_AcctSchema_GL>
+public class C_AcctSchema_GLAssert extends AbstractC_AcctSchema_GLAssert<C_AcctSchema_GLAssert, X_C_AcctSchema_GL>
 {
 
     /** Standard Constructor */
@@ -35,163 +33,4 @@ public class C_AcctSchema_GLAssert
       super (actual, C_AcctSchema_GLAssert.class);
     }
 
-
-	public C_AcctSchema_GLAssert hasC_AcctSchema_GL_UU(String expected)
-	{
-		isNotNull();
-		String actualField = actual.getC_AcctSchema_GL_UU();
-		if (!Objects.equals(expected, actualField)) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_GL_UU: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasC_AcctSchema_ID(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getC_AcctSchema_ID();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have C_AcctSchema_ID: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasCommitmentOffset_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCommitmentOffset_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CommitmentOffset_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasCommitmentOffsetSales_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCommitmentOffsetSales_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CommitmentOffsetSales_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasCurrencyBalancing_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getCurrencyBalancing_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have CurrencyBalancing_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasIntercompanyDueFrom_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getIntercompanyDueFrom_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IntercompanyDueFrom_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasIntercompanyDueTo_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getIntercompanyDueTo_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have IntercompanyDueTo_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasPPVOffset_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getPPVOffset_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have PPVOffset_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert hasSuspenseBalancing_Acct(int expected)
-	{
-		isNotNull();
-		int actualField = actual.getSuspenseBalancing_Acct();
-		if (expected != actualField) {
-			failWithActualExpectedAndMessage(actualField, expected, "\nExpecting PO: \n  <%s>\n to have SuspenseBalancing_Acct: <%s>\nbut it was: <%s>",
-				getPODescription(), expected, actualField);
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert isUseCurrencyBalancing()
-	{
-		isNotNull();
-		if (!actual.isUseCurrencyBalancing()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be UseCurrencyBalancing\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert isNotUseCurrencyBalancing()
-	{
-		isNotNull();
-		if (actual.isUseCurrencyBalancing()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be UseCurrencyBalancing\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert isUseSuspenseBalancing()
-	{
-		isNotNull();
-		if (!actual.isUseSuspenseBalancing()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be UseSuspenseBalancing\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert isNotUseSuspenseBalancing()
-	{
-		isNotNull();
-		if (actual.isUseSuspenseBalancing()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be UseSuspenseBalancing\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert isUseSuspenseError()
-	{
-		isNotNull();
-		if (!actual.isUseSuspenseError()) {
-			failWithMessage("\nExpecting PO:\n  <%s>\nto be UseSuspenseError\nbut it was not",
-				getPODescription());
-		}
-		return myself;
-	}
-
-	public C_AcctSchema_GLAssert isNotUseSuspenseError()
-	{
-		isNotNull();
-		if (actual.isUseSuspenseError()) {
-			failWithMessage("\nExpecting PO: \n  <%s>\n to not be UseSuspenseError\nbut it was",
-				getPODescription());
-		}
-		return myself;
-	}
 }
