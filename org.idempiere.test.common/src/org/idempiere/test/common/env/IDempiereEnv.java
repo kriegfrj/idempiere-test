@@ -29,6 +29,7 @@ import java.util.logging.Level;
 
 import org.adempiere.base.Core;
 import org.assertj.core.api.SoftAssertions;
+import org.assertj.core.api.SoftAssertionsProvider;
 import org.compiere.Adempiere;
 import org.compiere.model.MAcctSchema;
 import org.compiere.model.MBPBankAccount;
