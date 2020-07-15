@@ -13,4 +13,19 @@ import java.lang.annotation.Target;
 })
 @Retention(RUNTIME)
 @Documented
-public @interface IDempiereEnvParameter {}
+public @interface InjectIDempiereEnv {
+	
+	int clientId() default 11;
+	
+	int orgId() default 11;
+	
+	int userId() default 100;
+	
+	int roleId() default 102;
+	
+	int warehouseId() default 103;
+	
+	boolean autoRollback() default true;
+	
+	String timestamp() default "";
+}

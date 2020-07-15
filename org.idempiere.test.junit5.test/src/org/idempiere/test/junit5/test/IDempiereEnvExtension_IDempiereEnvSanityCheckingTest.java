@@ -2,7 +2,7 @@ package org.idempiere.test.junit5.test;
 
 import static org.idempiere.test.junit5.testutils.TestKitUtils.assertThatTest;
 
-import org.idempiere.test.common.annotation.IDempiereEnvParameter;
+import org.idempiere.test.common.annotation.InjectIDempiereEnv;
 import org.idempiere.test.common.env.IDempiereEnv;
 import org.idempiere.test.junit5.IDempiereEnvExtension;
 import org.junit.jupiter.api.Test;
@@ -21,19 +21,19 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 	@ExtendWith(IDempiereEnvExtension.class)
 	static class IncorrectParameterType {
 		@Test
-		void myParameterTest(@IDempiereEnvParameter String param) {}
+		void myParameterTest(@InjectIDempiereEnv String param) {}
 	}
 
 	@Test
 	void annotatedParameter_withIncorrectType_throwsException() {
 		assertThatTest(IncorrectParameterType.class).isInstanceOf(ParameterResolutionException.class)
 			.hasMessageEndingWith(
-				"Can only resolve @IDempiereEnvParameter parameter of type org.idempiere.test.common.env.IDempiereEnv but was: java.lang.String");
+				"Can only resolve @InjectIDempiereEnv parameter of type org.idempiere.test.common.env.IDempiereEnv but was: java.lang.String");
 	}
 
 	static class IncorrectFieldType extends TestBase {
 
-		@IDempiereEnvParameter
+		@InjectIDempiereEnv
 		String myField;
 
 		@Override
@@ -45,12 +45,12 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 	void annotatedField_withIncorrectType_throwsException() {
 		assertThatTest(IncorrectFieldType.class).isInstanceOf(ExtensionConfigurationException.class)
 			.hasMessage(
-				"[myField] Can only resolve @IDempiereEnvParameter field of type org.idempiere.test.common.env.IDempiereEnv but was: java.lang.String");
+				"[myField] Can only resolve @InjectIDempiereEnv field of type org.idempiere.test.common.env.IDempiereEnv but was: java.lang.String");
 	}
 
 	static class IncorrectStaticFieldType extends TestBase {
 
-		@IDempiereEnvParameter
+		@InjectIDempiereEnv
 		static String myStaticField;
 
 		@Override
@@ -62,11 +62,11 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 	void annotatedStaticField_withIncorrectType_throwsException() {
 		assertThatTest(IncorrectStaticFieldType.class).isInstanceOf(ExtensionConfigurationException.class)
 			.hasMessage(
-				"[myStaticField] Can only resolve @IDempiereEnvParameter field of type org.idempiere.test.common.env.IDempiereEnv but was: java.lang.String");
+				"[myStaticField] Can only resolve @InjectIDempiereEnv field of type org.idempiere.test.common.env.IDempiereEnv but was: java.lang.String");
 	}
 
 	static class FinalStaticField extends TestBase {
-		@IDempiereEnvParameter
+		@InjectIDempiereEnv
 		static final IDempiereEnv bc = null;
 
 		@Override
@@ -77,11 +77,11 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 	@Test
 	void annotatedStaticField_thatIsFinal_throwsException() {
 		assertThatTest(FinalStaticField.class).isInstanceOf(ExtensionConfigurationException.class)
-			.hasMessageMatching("@IDempiereEnvParameter field \\[bc\\] must not be .*final.*");
+			.hasMessageMatching("@InjectIDempiereEnv field \\[bc\\] must not be .*final.*");
 	}
 
 	static class FinalField extends TestBase {
-		@IDempiereEnvParameter
+		@InjectIDempiereEnv
 		final IDempiereEnv bc = null;
 
 		@Override
@@ -92,11 +92,11 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 	@Test
 	void annotatedField_thatIsFinal_throwsException() {
 		assertThatTest(FinalField.class).isInstanceOf(ExtensionConfigurationException.class)
-			.hasMessageMatching("@IDempiereEnvParameter field \\[bc\\] must not be .*final.*");
+			.hasMessageMatching("@InjectIDempiereEnv field \\[bc\\] must not be .*final.*");
 	}
 
 	static class PrivateField extends TestBase {
-		@IDempiereEnvParameter
+		@InjectIDempiereEnv
 		private IDempiereEnv bc = null;
 
 		@Override
@@ -107,11 +107,11 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 	@Test
 	void annotatedField_thatIsPrivate_throwsException() {
 		assertThatTest(PrivateField.class).isInstanceOf(ExtensionConfigurationException.class)
-			.hasMessageMatching("@IDempiereEnvParameter field \\[bc\\] must not be .*private.*");
+			.hasMessageMatching("@InjectIDempiereEnv field \\[bc\\] must not be .*private.*");
 	}
 
 	static class StaticPrivateField extends TestBase {
-		@IDempiereEnvParameter
+		@InjectIDempiereEnv
 		static private IDempiereEnv bc = null;
 
 		@Override
@@ -122,6 +122,6 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 	@Test
 	void annotatedStaticField_thatIsPrivate_throwsException() {
 		assertThatTest(StaticPrivateField.class).isInstanceOf(ExtensionConfigurationException.class)
-			.hasMessageMatching("@IDempiereEnvParameter field \\[bc\\] must not be .*private.*");
+			.hasMessageMatching("@InjectIDempiereEnv field \\[bc\\] must not be .*private.*");
 	}
 }
