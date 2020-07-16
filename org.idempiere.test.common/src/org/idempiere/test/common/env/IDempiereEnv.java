@@ -28,6 +28,7 @@ import java.util.function.Supplier;
 import java.util.logging.Level;
 
 import org.adempiere.base.Core;
+import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
 import org.assertj.core.api.SoftAssertionsProvider;
 import org.compiere.Adempiere;
@@ -111,7 +112,7 @@ import org.osgi.test.common.exceptions.Exceptions;
 
 public class IDempiereEnv implements AutoCloseable {
 
-	protected SoftAssertions softly;
+	protected SoftAssertionsProvider softly;
 
 	static public Builder newEnv() {
 		return new Builder();
@@ -208,7 +209,9 @@ public class IDempiereEnv implements AutoCloseable {
 		Timestamp date;
 		boolean autoRollback;
 		IDempiereEnv parent;
-		SoftAssertions softly;
+		SoftAssertionsProvider softly;
+		String className;
+		String methodName;
 
 		public Builder() {
 			clientId = 11;
@@ -220,10 +223,12 @@ public class IDempiereEnv implements AutoCloseable {
 			date = new Timestamp(System.currentTimeMillis());
 			parent = null;
 			softly = null;
+			className = null;
+			methodName = null;
 		}
 
 		public IDempiereEnv build() {
-			return new IDempiereEnv(clientId, orgId, userId, roleId, warehouseId, date, autoRollback, parent, softly);
+			return new IDempiereEnv(clientId, orgId, userId, roleId, warehouseId, date, autoRollback, parent, softly, className, methodName);
 		}
 
 		public Builder withClientId(int clientId) {
@@ -256,8 +261,8 @@ public class IDempiereEnv implements AutoCloseable {
 			return this;
 		}
 
-		public Builder withSoftAssertions(SoftAssertions softly) {
-			this.softly = softly;
+		public Builder withSoftAssertions(SoftAssertionsProvider provider) {
+			this.softly = provider;
 			return this;
 		}
 
@@ -272,6 +277,15 @@ public class IDempiereEnv implements AutoCloseable {
 			return this;
 		}
 
+		public Builder withClassName(String className) {
+			this.className = className;
+			return this;
+		}
+
+		public Builder withMethodName(String methodName) {
+			this.methodName = methodName;
+			return this;
+		}
 	}
 
 	public static Builder create() {
@@ -279,7 +293,7 @@ public class IDempiereEnv implements AutoCloseable {
 	}
 
 	protected IDempiereEnv(int clientId, int orgId, int userId, int roleId, int warehouseId, Timestamp date,
-			boolean autoRollback, IDempiereEnv parent, SoftAssertions softly) {
+			boolean autoRollback, IDempiereEnv parent, SoftAssertionsProvider softly, String className, String methodName) {
 		Adempiere.startup(false);
 		mClientId = clientId;
 		mOrgId = orgId;
@@ -288,6 +302,8 @@ public class IDempiereEnv implements AutoCloseable {
 		mWarehouseId = warehouseId;
 		mAutoRollback = autoRollback;
 		mParentEnv = parent;
+		mClassName = className;
+		mName = methodName;
 		this.softly = softly;
 		m_date = TimeUtil.trunc(date, TimeUtil.TRUNC_DAY);
 
@@ -328,9 +344,9 @@ public class IDempiereEnv implements AutoCloseable {
 
 	public <P extends SvrProcess> ProcessController<P> buildProcess(Class<P> processClass) {
 		final AtomicReference<ProcessController<P>> retval = new AtomicReference<>();
-		softly.assertThatCode(() -> {
+		softly.check(() -> Assertions.assertThatCode(() -> {
 			retval.set(new ProcessController<P>(processClass, this));
-		}).as("ProcessController for " + processClass.getSimpleName()).doesNotThrowAnyException();
+		}).as("ProcessController for " + processClass.getSimpleName()).doesNotThrowAnyException());
 		return retval.get();
 	}
 
@@ -388,7 +404,7 @@ public class IDempiereEnv implements AutoCloseable {
 		return DB.getSQLValue(get_TrxName(), "select count(*) from " + tableName);
 	}
 
-	public SoftAssertions getSoftly() {
+	public SoftAssertionsProvider getSoftly() {
 		return softly;
 	}
 
