@@ -1,5 +1,9 @@
 package org.idempiere.test.junit5.test;
 
+import java.lang.reflect.Method;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Properties;
 
 import org.assertj.core.api.SoftAssertions;
@@ -9,8 +13,10 @@ import org.idempiere.test.common.annotation.InjectIDempiereEnv;
 import org.idempiere.test.common.env.IDempiereEnv;
 import org.idempiere.test.junit5.IDempiereEnvExtension;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,6 +27,8 @@ public class IDempiereEnvExtension_HierarchicalTest extends AssertCtx {
 
 	@InjectIDempiereEnv
 	static IDempiereEnv ENV;
+
+	static IDempiereEnv ENV_UNANNOTATED;
 
 	@ExtendWith(SoftAssertionsExtension.class)
 	@ExtendWith(IDempiereEnvExtension.class)
@@ -53,8 +61,10 @@ public class IDempiereEnvExtension_HierarchicalTest extends AssertCtx {
 	@InjectIDempiereEnv
 	IDempiereEnv fieldEnv;
 
+	IDempiereEnv fieldEnvUnannotated;
+
 	@Test
-	public void withParameterInjection_setsDefaults(SoftAssertions softly, @InjectIDempiereEnv IDempiereEnv env) {
+	void withParameterInjection_setsDefaults(SoftAssertions softly, @InjectIDempiereEnv IDempiereEnv env) {
 		this.softly = softly;
 		assertCtxDefaults(env);
 		softly.assertThat(env.getParentEnv()).as("parent").isSameAs(ENV);
@@ -62,13 +72,42 @@ public class IDempiereEnvExtension_HierarchicalTest extends AssertCtx {
 	}
 
 	@Test
-	public void withFieldInjection_setsDefaults(SoftAssertions softly) {
+	void withFieldInjection_setsDefaults(SoftAssertions softly) {
 		this.softly = softly;
 		assertCtxDefaults(fieldEnv);
 		softly.assertThat(fieldEnv.getParentEnv()).as("parent").isSameAs(ENV);
 		assertCaller(fieldEnv);
 	}
 
+	@Test
+	void unannotatedFields_doNotGetInjected(SoftAssertions softly) {
+		softly.assertThat(ENV_UNANNOTATED).as("static").isNull();
+		softly.assertThat(fieldEnvUnannotated).as("nonstatic").isNull();
+	}
+
+	@ExtendWith(IDempiereEnvExtension.class)
+	@ExtendWith(SoftAssertionsExtension.class)
+	public static class ConfiguredFields extends AssertCtx {
+		@InjectIDempiereEnv(timestamp = "2020-02-02")
+		IDempiereEnv env;
+		
+		@Test
+		void annotationOnField_setsTime(SoftAssertions softly) {
+			this.softly = softly;
+			assertCtx(env, 11, 11, 100, 102, 103, true, LocalDate.of(2020, 2, 2));
+		}
+	}
+	
+	@ExtendWith(IDempiereEnvExtension.class)
+	@ExtendWith(SoftAssertionsExtension.class)
+	public static class ConfiguredParameters extends AssertCtx {
+		@Test
+		void annotationOnParameter_setsTime(SoftAssertions softly, @InjectIDempiereEnv(timestamp = "2020-02-02") IDempiereEnv env) {
+			this.softly = softly;
+			assertCtx(env, 11, 11, 100, 102, 103, true, LocalDate.of(2020, 2, 2));
+		}
+	}
+	
 	@Nested
 	@TestInstance(Lifecycle.PER_CLASS)
 	public class NestedTest_WithBeforeAllInjected {
@@ -80,8 +119,9 @@ public class IDempiereEnvExtension_HierarchicalTest extends AssertCtx {
 
 		@BeforeAll
 		void beforeAll(@InjectIDempiereEnv IDempiereEnv env) {
-			beforeAllEnv = env;
 			softly = new SoftAssertions();
+			softly.assertThat(beforeAllEnv).as("beforeAllEnv shouldn't be set").isNull();
+			beforeAllEnv = env;
 			softly.assertThat(env).as("env").isSameAs(nestedEnv);
 			assertCtxDefaults(env);
 			softly.assertThat(env.getParentEnv()).as("parent").isSameAs(ENV);
@@ -141,12 +181,21 @@ public class IDempiereEnvExtension_HierarchicalTest extends AssertCtx {
 abstract class AssertCtx {
 	SoftAssertions softly;
 
+	String testMethodName;
+	String testClassName;
+
+	@BeforeEach
+	void beforeEach(TestInfo info) {
+		testMethodName = info.getTestMethod().map(Method::getName).orElse(null);
+		testClassName = info.getTestClass().map(Class::getName).orElse(null);
+	}
+
 	void assertCtxDefaults(IDempiereEnv env) {
-		assertCtx(env, 11, 11, 100, 102, 103, true);
+		assertCtx(env, 11, 11, 100, 102, 103, true, LocalDate.now());
 	}
 
 	void assertCtx(IDempiereEnv env, int clientId, int orgId, int userId, int roleId, int warehouseId,
-			boolean autoRollback) {
+			boolean autoRollback, LocalDate date) {
 		Properties ctx = env.getCtx();
 		softly.assertThat(ctx.get(Env.AD_CLIENT_ID)).as("clientId").isEqualTo(String.valueOf(clientId));
 		softly.assertThat(ctx.get(Env.AD_ORG_ID)).as("orgId").isEqualTo(String.valueOf(orgId));
@@ -154,16 +203,18 @@ abstract class AssertCtx {
 		softly.assertThat(ctx.get(Env.AD_ROLE_ID)).as("roleId").isEqualTo(String.valueOf(roleId));
 		softly.assertThat(ctx.get(Env.M_WAREHOUSE_ID)).as("warehouseId").isEqualTo(String.valueOf(warehouseId));
 		softly.assertThat(env.isAutoRollback()).as("autoRollback").isEqualTo(autoRollback);
+		softly.assertThat(env.getDate()).as("date")
+				.isEqualToIgnoringHours(Date.from(date.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
-	
+
 	void assertCaller(IDempiereEnv env) {
-		final StackTraceElement caller = Thread.currentThread().getStackTrace()[2]; 
+		final StackTraceElement caller = Thread.currentThread().getStackTrace()[2];
 		softly.assertThat(env.getName()).as("methodName").isEqualTo(caller.getMethodName());
 		softly.assertThat(env.getClassName()).as("className").isEqualTo(caller.getClassName());
 	}
 
 	void assertCallerClass(IDempiereEnv env) {
-		final StackTraceElement caller = Thread.currentThread().getStackTrace()[2]; 
+		final StackTraceElement caller = Thread.currentThread().getStackTrace()[2];
 		softly.assertThat(env.getName()).as("methodName").isNull();
 		softly.assertThat(env.getClassName()).as("className").isEqualTo(caller.getClassName());
 	}

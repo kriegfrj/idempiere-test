@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.assertj.core.api.SoftAssertionsProvider;
 import org.assertj.core.api.junit.jupiter.SoftAssertionsExtension;
@@ -29,7 +30,6 @@ import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;
 import org.junit.jupiter.api.extension.ParameterResolver;
 import org.junit.platform.commons.util.ExceptionUtils;
-import org.junit.platform.engine.UniqueId;
 
 public class IDempiereEnvExtension
 		implements BeforeAllCallback, BeforeEachCallback, AfterAllCallback, AfterEachCallback, ParameterResolver {
@@ -76,8 +76,7 @@ public class IDempiereEnvExtension
 
 			env = IDempiereEnv.newEnv().withParameters(parameters).withParent(parentEnv).withSoftAssertions(provider)
 					.withClassName(extensionContext.getTestClass().map(Class::getName).orElse(null))
-					.withMethodName(extensionContext.getTestMethod().map(Method::getName).orElse(null))
-					.build();
+					.withMethodName(extensionContext.getTestMethod().map(Method::getName).orElse(null)).build();
 			try {
 				env.before();
 			} catch (Exception e) {
@@ -106,6 +105,11 @@ public class IDempiereEnvExtension
 		for (Object instance : context.getRequiredTestInstances().getAllInstances()) {
 			final Class<?> testClass = instance.getClass();
 			fields = findAnnotatedNonStaticFields(testClass, InjectIDempiereEnv.class);
+
+			if (fields.size() > 1) {
+				throw new ExtensionConfigurationException("Multiple @InjectIDempiereEnv fields not supported ("
+						+ fields.stream().map(f -> "[" + f.getName() + "]").collect(Collectors.joining(", ")) + ")");
+			}
 
 			fields.forEach(field -> {
 				assertFieldIsOfType(field, IDempiereEnv.class, InjectIDempiereEnv.class,

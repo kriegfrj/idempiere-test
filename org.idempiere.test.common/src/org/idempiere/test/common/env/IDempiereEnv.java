@@ -3,6 +3,7 @@ package org.idempiere.test.common.env;
 import static org.idempiere.test.common.utils.Utils.BD_ONE;
 import static org.idempiere.test.common.utils.Utils.BD_ZERO;
 import static org.idempiere.test.common.utils.Utils.injectMockLog;
+import static org.idempiere.test.common.utils.Utils.timestamp;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Constructor;
@@ -228,7 +229,8 @@ public class IDempiereEnv implements AutoCloseable {
 		}
 
 		public IDempiereEnv build() {
-			return new IDempiereEnv(clientId, orgId, userId, roleId, warehouseId, date, autoRollback, parent, softly, className, methodName);
+			return new IDempiereEnv(clientId, orgId, userId, roleId, warehouseId, date, autoRollback, parent, softly,
+					className, methodName);
 		}
 
 		public Builder withClientId(int clientId) {
@@ -274,6 +276,16 @@ public class IDempiereEnv implements AutoCloseable {
 		public Builder withParameters(InjectIDempiereEnv parameters) {
 			this.clientId = parameters.clientId();
 			this.orgId = parameters.orgId();
+			this.userId = parameters.userId();
+			this.warehouseId = parameters.warehouseId();
+			this.roleId = parameters.roleId();
+			this.autoRollback = parameters.autoRollback();
+			System.err.println("About to set the timestamp: " + parameters.timestamp());
+			if (parameters.timestamp() != null && !"".equals(parameters.timestamp())) {
+				System.err.println("Setting the timestamp: ");
+				this.date = timestamp(parameters.timestamp());
+				System.err.println("Sett the timestamp to: " + date);
+			}
 			return this;
 		}
 
@@ -293,7 +305,8 @@ public class IDempiereEnv implements AutoCloseable {
 	}
 
 	protected IDempiereEnv(int clientId, int orgId, int userId, int roleId, int warehouseId, Timestamp date,
-			boolean autoRollback, IDempiereEnv parent, SoftAssertionsProvider softly, String className, String methodName) {
+			boolean autoRollback, IDempiereEnv parent, SoftAssertionsProvider softly, String className,
+			String methodName) {
 		Adempiere.startup(false);
 		mClientId = clientId;
 		mOrgId = orgId;
@@ -353,7 +366,7 @@ public class IDempiereEnv implements AutoCloseable {
 	public IDempiereEnv getParentEnv() {
 		return mParentEnv;
 	}
-	
+
 	public <P extends SvrProcess> ProcessController<P> buildProcess(P process) {
 		return new ProcessController<>(process, this);
 	}

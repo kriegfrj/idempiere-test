@@ -124,4 +124,22 @@ public class IDempiereEnvExtension_IDempiereEnvSanityCheckingTest {
 		assertThatTest(StaticPrivateField.class).isInstanceOf(ExtensionConfigurationException.class)
 			.hasMessageMatching("@InjectIDempiereEnv field \\[bc\\] must not be .*private.*");
 	}
+	
+	static class MultipleAnnotatedFields extends TestBase {
+		@InjectIDempiereEnv
+		IDempiereEnv field1;
+		
+		@InjectIDempiereEnv
+		IDempiereEnv field2;
+
+		@Override
+		@Test
+		void myTest() {}
+	}
+
+	@Test
+	void multipleAnnotatedFields_throwsException() {
+		assertThatTest(MultipleAnnotatedFields.class).isInstanceOf(ExtensionConfigurationException.class)
+			.hasMessageMatching("Multiple @InjectIDempiereEnv fields not supported \\(\\[field1\\], \\[field2\\]\\)");
+	}
 }
