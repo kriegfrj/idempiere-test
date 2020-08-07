@@ -25,6 +25,7 @@ mavencentral:           https://repo.maven.apache.org/maven2
         name="Release";\
         releaseUrl="${fileuri;${releaserepo}}";\
         snapshotUrl="${fileuri;${releaserepo}}";\
+        index="${.}/idempiere-test.mvn";\
         noupdateOnRelease=true
         
 -plugin.9.Baseline:\

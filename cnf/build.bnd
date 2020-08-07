@@ -29,9 +29,9 @@ Bundle-Version:         ${base.version}.${tstamp}-SNAPSHOT
 -diffignore:            Bundle-Version
 
 # Maven info. The maven artifactId defaults to Bundle-SymbolicName
-#-groupid:               biz.aQute.bnd
-#-pom:                   version=${versionmask;===s;${@version}}
-#-maven-release:         pom;path=JAR,javadoc;-classpath="${project.buildpath}"
+-groupid:               org.idempiere
+-pom:                   version=${versionmask;===s;${@version}}
+-maven-release:         pom;path=JAR,javadoc;-classpath="${project.buildpath}"
 
 Automatic-Module-Name:  ${def;bsn}
 Bundle-Vendor:          Greek Welfare Centre of South Australia https://www.greekwelfaresa.org.au/
