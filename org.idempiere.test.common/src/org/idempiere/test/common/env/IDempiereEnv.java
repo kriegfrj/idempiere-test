@@ -1261,7 +1261,7 @@ public class IDempiereEnv implements AutoCloseable {
 		MBPartnerLocation bploc = new MBPartnerLocation(getCtx(), 0, null);
 		bploc.setAD_Org_ID(0);
 		bploc.setC_BPartner_ID(bp.get_ID());
-		MLocation loc = createLocation();
+		MLocation loc = createLocation(null);
 		registerPO(loc);
 		bploc.setC_Location_ID(loc.get_ID());
 		bploc.setName(getCity() + " " + getRegion().getName());
@@ -1983,9 +1983,13 @@ public class IDempiereEnv implements AutoCloseable {
 	}
 
 	public MLocation createLocation() {
+		return createLocation(get_TrxName());
+	}
+	
+	public MLocation createLocation(String trxName) {
 		validate();
 
-		MLocation loc = new MLocation(getCtx(), getCountry().get_ID(), getRegion().get_ID(), getCity(), get_TrxName());
+		MLocation loc = new MLocation(getCtx(), getCountry().get_ID(), getRegion().get_ID(), getCity(), trxName);
 		loc.saveEx();
 		setLocation(loc);
 
