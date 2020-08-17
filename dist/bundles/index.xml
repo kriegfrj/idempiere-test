@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Release" increment="1597646918349">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;(Apache-2.0 OR EPL-2.0)&quot;;description=&quot;This program and the accompanying materials are made available under the terms of the Apache License, Version 2.0, or the Eclipse Public License 2.0.&quot;;link=&quot;https://opensource.org/licenses/Apache-2.0,https://opensource.org/licenses/EPL-2.0&quot;"/>
+      <attribute name="osgi.identity" value="org.idempiere.test.junit5"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.idempiere.test.common.annotation,org.idempiere.test.common.env,org.junit.jupiter.api.extension"/>
+      <attribute name="bundle-symbolic-name" value="org.idempiere.test.junit5"/>
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.junit5"/>
+      <attribute name="bnd.hashes" value="-1721008513,-536087666,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.idempiere.test.junit5"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.idempiere.test.junit5"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="12962" type="Long"/>
+      <attribute name="url" value="org.idempiere.test.junit5/org.idempiere.test.junit5-1.0.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="5153614B5EAFF34746ED0E82AD6D7CC718B3F75D13CE7BEFBBB83EDDDE4D34EA"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.assertj.core.api)(version&gt;=3.16.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.assertj.core.api"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.assertj.core.api.junit.jupiter)(version&gt;=3.16.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.assertj.core.api.junit.jupiter"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.idempiere.test.common.annotation)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.idempiere.test.common.env)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.env"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.jupiter.api.extension)(version&gt;=5.6.0)(!(version&gt;=6.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.junit.jupiter.api.extension"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.platform.commons.util)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.junit.platform.commons.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.test.common.inject)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.test.common.inject"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;(Apache-2.0 OR EPL-2.0)&quot;;description=&quot;This program and the accompanying materials are made available under the terms of the Apache License, Version 2.0, or the Eclipse Public License 2.0.&quot;;link=&quot;https://opensource.org/licenses/Apache-2.0,https://opensource.org/licenses/EPL-2.0&quot;"/>
+      <attribute name="osgi.identity" value="org.idempiere.test.assertj"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.assertj.core.api,org.compiere.impexp,org.compiere.model,org.compiere.process"/>
+      <attribute name="bundle-symbolic-name" value="org.idempiere.test.assertj"/>
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.assertj"/>
+      <attribute name="bnd.hashes" value="-414438806,-1692047994,-1265562568,-1029772936,-1322471297,1310104482,-898779284,487627525,-928644585,1954485446,1026263960,-1921690968,366223774,-1565046136,-438373203,-404662867,-87859077,-499084802,238692941,577511672,-651891209,1249027122,-839075397,-1792176042,717617990,-1748706843,100457163,-823467482,-759618529,-1904575182,-384446812,369117703,1463538760,966732827,785813222,1424857161,-1724430753,1431849541,-1924379699,2088126728,-1089149851,1171500577,610810610,-2042132794,1826067275,650892295,1588474848,-1478801905,707867459,1022432040,-1247793376,1434818682,-1066946611,-1076896363,1707917051,433682241,-1448440079,1243610019,1604703627,274978238,-105736300,-375986674,210229340,-395449880,-1234163569,-1157912908,403248508,1479335342,-1979427410,848407581,349896976,870202463,-1272924012,-1872369244,-836904717,-443980775,-730521102,1105871821,-239446851,-79021992,1956511430,-1579740293,1692351534,157619489,598437379,-999106775,1829831357,1898518465,950023578,927082978,1430667097,1553928310,843295986,436843952,128517340,-260204404,663679660,-436852171,-1868733669,-1958613000,-965219082,1231321585,-556389815,-442360572,1059905435,-1705368158,469373787,-221082436,-324503898,-1949371112,1247547375,-1133120607,90803998,1804004473,-803481691,-548549909,-96784064,383607846,257191933,462866979,1850808863,-603050487,-33445312,-1811695960,-376295030,56267958,-1038506469,-1947006801,185311321,339966225,-528880129,365854963,-479921544,571034310,1624007799,48547040,1831953127,-1776734500,-27430616,1771240919,-945715533,1510402624,1591717887,2030661090,876598448,-992215613,-707113395,322941395,1210445076,205131906,1281146724,-2112553890,-1225050209,-337546528,549957153,-1840919379,-1238759553,-1968320001,-1621029862,369264417,1118916036,-1744318296,-670158553,1655182582,763514507,-1368744104,-1470452452,-878632387,1340356354,-1007449650,-368496215,626853350,214881343,-1111902853,604903130,-1768356,-599933393,-1439264305,-913151583,837924971,-526030104,-86847982,-1708118115,-2120684370,647942569,1973505913,-1922190431,-142644099,-1665931501,977386286,-1023259214,1778524649,1758514014,-913816481,-1448020533,508800873,-1225519821,-487443884,412049111,407897329,-185297286,-401880628,682561463,-1254088698,-107150536,-1068007834,192524303,-798525181,2050495313,-231966969,-994127752,-732872936,-1571967354,966604653,105876752,1834173864,-1454593915,659567373,-1068486456,657665036,-283588249,-662637126,1819758106,515130227,1358084230,-1087177282,-862045107,-40294176,-2018807791,1897645536,2043522827,-1495108380,-611910321,1042692885,1134881403,-1076332580,400139544,1234626471,-578333432,1512558230,-1495168451,1199928299,462942782,-600112256,1064350252,-524804536,2083851702,690523962,2026942973,-1506073756,-164280402,-914551933,-1874197611,-861692792,1778891226,-65082202,1845012832,-397802678,314254063,1420145963,-1490038535,-1016975040,1405936399,-1892646794,-128203591,1983526004,2053712441,-71879144,1452116872,107901923,666795593,-88968600,2133169309,-737331724,782796646,-1033061755,-2078801270,173101849,-7817756,906966923,-599158947,-1695874297,-445590641,-1683152950,725962595,225947551,92920372,850655044,1308177037,133002057,186295390,241494993,1875110917,-2147263450,567319070,-1565519752,1825841227,-553208745,-730441479,-359948737,-713941197,1996237285,659150601,1400250044,-899367278,983885648,944728222,339049002,244625489,-634225290,-542304518,961445104,-189831124,330517343,2139493262,-1635168547,583684754,-15760478,1019704049,681291031,1126087664,-1364286645,-1641626309,-1481201450,-859666808,-100951235,1174461296,910246755,-803742079,1893681063,884278331,496339007,-1488334952,-18470048,-2129801317,608375284,1968567792,-965335506,652204958,1034424458,2142468718,1041936887,-743461863,-833341194,-1483109320,874231603,-913479797,1414248194,1812532701,-952740892,-932805671,-1166635462,1395793000,1551965206,1771234993,-2078673633,-702826980,-1196333961,675307367,576721897,1692812222,-561945180,2113800699,1757495841,905255837,-1120940725,701053570,1081091878,1480313736,808895224,128736989,-468217743,1664100379,-2130192241,830992193,2086151861,687321914,-831145148,-1545687691,482458018,1038322149,-651462694,-545320854,-2000038759,-511804555,716771646,-1968750527,-969677344,-525581010,-1510105851,-1225003633,-194948843,692554838,-1197047552,-121032734,780233948,1667737629,-1739725986,-852222305,1660416939,-113487747,-1444632383,-2138920100,-148625821,-1881422398,1605095974,808630505,709629556,-638664951,-616116838,-175823590,2014155451,1864043972,-1364539632,-886386453,-1947817048,1509510205,-588215235,-1833455400,732730526,-1117823631,-313992499,1979636255,-107628055,-1471583130,1737960848,-1184430497,-1596996752,2126731627,-1568834117,-627561569,1577652799,149180945,1730013552,-499571596,-659833881,-1411181476,910992349,-280777075,-1961357593,-491020939,807184978,935736729,1886686387,-978928264,765362830,1417060345,224700360,-900781514,410781224,716211921,-1316415419,648315855,291720649,-470440134,-2135052394,-819340088,1490292271,629564370,-1937105814,-930906297,1183254991,56785350,1410292302,-1685767707,1193971640,-618600424,-887049231,840193992,-563489664,616743951,1254334686,1758269267,-677024862,-1685106039,225188518,140716945,-1437161965,-1370489607,2009019354,-809475818,-1245228379,-1980512890,-2029781800,-2013058689,-1279926551,-2042428228,1256496510,990341444,-326714681,1175972154,1420248512,-2074927325,-606059164,1633940438,1410541494,-1058461100,1377900432,-1981296336,2104224098,-1231233167,-1409742125,760663519,641302168,-1062460819,861124636,-1069855021,474230743,-1404856108,1024582318,629554865,-1016472879,-436641363,40027435,-1531662444,1956802746,-2131750668,1766572750,717788881,-697014652,729795735,1697292190,-328263657,-2092028765,-876100609,-548278029,323751719,-1486323374,1668488133,-428519266,277548785,-1268003172,-338659660,1527508167,939068041,-1227563944,-586732102,1802354229,-2051760200,-1545312493,-2004960114,-948650219,349696667,-504886338,-1926964552,355517028,971224199,690060285,-461575241,-1638640686,8158732,-324556779,968163258,-295759843,25164880,-265699126,-2111451978,2144812122,-1757204903,611590827,1394876389,1242005324,-222739584,-1641919845,840265007,-1778173746,117631523,1238781954,-794480556,1337320247,-592046336,-1506048098,1219712971,1817130816,285310804,687865483,467003000,-385702574,-782110139,174760742,-586909841,1770667365,1150458991,136650080,-1583303421,1136238568,-461803049,308106804,-382454383,1886674654,-1774924275,-1920829995,536812181,626948393,70980782,772677689,-1749955942,-1976827264,285649556,184846042,816432718,-1002782919,1470331863,-756936482,-43914304,-651011598,-1681227324,464693337,297725117,1774438514,-236716747,-1555777903,-946541019,-1842855223,288085558,-1223585876,-1867125118,2005543621,-1489535694,-89149853,-1910675718,-967738373,2022217019,650215225,1991949363,-1375525967,1423559515,-1111583466,764778221,-1234020691,1027736106,-994101323,1883344145,1134968577,-1936563623,-612257764,1431242223,-835452167,-1833419946,-1550443926,1165019879,-1502816504,1761674220,-1069941988,75233003,682075470,120796696,629542256,-2010607398,-130364228,-842466363,1036273060,160891267,-2030345183,-1612865148,1409621144,1847219125,-161185626,-1290950522,611264123,1015957277,198939749,1516565734,-1381073519,1862449848,1945678553,1376292294,-1819390081,1477153045,1492786091,-277274715,-1568232135,44454601,1113873478,-565137062,-1132671224,1651878005,-1469840323,-2144711799,-986637848,85542806,-676326701,-493594265,-1850714117,-1166775391,1561882107,994669758,659101705,531571763,-2077009455,-2127211066,2095233619,-685293337,46785310,1623777412,439789260,-588660149,-2089650277,-1942436058,-1765507324,1775454263,-2087557051,-1758971527,1648394433,-2066819990,926967153,-171365894,1866479523,1393136646,-13498212,1401536930,1766590646,-769271517,-1263818699,790507429,-1413969375,375262842,-587322994,294742901,1763949881,-687351165,1046961726,966063108,-373814367,-1503802089,-1988252013,-478407574,1747013466,-237033344,859000001,1457182634,218659515,1422965788,1137451732,-1517634667,749611773,1989226950,-1658801990,-1563335901,1272597743,-1933320382,1247778272,-917352491,549074850,-1919808050,1477055556,777490327,960230795,-1230085569,-700989194,-1365774098,351323619,-877427018,1502907296,2068160550,1179160213,384853253,1922966383,-1329785081,1397569042,-2011153207,-1665336878,230027426,-699270447,720872953,858731015,-84860680,-186734719,-293151975,1769404822,-727871135,1957380357,1125742966,352919193,787435452,11090543,-592905776,-1694619204,-1850027056,-824813959,-1878762995,1948452789,1893600585,589667157,844730099,2124221051,-1156052655,-714261233,590972989,1679556963,-1719513170,-990465854,-1760078762,-874296728,1255969090,691154659,-409115516,379961026,-1123125018,1467894230,-1803262103,46720163,-1117752579,629697167,471430097,-1225285081,-1253564904,-755287508,-659854716,973393415,-769323123,-399363175,1017081170,-1810115583,-1403906135,1701088562,-1268903404,-17705169,1268302653,351031970,-2022659608,1328580022,283140361,1921754707,-676179213,-1724282489,1711738843,-1126864644,-340565579,629111513,585693590,-2052708694,-1800313015,-1057614067,-1038193020,-582346301,-1380846976,1292305752,376734060,1113968511,-859220942,1233237566,-445642760,1253166062,495848706,249008788,776904370,-1989589261,-601426435,-1235475950,-1785703810,-2120759396,129321140,884555574,-1420660006,590487254,-276697286,992484514,1413800886,872045531,-1885480309,-1617831404,-1687753424,-555019088,-840529963,2101957609,1079781289,891390967,568049601,-229361762,1282942743,1693095672,-879470839,1761140159,-1148165531,-1303502413,-1710402769,-1822627688,979337805,-1244749179,-1244312253,1816297670,1026803644,-490825198,1771746651,-343370278,27045684,-1489898303,398686664,-1938809860,1987785633,-199974809,-1513538459,219313125,-937573933,-92034685,-1513725823,-2088927978,838487264,-369216148,-906695169,-169480235,-2023698551,-309044478,1203608447,220312219,-754019367,-1537079620,1792759014,-324900648,1862846680,-374855422,1101999296,870156790,309544719,1000409872,-612809919,1967380467,-1994916473,-1373135067,-435585782,1234901698,-835824401,-1927240548,-1917745510,-977116317,-420748809,-1625249893,506697358,1336692263,256334139,925144021,-574570723,1990720082,1720258900,224585585,650712840,1875414187,-2103140874,437590527,-202007417,1992042868,2123612407,-87444390,1954670488,-289338550,1764747303,1771890925,1480754320,1684510472,1007130520,228102335,-2019357239,-1915080858,959024610,268487331,-1543706975,272443510,1032316298,1322402276,-706343593,-1126316584,-1577917981,-1862748250,-1848652163,-23356730,-1805503739,1969603132,-58540546,-1281296347,-1773302622,-1258847400,-2090794824,2111234390,83271570,-2004288954,1561043694,383927200,-285680141,-891851887,-959633379,117614550,-544570581,-152573538,1400303445,-278396523,1065302358,-100689488,1575107891,-222841901,-1915430421,-1254601427,-586109418,-935985092,684427570,1013945484,-1002508017,-1220702270,-437447723,-2079784868,-1453535463,-1574138527,2124237825,-1842906891,-199935899,2056016656,543216327,973660192,-1442748113,1548175066,2131498806,402236361,186440775,1588614294,1987938296,82057331,1117935290,2015155921,569710284,1489708311,706786649,-1630158144,1844315126,-168170590,218596933,-477183173,-1214202507,1921827728,-1117113074,1077622679,1913716284,-819447461,-498522738,-1000198008,326906552,1392184856,-355025445,87903209,642249123,-573107122,-1582611906,1527775645,-1016343759,727197264,474721505,504283072,-1528979438,-22552075,-1326545218,1663647392,485214089,1082631934,803201042,-1136943347,-700240458,-1864491632,1792560259,1576940200,-1946782163,645395559,-328330067,-615977186,-2106991039,10966762,483749977,-215580814,563098643,61865824,-1257034037,584541015,-197686701,-498323413,864611760,-706111369,1250382492,-1458937026,-466977710,-1639962788,292745100,1467375547,1988222101,2059241756,901638722,-1174699216,788931142,982583575,-436773765,649166708,-2061525577,-1037887665,-1699168285,-440675765,-1432211340,-278032850,949053120,991845447,1680159796,1313029605,-965122692,-610648391,543427961,-84283657,1468261745,-2128153233,-1469228323,-317952488,1974393583,-288467665,-266892756,-1746728589,-1009443693,400469695,1233131867,-1625955938,263998765,-317561929,982758292,1619251564,-1727767959,-984926266,-94934546,-1822569254,1020786029,-1142733360,638686934,-123085010,-608427940,-1850661126,-2009709821,-88998746,954522245,439813283,-1094974910,885933526,-1045568713,356704612,111228936,2013443581,1533847515,-1095689113,992878116,1788621971,695206390,-1831398505,1733382276,755280317,910814615,1058875113,-1290972889,901926331,-1434334457,-1778914360,380415964,1441999174,357249143,1035530687,1583917067,415541610,-1393246252,-158436463,-1246221531,619444349,-648885153,809254841,-820442688,-700770617,-482126411,-674829997,447459332,1571546001,1889377061,-1247843552,-1269010426,-83898358,-1323159031,1191618845,1828843620,1776832706,1022826997,-685377593,1783368503,288522111,403338476,1872520179,-2027974660,41670693,869449028,-1308127074,276265124,-90018120,24359461,-2016445965,56008547,1755726115,-1481345924,1892531856,-271595529,-2013127177,-1310439124,1384003446,-924791929,1840592704,231564226,-1499086173,-558249063,-1470361775,-1773036436,268224408,-1531662206,106372735,162553772,-1606149315,-2078370530,-687357098,1482703767,-1075197057,510437892,-2100928571,1901666424,1606359589,-552211087,-1139689404,122506466,-399462253,1342705828,1640660364,182426694,-389753131,-864578035,-436454591,-2060861516,1634564336,-1505285147,68126008,2020797534,278564264,1536250195,902743491,1399278765,-1853472699,383870868,805025031,1895131536,747917664,-1824542253,-1135735813,-501141307,-1563649738,1215444739,1109027483,474775960,-1462370017,790136899,1643633204,-1125869865,263747834,-1778505743,1981764622,1847720826,-1492937074,120739067,626608015,1213953907,-1883476473,-1235141673,1790283125,-1377115267,-638162417,-2008890095,-161654277,-1213230875,1280825264,-2115737660,-814525736,1595861738,-1636818748,-322543515,-1576358974,-745310780,-1857623900,-356914600,1757206311,992273189,-599862341,-1159899119,-52257521,1213073449,1216593562,646891950,-2138643774,238894533,-251432885,-1693992037,-839527596,660042883,-458353109,948461296,-751013166,-584043599,1786192891,1753211428,1519680422,-486532424,-1195648697,132158421,2139999025,2046997189,959111577,-1650552262,-1635194441,-1186000933,62005972,521961704,1369382475,1422240783,-92639994,819833157,1057511554,278607578,-1448074770,-53274947,1610937524,709549948,-1740271622,-1639621776,1441401732,-485490094,1722457396,480569205,-2080215493,1934219540,1756636220,1421580634,-1660275146,-835741324,1059194844,-1266121512,80392696,-797111772,847462456,-253226275,689190089,1198346834,792101426,847160370,-2135158825,1578269991,1597671527,-587398091,44361983,288528476,-573666023,1316473526,-522380857,-1588274111,-354534553,-2056129679,1105775469,1737840726,1497228043,1882974659,1925383237,-8511160,-98468162,-1243452464,-1121041187,1058809180,-496641934,1679797187,-726585142,1061528574,-1789291425,1054846501,-1781067635,1486799975,1164866151,-1672072815,853518341,-568172797,-1295297000,1356377502,148674090,1909483069,348410003,481672459,1093134980,-1689179391,-1074316643,-1488518249,1632615870,-32049816,-1077527914,73250394,-808766400,-1790788542,-850140108,-815727087,476722254,-2091598977,1214753201,1132807365,-1896822685,966593676,500402816,1738845997,-1409350310,587625500,425063141,524804217,1935218521,-227801524,813004645,1658513597,1718774999,-56680485,-1786356976,985760018,-1590526861,127025222,580785325,1668138804,-857038335,-1369250875,-1357371402,-769175431,-1089975656,-1394743782,1112840908,1030248421,-52917905,957066702,-1208277366,-807981926,-205808643,419001291,564773992,1904577636,-484139935,1625988515,-894799948,-446472760,2116033254,2109834645,1343841882,-1060027743,607410216,-1055021185,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.idempiere.test.assertj"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.idempiere.test.assertj"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="3909777" type="Long"/>
+      <attribute name="url" value="org.idempiere.test.assertj/org.idempiere.test.assertj-1.0.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="DBC13173B00B6E02101DF584E9545906A454D7A8409988BF2767935F2162B0DF"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere.impexp)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.impexp"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere.model)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.model"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere.process)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.process"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere.util)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.assertj.core.api)(version&gt;=3.16.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.assertj.core.api"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.assertj.core.api.recursive.comparison)(version&gt;=3.16.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.assertj.core.api.recursive.comparison"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.idempiere.test.common.utils)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.utils"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.assertj.core.error)(version&gt;=3.16.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.assertj.core.error"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;(Apache-2.0 OR EPL-2.0)&quot;;description=&quot;This program and the accompanying materials are made available under the terms of the Apache License, Version 2.0, or the Eclipse Public License 2.0.&quot;;link=&quot;https://opensource.org/licenses/Apache-2.0,https://opensource.org/licenses/EPL-2.0&quot;"/>
+      <attribute name="osgi.identity" value="org.idempiere.test.generator"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.idempiere.test.generator"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.idempiere.test.generator"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="34630" type="Long"/>
+      <attribute name="url" value="org.idempiere.test.generator/org.idempiere.test.generator-1.0.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="8E13B452C01FF45D6906B2BDD78F6F702B31F747D8C640E9B912A61EEB3DA535"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="java.lang.Runnable" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.annotation)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.swing)"/>
+      <attribute name="osgi.wiring.package" value="javax.swing"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.swing.plaf.basic)"/>
+      <attribute name="osgi.wiring.package" value="javax.swing.plaf.basic"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.adempiere.exceptions)"/>
+      <attribute name="osgi.wiring.package" value="org.adempiere.exceptions"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.adempiere.util)"/>
+      <attribute name="osgi.wiring.package" value="org.adempiere.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.compiere)"/>
+      <attribute name="osgi.wiring.package" value="org.compiere"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.compiere.model)"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.model"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.compiere.util)"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.idempiere.test.assertj)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.assertj"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=java.lang.Object)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;(Apache-2.0 OR EPL-2.0)&quot;;description=&quot;This program and the accompanying materials are made available under the terms of the Apache License, Version 2.0, or the Eclipse Public License 2.0.&quot;;link=&quot;https://opensource.org/licenses/Apache-2.0,https://opensource.org/licenses/EPL-2.0&quot;"/>
+      <attribute name="osgi.identity" value="org.idempiere.test.common"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.idempiere.test.common"/>
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.annotation"/>
+      <attribute name="bnd.hashes" value="351728610,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.assertj.core.api,org.compiere.model,org.compiere.process,org.compiere.util,org.idempiere.test.common.annotation,org.idempiere.test.common.utils"/>
+      <attribute name="bundle-symbolic-name" value="org.idempiere.test.common"/>
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.env"/>
+      <attribute name="bnd.hashes" value="212260567,407199665,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.compiere.model,org.compiere.process,org.compiere.util,org.idempiere.test.common.env"/>
+      <attribute name="bundle-symbolic-name" value="org.idempiere.test.common"/>
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.utils"/>
+      <attribute name="bnd.hashes" value="83730251,82059409,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.idempiere.test.common"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.202008170648-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.idempiere.test.common"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="60419" type="Long"/>
+      <attribute name="url" value="org.idempiere.test.common/org.idempiere.test.common-1.0.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="DC8EBE91C6D11AFBF49740CA1FADE1945BC5AE11937191ABB1D5489012E1EB5A"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere.model)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.model"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere.process)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.process"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.compiere.util)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.compiere.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.adempiere.base)(bundle-symbolic-name=org.adempiere.base)(bundle-version&gt;=6.2.0)(!(bundle-version&gt;=7.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.adempiere.base"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.assertj.core.api)(version&gt;=3.16.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.assertj.core.api"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.idempiere.test.common.annotation)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.idempiere.test.common.env)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.env"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.idempiere.test.common.utils)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.idempiere.test.common.utils"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito)(version&gt;=3.3.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.mockito"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.test.common.exceptions)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.test.common.exceptions"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>
