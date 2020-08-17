@@ -24,9 +24,11 @@ tasks.named('checkDependencies') {
 
 tasks.named('releaseDependencies') {
   mustRunAfter 'jarDependencies', 'checkDependencies'
+  doFirst {
+  	mkdir 'bundles'
+  }
 }
 
 tasks.named('clean') {
-  File releaserepo = file(bnd('releaserepo', 'bundles')) /* Release repository. */
-  delete releaserepo
+  delete 'bundles'
 }

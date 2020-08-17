@@ -1,4 +1,4 @@
-releaserepo:            ${workspace}/dist/bundles
+releaserepo:            ${workspace}/dist/bundles/
 mavencentral:           https://repo.maven.apache.org/maven2
 
 -plugin.0.Main:\
@@ -21,12 +21,10 @@ mavencentral:           https://repo.maven.apache.org/maven2
     aQute.bnd.repository.maven.provider.MavenBndRepository;\
         name="Local";\
         noupdateOnRelease=true,\
-    aQute.bnd.repository.maven.provider.MavenBndRepository;\
-        name="Release";\
-        releaseUrl="${fileuri;${releaserepo}}";\
-        snapshotUrl="${fileuri;${releaserepo}}";\
-        index="${.}/idempiere-test.mvn";\
-        noupdateOnRelease=true
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = Release; \
+		pretty = true; \
+		local = ${releaserepo}
         
 -plugin.9.Baseline:\
     aQute.bnd.repository.maven.provider.MavenBndRepository;\
